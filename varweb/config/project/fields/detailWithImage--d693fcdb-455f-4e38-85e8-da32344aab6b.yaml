@@ -1,0 +1,51 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: detailWithImage
+instructions: null
+name: 'Detail met foto'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1892885513
+  columns:
+    __assoc__:
+      -
+        - 5de34e6a-c463-4fa7-a514-de31e477076e # Ondertitel
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 1da17888-94b9-40d9-bc41-300248ad28c8 # Tekst
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 1743b11c-7713-46e6-8b84-0348507cece0 # Afbeelding
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 4f0ce8b2-9e13-436b-bf2f-ba42ec932de6 # Call to action
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_detailwithimage}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

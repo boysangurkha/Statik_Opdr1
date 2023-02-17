@@ -1,0 +1,81 @@
+changedFieldIndicator: null
+field: 352695ed-fd54-49e1-b4be-8895f3cd4c62 # Overzicht met blokken
+fieldLayouts:
+  ba572765-9ced-49ad-8302-04e4ce57341e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b511518c-9c6d-4063-92df-054c64bd2d02 # Tekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 905339c2-17a7-44fe-8ea3-a86279e26bc6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8556a5a9-464d-45c0-a2e5-b92173c7b334 # Blokken
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8151f835-123f-402e-9769-143a3526348e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 41ee731d-ed40-437f-9aba-e0e25f2c09fc
+        userCondition: null
+fields:
+  8556a5a9-464d-45c0-a2e5-b92173c7b334: # Blokken
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: blocks
+    instructions: 'Voeg maximum 3 blokken toe'
+    name: Blokken
+    searchable: false
+    settings:
+      contentTable: '{{%matrixcontent_blocks}}'
+      maxBlocks: 3
+      minBlocks: null
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  b511518c-9c6d-4063-92df-054c64bd2d02: # Tekst
+    columnSuffix: qcedziaq
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Geef hier de tekst in'
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field

@@ -1,0 +1,14 @@
+columnSuffix: ecbizyte
+contentColumnType: string(255)
+fieldGroup: e8c01ebd-74ac-43cf-89d8-2f971dc839a6 # Reports
+handle: externalLink
+instructions: 'Deze link moet https:// bevatten'
+name: 'Externe link'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Url

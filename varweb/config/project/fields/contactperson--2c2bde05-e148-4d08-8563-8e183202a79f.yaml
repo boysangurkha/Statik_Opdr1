@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e8c01ebd-74ac-43cf-89d8-2f971dc839a6 # Reports
+handle: contactperson
+instructions: null
+name: Contactpersoon
+searchable: true
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: 1
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Selecteer een contactpersoon'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

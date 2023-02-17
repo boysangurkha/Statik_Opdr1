@@ -1,0 +1,215 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+fieldLayouts:
+  0f0db14f-2f40-48e1-853e-ba4ea386b28f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 933f619e-82e4-4b3d-a27f-9d7d9cce42b8 # Tekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cbc1da18-20d8-4498-b092-47081ee7ae11
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9a0dd6a8-9ebb-44f8-a62a-03f12bf2a504 # Auteur
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8eb0aca1-2882-4c08-b7ee-5ac875f9ce84
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 44549f86-4264-4c94-964c-a927c53c2a38 # Auteur afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cacc93e6-e85e-410b-b9c4-a9e85962e836
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 302aeb89-2e5c-42f2-a735-98e504b28a37 # Call to action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e9092905-93ca-4313-a3fc-3fd4ac307557
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7bfca6b9-10b5-45cf-a470-29d85f876c61 # Achtergrondkleur
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14a7aa7f-00ce-4c5e-83c8-26626d93de0a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 87b0e6d6-6529-46f2-b359-dd62254ea435
+        userCondition: null
+fields:
+  7bfca6b9-10b5-45cf-a470-29d85f876c61: # Achtergrondkleur
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Selecteer de achtergrondkleur van het blok. Belangrijk: Afhankelijk van de achtergrondkleur kan de tekstkleur automatisch mee veranderen.'
+    name: Achtergrondkleur
+    searchable: false
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  9a0dd6a8-9ebb-44f8-a62a-03f12bf2a504: # Auteur
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: writer
+    instructions: 'Geef de auteur van de quote in'
+    name: Auteur
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  302aeb89-2e5c-42f2-a735-98e504b28a37: # Call to action
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: 'Voeg één of meerdere call to actions toe, vul een entry of link in en kies de styling (knop of link)'
+    name: 'Call to action'
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1020432044
+      columns:
+        __assoc__:
+          -
+            - 6d99d3e8-e687-44e6-9e4f-8724da1c5123 # Link
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_8_cta}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Voeg een call to action toe'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  933f619e-82e4-4b3d-a27f-9d7d9cce42b8: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Geef hier de tekst van de quote in'
+    name: Tekst
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  44549f86-4264-4c94-964c-a927c53c2a38: # Auteur afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: authorImage
+    instructions: 'Geef een optionele afbeelding van de auteur mee'
+    name: 'Auteur afbeelding'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Voeg een afbeelding toe'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: quote
+name: Quote
+sortOrder: 7

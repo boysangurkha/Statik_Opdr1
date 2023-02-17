@@ -1,0 +1,43 @@
+defaultPlacement: end
+enableVersioning: true
+handle: annualReport
+name: Jaarverslag
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Web version'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+  -
+    __assoc__:
+      -
+        - label
+        - 'Print version'
+      -
+        - urlFormat
+        - '{canonicalId}/print'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # Vario NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _site/_annualReport/_entry
+    uriFormat: '{parent.uri}/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _site/_annualReport/_entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: 3
+  uid: c588130c-907a-44ce-9869-8ec16b08c061
+type: structure

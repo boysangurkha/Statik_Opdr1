@@ -1,0 +1,64 @@
+columnSuffix: lyniduac
+contentColumnType: text
+fieldGroup: e8c01ebd-74ac-43cf-89d8-2f971dc839a6 # Reports
+handle: mainAsset
+instructions: null
+name: 'Hoofd bijlage'
+searchable: false
+settings:
+  allowClass: ''
+  allowCustomText: '1'
+  allowTarget: ''
+  allowedLinkNames:
+    1: asset
+  class: null
+  classes: null
+  defaultLinkName: asset
+  defaultText: 'Download het advies'
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+translationKeyFormat: null
+translationMethod: site
+type: statikbe\cta\fields\CTAField

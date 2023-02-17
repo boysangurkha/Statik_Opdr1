@@ -1,0 +1,245 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+fieldLayouts:
+  f997fbbd-3d0f-4ed7-adc1-ba30da763d82:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e2e2a303-7d29-4edb-846d-84e6c8494c50 # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 70237f92-d5cd-452c-9c10-ea46b8336b13
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 655b59ef-5329-40e5-9a85-6ea2ac1d8a14 # Tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da847db5-850e-4d05-bb3a-e5803c3e04ad
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7def856e-47b3-4b83-ba43-23b5da28a176 # Afbeelding 
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05216db1-92ad-4acb-ad4a-caf5abad6e04
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: df7389a1-233e-4f41-8340-9d16eee18c51 # CTA
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7509d04b-802c-4197-92f3-60e6ee71746e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ac60331a-e9bd-4399-8b44-42a2c469fd52 # Achtergrondkleur
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1f1b736f-d51f-4b43-93cd-059bdcda13b3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ebeecdff-5e28-44c3-8233-ca59e850eb04
+        userCondition: null
+fields:
+  7def856e-47b3-4b83-ba43-23b5da28a176: # Afbeelding 
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'De minimale breedte voor deze afbeelding is 660px. De ideale breedte is 1320px.'
+    name: 'Afbeelding '
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Voeg een afbeelding toe'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  655b59ef-5329-40e5-9a85-6ea2ac1d8a14: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Geef een optionele tekst in'
+    name: Tekst
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  ac60331a-e9bd-4399-8b44-42a2c469fd52: # Achtergrondkleur
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Selecteer de achtergrondkleur van het blok. Belangrijk: Afhankelijk van de achtergrondkleur kan de tekstkleur automatisch mee veranderen.'
+    name: Achtergrondkleur
+    searchable: false
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  df7389a1-233e-4f41-8340-9d16eee18c51: # CTA
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: cta
+    instructions: 'Vul een entry of link in en kies de styling (knop of link)'
+    name: CTA
+    searchable: true
+    settings:
+      allowClass: '1'
+      allowCustomText: '1'
+      allowTarget: '1'
+      allowedLinkNames:
+        1: asset
+        3: entry
+        4: email
+        6: url
+      class: null
+      classes: null
+      defaultLinkName: entry
+      defaultText: 'Meer lezen'
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: statikbe\cta\fields\CTAField
+  e2e2a303-7d29-4edb-846d-84e6c8494c50: # Titel
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: blockTitle
+    instructions: 'Voeg een optionele titel toe aan het blok'
+    name: Titel
+    searchable: true
+    settings:
+      someAttribute: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: modules\statik\fields\AnchorLink
+handle: callToAction
+name: 'Call To Action'
+sortOrder: 11

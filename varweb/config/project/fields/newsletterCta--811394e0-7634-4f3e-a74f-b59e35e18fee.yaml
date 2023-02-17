@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 39b3406d-d1bb-4a84-a13a-bce5cc293238 # Globals
+handle: newsletterCta
+instructions: null
+name: 'Nieuwsbrief CTA'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1468611642
+  columns:
+    __assoc__:
+      -
+        - 06abc43e-b8f6-49b0-a61e-6deed7035aa9
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c47f225d-016a-42eb-9454-536fd1c1d5c9
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 37af69dc-bbee-4472-aaed-4719cae2e866
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_newslettercta}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

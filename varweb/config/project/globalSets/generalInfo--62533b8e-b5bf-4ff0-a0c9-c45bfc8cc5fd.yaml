@@ -1,0 +1,60 @@
+fieldLayouts:
+  95b592be-7c58-48f3-8fcd-eddbb3ec81da:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b144d468-0854-483a-8899-f7dc2ecc64a7 # Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f25c426-5f65-44cd-911c-1107a3fb956d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6ca94949-c3f4-465d-88c7-3d4736d97ed4 # Address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0a4f8f0-15a2-4baf-b0ed-9fd4abeb6464
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 072209d1-1c68-4ee5-9a66-a209b518da6d # Mail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b380e633-cef0-4109-ac15-de364e6a142f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e48813cd-24dc-4b06-a97d-2a95520dcc24 # Telefoonnummer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e77ff7cf-3066-447e-af33-97a435acf9bf
+            userCondition: null
+            warning: null
+            width: 50
+        name: Info
+        uid: 6647660d-ca3c-4860-859f-e420fda4ba4a
+        userCondition: null
+handle: generalInfo
+name: 'General Info'
+sortOrder: 2

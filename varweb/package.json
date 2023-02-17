@@ -1,0 +1,61 @@
+{
+  "private": true,
+  "config": {
+    "test": "git change",
+    "path": {
+      "src": "tailoff",
+      "public": "public"
+    },
+    "proxy": "https://basecraft.local.statik.be"
+  },
+  "scripts": {
+    "watch": "vite",
+    "watch-site2": "vite --config vite.config.site2.js",
+    "dev": "vite build",
+    "prod": "vite build",
+    "prod-two-sites-example": "vite build && vite build --config vite.config.site2.js",
+    "favicon": "vite build --config vite-favicon.config.js",
+    "favicon-site2": "vite build --config vite-favicon.config.site2.js",
+    "start": "composer install && (yarn install && yarn run prod) && git config core.hooksPath .githooks && chmod +x .githooks/post-merge && chmod +x .githooks/pre-push && node -e \"console.log('DONE! All ready to go!')\"",
+    "googlefonts": "node googlefonts.js",
+    "touch": "./craft project-config/touch"
+  },
+  "resolutions": {
+    "sharp": "^0.29.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@types/glidejs": "^1.0.31",
+    "@types/googlemaps": "^3.43.3",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
+    "@vitejs/plugin-legacy": "^4.0.1",
+    "autoprefixer": "^10.4.13",
+    "google-fonts-helper": "^2.0.1",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-properties": "^13.1.2",
+    "postcss-file": "^0.1.1",
+    "postcss-import": "^15.1.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.0",
+    "promise-polyfill": "^8.3.0",
+    "tailwindcss": "^3.2.4",
+    "terser": "^5.16.3",
+    "typescript": "4.9.5",
+    "vite": "^4.1.1",
+    "vite-plugin-mkcert": "^1.13.0",
+    "vite-plugin-restart": "^0.3.1",
+    "wicg-inert": "^3.1.2"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.2.0",
+    "@glidejs/glide": "^3.6.0",
+    "@popperjs/core": "^2.11.6",
+    "flatpickr": "^4.6.13",
+    "leaflet": "^1.9.3",
+    "tippy.js": "^6.3.7"
+  },
+  "optionalDependencies": {
+    "vite-plugin-favicon2": "^1.1.4"
+  }
+}

@@ -1,0 +1,25 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e8c01ebd-74ac-43cf-89d8-2f971dc839a6 # Reports
+handle: reportType
+instructions: null
+name: 'Type Advies'
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Categorie toevoegen'
+  showSiteMenu: false
+  source: 'group:64516e7d-b46e-44ff-aa53-34e7e1e0a89d' # Type Advies
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

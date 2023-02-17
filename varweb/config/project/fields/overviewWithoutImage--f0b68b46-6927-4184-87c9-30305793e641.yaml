@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: overviewWithoutImage
+instructions: null
+name: 'Overzicht zonder foto'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1821292344
+  columns:
+    __assoc__:
+      -
+        - eedbaa8c-8390-46c7-af27-09fa9294335d # Tekst
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - fd713f9e-c964-4dd0-9bff-630fb6a09429 # Entries
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_overviewwithoutimage}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

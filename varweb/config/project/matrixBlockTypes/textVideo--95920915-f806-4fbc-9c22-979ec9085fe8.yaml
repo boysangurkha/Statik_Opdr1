@@ -1,0 +1,252 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+fieldLayouts:
+  86d679f2-c66c-4cad-a0cc-63b8753b55a8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5e9cb47a-530d-4aa9-a98f-5049e6d0eb9e # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c2d30acc-f77c-4758-b7ea-eb9ae78c344c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cc93d3b9-10be-4698-8656-cdad4201aa45 # Ondertitel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47c1d783-00b4-4964-b808-c980c12c03c5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d8d1d5d4-1fab-4aaa-b9e7-0eca37062865 # Tekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49decd66-c2e9-416c-83cd-46bc0474a15e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9faf6a00-afea-4a29-a217-e6af774f6b55 # Call to action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a71f70a-e8c4-4c92-8ecc-9eedcd75a3c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2561c4fb-34b5-49e6-ade6-f774411e48ba # Video
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3b691ab-3aba-42aa-9b69-08b6498a0827
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c8533e19-1c6c-4d33-8e50-71babb409313 # Video positie
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2607da7f-daf5-4c42-8c89-915abc68dd03
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f3f6d3ea-ccb1-48a5-bb33-93e1e31aff24 # Achtergrondkleur
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95f06a3a-c17c-4032-abd6-82d452ed5e7b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dba25c67-8336-4776-bb85-63e3fffb4f1e
+        userCondition: null
+fields:
+  5e9cb47a-530d-4aa9-a98f-5049e6d0eb9e: # Titel
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: blockTitle
+    instructions: 'Voeg een optionele titel toe aan het blok'
+    name: Titel
+    searchable: true
+    settings:
+      someAttribute: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: modules\statik\fields\AnchorLink
+  9faf6a00-afea-4a29-a217-e6af774f6b55: # Call to action
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: 'Voeg één of meerdere call to actions toe, vul een entry of link in en kies de styling (knop of link)'
+    name: 'Call to action'
+    searchable: true
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1703775180
+      columns:
+        __assoc__:
+          -
+            - fc9b3c7f-00f8-4113-aa56-b2328011d192 # Link
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_11_cta}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Voeg een call to action toe'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  2561c4fb-34b5-49e6-ade6-f774411e48ba: # Video
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: video
+    instructions: 'Plak hier de URL van een YouTube of Vimeo video. '
+    name: Video
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+  c8533e19-1c6c-4d33-8e50-71babb409313: # Video positie
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: 'Selecteer de positie van de afbeelding in verhouding tot het tekstblok'
+    name: 'Video positie'
+    searchable: false
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  cc93d3b9-10be-4698-8656-cdad4201aa45: # Ondertitel
+    columnSuffix: putgbyue
+    contentColumnType: text
+    fieldGroup: null
+    handle: subTitle
+    instructions: 'Voeg een optionele ondertitel toe aan het blok'
+    name: Ondertitel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  d8d1d5d4-1fab-4aaa-b9e7-0eca37062865: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Geef hier de tekst in'
+    name: Tekst
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  f3f6d3ea-ccb1-48a5-bb33-93e1e31aff24: # Achtergrondkleur
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Selecteer de achtergrondkleur van het blok. Belangrijk: Afhankelijk van de achtergrondkleur kan de tekstkleur automatisch mee veranderen.'
+    name: Achtergrondkleur
+    searchable: false
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+handle: textVideo
+name: 'Tekst + Video'
+sortOrder: 5

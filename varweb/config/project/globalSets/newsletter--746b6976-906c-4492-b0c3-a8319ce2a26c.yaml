@@ -1,0 +1,24 @@
+fieldLayouts:
+  fc6c8853-222e-45dc-b24a-53f6c26476ed:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 811394e0-7634-4f3e-a74f-b59e35e18fee # Nieuwsbrief CTA
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5d40d35-e78c-49cb-8eb3-fead2c1fba8a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: efa5315b-3ef8-40ae-868e-01e2da45b34e
+        userCondition: null
+handle: newsletter
+name: Nieuwsbrief
+sortOrder: 3

@@ -1,0 +1,32 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: 'Pagina''s'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # Vario NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _site/_contentPage
+    uriFormat: '{parent.uri}/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _site/_contentPage
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 8839fbe4-d531-4ccd-9d5d-2ec8517196f6
+type: structure

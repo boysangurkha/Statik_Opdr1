@@ -1,0 +1,19 @@
+columnSuffix: tphviftg
+contentColumnType: text
+fieldGroup: 2515374d-65d4-4b56-a2b9-4dd6f1cfc354 # People
+handle: peopleGsm
+instructions: null
+name: GSM
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

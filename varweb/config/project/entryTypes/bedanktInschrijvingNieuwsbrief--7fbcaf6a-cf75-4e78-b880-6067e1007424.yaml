@@ -1,0 +1,96 @@
+fieldLayouts:
+  fee70d46-cc79-42fd-82da-cc93a8e13aff:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ab2b4e1d-5ecc-401e-ae19-edf037b7bc9e
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ffcb7357-715a-462b-9baa-51a6a940f889 # Afbeelding hoofding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02c899c2-6f6d-4a53-ae06-f419e3c9b8e1
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d67b49c6-ccb0-4d66-a1dd-9ff1355a0906 # Call To Actions
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: adb8a1f6-277e-419f-971b-d90216326523
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: dd6751e0-52c6-48f3-99e6-b426c128a59a
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9f38f0df-0a5e-459a-8490-b59f27a556e4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b1424b4b-17cb-4f44-b72e-63bf261659d9 # Nieuws aan/uit knop
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c6a2feb-34a6-4d8b-9886-6c47051e7e70
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ee241068-e666-4133-a33f-c53caa7a183b
+        userCondition: null
+handle: bedanktInschrijvingNieuwsbrief
+hasTitleField: true
+name: 'Bedankt inschrijving nieuwsbrief'
+section: 928e5aea-e1ef-4d05-8d67-d0526becc555 # Bedankt inschrijving nieuwsbrief
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

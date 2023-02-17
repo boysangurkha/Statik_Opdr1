@@ -1,0 +1,144 @@
+fieldLayouts:
+  3fef003f-8c17-403e-903a-5e84dbde31f4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: 'Vul de titel van de pagina in'
+            label: Titel
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8742d1f9-361d-4178-a1da-2fad77a9c59e
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ffcb7357-715a-462b-9baa-51a6a940f889 # Afbeelding hoofding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62171d4e-e68c-4978-8c64-b50ed89bf297
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 830e2f4c-48d8-4d9e-800e-20fbe8f7a13f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: c7870d94-c042-4ba3-a965-20ef8f971dd4
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0508f91-5d6e-45bc-99a8-d195835db2f9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4110deee-d6db-4bba-b6ba-813a2b700b30
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overzicht titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8b7d3c12-2c46-468c-b845-f7060f120165
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overzicht beschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6d57a08-b68c-405a-a197-dd1b71752ca8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overzicht afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 788cffc9-506a-41fd-b182-1852e52bea38
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: fa71b5ba-9bb6-4597-8b18-13db104b674d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c5c5fc8-c714-4077-a5d8-d530f25cf204
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 8e483955-df69-4961-aade-4cab5a23e076
+        userCondition: null
+handle: team
+hasTitleField: true
+name: Team
+section: 959759d2-6f65-4f9d-a9e1-47f32ac3d7c6 # Team
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

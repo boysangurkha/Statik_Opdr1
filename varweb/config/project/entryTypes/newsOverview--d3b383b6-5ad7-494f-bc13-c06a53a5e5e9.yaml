@@ -1,0 +1,146 @@
+fieldLayouts:
+  1bfb15de-84e7-42f7-b958-7aaaebfef219:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: 'Vul de titel van de pagina in'
+            label: Titel
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 51717d00-a22b-4bb9-9daa-4b4958619940
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ffcb7357-715a-462b-9baa-51a6a940f889 # Afbeelding hoofding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a52f776-4d10-40ed-97c4-9f12b65d4c04
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: 'Schrijf een korte tekst als inleiding van deze pagina'
+            label: 'Intro tekst'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f678398-bafb-4392-beaf-0c87eb29d826
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 00d7cc0b-19b6-4f9d-b282-0d3312cf5078
+            userCondition: null
+          -
+            elementCondition: null
+            style: tip
+            tip: 'Hieronder verschijnen automatisch alle nieuwsberichten'
+            type: craft\fieldlayoutelements\Tip
+            uid: 024321fc-470f-47f7-b158-92bb0bae55a7
+            userCondition: null
+          -
+            elementCondition: null
+            style: tip
+            tip: 'Hieronder verschijnt automatisch de algemene call to action om in te schrijven op de nieuwsbrief'
+            type: craft\fieldlayoutelements\Tip
+            uid: 8fba95ba-5c2c-4690-8d59-63c48708bb69
+            userCondition: null
+        name: Common
+        uid: 1151a7c0-8610-40fc-96ba-19f9e8a821b7
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overzicht titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9169b970-856c-41da-b9c3-f7582d4b7187
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overzicht beschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0066ccf-1c14-48f0-bc39-da6931392a3b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overzicht afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5695ad3f-be91-47a9-be0e-1bf8c8d5d0f4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: d6a2318b-0d09-42d1-b125-bcafda7ccfe6
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5cda32d0-8907-40d8-bccf-daa174edb4f0
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 485137f8-0dcb-4409-8602-bebbef47a900
+        userCondition: null
+handle: newsOverview
+hasTitleField: true
+name: 'Nieuws overzicht'
+section: 4c32edae-2824-4f0f-b38b-2477d2500dfe # Nieuws overzicht
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

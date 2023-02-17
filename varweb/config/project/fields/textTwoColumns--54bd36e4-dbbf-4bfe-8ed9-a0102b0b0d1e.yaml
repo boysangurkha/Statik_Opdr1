@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: textTwoColumns
+instructions: null
+name: '2 kolommen met foto'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 819028289
+  contentTable: '{{%stc_texttwocolumns}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

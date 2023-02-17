@@ -1,0 +1,112 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+fieldLayouts:
+  8fc1f7b2-700b-4a7a-b1ff-34365023df8b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 533f63b6-4322-4a92-ab10-8131b672a07e # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15305a8d-8794-4047-a47e-c6095f2c0b73
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5ab19d98-4c56-4487-8d90-e3ed32917b0a # Adviezen
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 320a9c84-a8ba-467b-8cd0-e9adbfff64df
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 01c1f73e-8038-4f19-976b-fffa32aefe4d # Achtergrondkleur
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e8c6753-86b4-47ed-834a-0969c91a111c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 758f7396-954c-4116-a56f-136d6e49a1a6
+        userCondition: null
+fields:
+  01c1f73e-8038-4f19-976b-fffa32aefe4d: # Achtergrondkleur
+    columnSuffix: cswkgbim
+    contentColumnType: string
+    fieldGroup: null
+    handle: backgroundColor
+    instructions: 'Selecteer de achtergrondkleur van het blok. Belangrijk: Afhankelijk van de achtergrondkleur kan de tekstkleur automatisch mee veranderen.'
+    name: Achtergrondkleur
+    searchable: false
+    settings:
+      dataSet: 'Background colors'
+      type: dropdown
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
+  5ab19d98-4c56-4487-8d90-e3ed32917b0a: # Adviezen
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: advices
+    instructions: 'Selecteer max 3 adviezen die je in dit overzicht wil tonen. Indien er geen 3 adviezen zijn geselecteerd, vullen wij aan met andere recente adviezen.'
+    name: Adviezen
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: 3
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Voeg een advies toe'
+      showSiteMenu: false
+      source: null
+      sources:
+        - 'section:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  533f63b6-4322-4a92-ab10-8131b672a07e: # Titel
+    columnSuffix: cwgvcblf
+    contentColumnType: string
+    fieldGroup: null
+    handle: blockTitle
+    instructions: 'Voeg een optionele titel toe aan het blok'
+    name: Titel
+    searchable: true
+    settings:
+      someAttribute: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: modules\statik\fields\AnchorLink
+handle: advice
+name: Adviezen
+sortOrder: 10

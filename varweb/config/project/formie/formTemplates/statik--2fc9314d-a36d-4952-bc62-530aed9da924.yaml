@@ -1,0 +1,11 @@
+handle: statik
+name: Statik
+outputCssLayout: true
+outputCssLocation: page-header
+outputCssTheme: false
+outputJsBase: true
+outputJsLocation: inside-form
+outputJsTheme: true
+sortOrder: 99
+template: null
+useCustomTemplates: false

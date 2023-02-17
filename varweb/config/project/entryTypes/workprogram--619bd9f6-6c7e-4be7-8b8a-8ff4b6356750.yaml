@@ -1,0 +1,168 @@
+fieldLayouts:
+  518491ae-c254-4810-9901-e12f7df8e03a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: 'Vul de titel van de pagina in'
+            label: Titel
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d659dbe7-8a74-4703-b484-a6d7206e0c0e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ffcb7357-715a-462b-9baa-51a6a940f889 # Afbeelding hoofding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 774b8195-a3f7-4a45-8a73-dfffc76e55ae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bae2c86e-3f23-48ec-8e23-8dfd197bec60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d67b49c6-ccb0-4d66-a1dd-9ff1355a0906 # Call To Actions
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 93412bbc-114c-4e79-a28d-227129603964
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 395f1f4e-95a6-4364-a8fe-edc28f3e083a
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff2dbef1-74c6-40d3-a240-d843cf6e6b81
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b1424b4b-17cb-4f44-b72e-63bf261659d9 # Nieuws aan/uit knop
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 947fe035-8145-44bd-8eec-e9ceb6d49ce8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dc1d6ba2-bc63-4635-b692-081af841a446
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overzicht titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8f0a85a7-fb26-4e9d-86c3-67a004afee24
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overzicht beschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9802831-cee3-4e09-8995-3b122e57d672
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overzicht afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7947bcc9-61e8-4016-ab5a-c0f30147e1a7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 44ffab69-001c-4cfb-b257-5dbccca0d21c
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fcc4d370-4893-4f78-a03c-49381f4e203a
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: f6746331-fd21-4e23-8799-2657589281ea
+        userCondition: null
+handle: workprogram
+hasTitleField: true
+name: Werkprogramma
+section: 45127d25-4280-4735-807b-31d1b3bf5047 # Werkprogramma
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,194 @@
+field: 8556a5a9-464d-45c0-a2e5-b92173c7b334 # Blokken
+fieldLayouts:
+  35543ac6-6a78-4e25-aa94-b785a13c9fe1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e59b7ba4-aaed-43e6-a1fe-ac905a85e1f3 # Titel
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90dbc20f-3e6c-46f2-aacc-ed4ff130b6de
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3bbf7614-158d-4b60-92c8-9bf15d4e6449 # Datum
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81f7ae6e-eac5-4098-b3af-ee959409200c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5272d01a-b93a-440b-bed2-214c9c82b591 # Tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa2e935c-f7fb-497b-9bde-8c562950360f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8346cf33-1e17-43e8-91d6-c657af62edf2 # Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88581e70-8f1c-4efe-9743-6967be61268f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 972862fb-5233-441a-935f-1384bad28f1b
+        userCondition: null
+fields:
+  3bbf7614-158d-4b60-92c8-9bf15d4e6449: # Datum
+    columnSuffix: edjeihwx
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: date
+    instructions: null
+    name: Datum
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 30
+      showDate: true
+      showTime: false
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Date
+  5272d01a-b93a-440b-bed2-214c9c82b591: # Tekst
+    columnSuffix: mxbspzsq
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  8346cf33-1e17-43e8-91d6-c657af62edf2: # Link
+    columnSuffix: hsknorfa
+    contentColumnType: text
+    fieldGroup: null
+    handle: cta
+    instructions: 'Vul een entry of link in'
+    name: Link
+    searchable: false
+    settings:
+      allowClass: ''
+      allowCustomText: ''
+      allowTarget: ''
+      allowedLinkNames:
+        3: entry
+        6: url
+      class: null
+      classes: null
+      defaultLinkName: entry
+      defaultText: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: statikbe\cta\fields\CTAField
+  e59b7ba4-aaed-43e6-a1fe-ac905a85e1f3: # Titel
+    columnSuffix: vichpubh
+    contentColumnType: text
+    fieldGroup: null
+    handle: blockTitle
+    instructions: null
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: block
+name: Blok
+sortOrder: 1

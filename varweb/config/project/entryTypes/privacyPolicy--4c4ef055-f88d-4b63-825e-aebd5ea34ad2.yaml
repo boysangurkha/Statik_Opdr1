@@ -1,0 +1,85 @@
+fieldLayouts:
+  ce2524be-8574-4fd8-8507-225d56dbde04:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3a06b3b6-e8f4-4ba4-9bd6-250b3225dba6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 54f554ff-f28c-42b5-8d6a-bc8d8615bf24
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 043fd533-9adb-4759-88ff-bf74d8353dcf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b75c7738-6545-43ef-9bd8-bb781c7de089
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae59d9b4-c371-4555-a2e9-9c5fc34300ae
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: a61eb8fe-f459-4de7-8ec0-ed0df1e0f03c
+        userCondition: null
+handle: privacyPolicy
+hasTitleField: true
+name: 'Privacy policy'
+section: c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e # Privacy policy
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

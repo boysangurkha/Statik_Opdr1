@@ -1,0 +1,829 @@
+dateModified: 1676628411
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      heading: Algemeen
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:45127d25-4280-4735-807b-31d1b3bf5047' # Werkprogramma
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:f9bf34b7-61cc-440c-a197-0b140eb8d4f2' # Colloquium
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:8dd3ea65-76f3-48f6-baf2-5d3c37d61e18' # Over Vario
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+      tableAttributes:
+        - 'field:c2131ba1-4a42-4d09-8c7c-ebe682580569' # Layouts
+        - dateCreated
+        - dateUpdated
+        - revisionCreator
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:c5cf3c0c-0095-4eaf-ae28-ca0480e99396' # Nieuwsbrief
+      tableAttributes:
+        - dateCreated
+        - author
+        - dateUpdated
+        - revisionCreator
+        - link
+      type: native
+    -
+      key: 'single:928e5aea-e1ef-4d05-8d67-d0526becc555' # Bedankt inschrijving nieuwsbrief
+      type: native
+    -
+      heading: Personen
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:959759d2-6f65-4f9d-a9e1-47f32ac3d7c6' # Team
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:3698dda1-5942-4177-a819-d4b52890e1ac' # Raadsleden 
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      heading: Nieuws
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:4c32edae-2824-4f0f-b38b-2477d2500dfe' # Nieuws overzicht
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      heading: 'Adviezen & Rapporten'
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:07719191-c791-4ff2-9e89-8b84820b88bc' # Adviezen & rapporten Overzicht
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      heading: Overig
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e' # Privacy policy
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:4750849d-9328-4d3e-956d-9d317da5e6eb' # Pagina niet gevonden
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Zoekresultaten
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:fa6e0764-a31c-4304-a4d7-76bd3a679e3e' # 503
+      tableAttributes:
+        - slug
+        - revisionCreator
+        - dateUpdated
+        - link
+      type: native
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SYSTEM_NAME
+  replyToEmail: null
+  template: _mail/_layout
+  transportSettings:
+    command: '/usr/sbin/sendmail -bs'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  files:
+    hasUrls: true
+    name: Files
+    settings:
+      path: '@webroot/files'
+    type: craft\fs\Local
+    url: '@baseUrl/files/'
+meta:
+  __names__:
+    0f1f7543-7931-423b-9e0d-0158da0cc08f: Link # Link
+    1a64e732-f1ae-44b6-aee3-bedc6b1ebdd2: 'Cookie policy' # Cookie policy
+    1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3: Impact # Impact
+    1a9703c9-1eb8-4b3a-94e1-1386e5b24f2a: Titel # Titel
+    01c1f73e-8038-4f19-976b-fffa32aefe4d: Achtergrondkleur # Achtergrondkleur
+    1da17888-94b9-40d9-bc41-300248ad28c8: Tekst # Tekst
+    1dac4b9e-8f95-4059-82a9-d9bc85b18863: Adviezen # Adviezen
+    1e4267e1-8d5f-4312-8458-86b19bc17d74: 'Tekst (2 kolommen)' # Tekst (2 kolommen)
+    2a9d0de3-133d-45b2-8df3-048614b841ae: Icoon # Icoon
+    2c2bde05-e148-4d08-8563-8e183202a79f: Contactpersoon # Contactpersoon
+    2c770290-8edc-4f26-b846-6d99d36d7844: Common # Common
+    2e4b3bb0-26e4-47d2-9445-54401a221c63: Twitter # Twitter
+    2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38: 'Overzicht beschrijving' # Overzicht beschrijving
+    2fc9314d-a36d-4952-bc62-530aed9da924: Statik # Statik
+    3bab6073-85a4-4894-a84e-722e24476827: Voornaam # Voornaam
+    3bbf7614-158d-4b60-92c8-9bf15d4e6449: Datum # Datum
+    3d6caa38-c632-4f5c-8a0a-7e2fb79ac0d5: 'Externe link' # Externe link
+    3e5318bd-23e0-4319-8f7c-3f38350d8764: Achtergrondkleur # Achtergrondkleur
+    4a2bad07-8d89-4689-b0bf-774eed764660: 'Overzicht titel' # Overzicht titel
+    4a35dc80-784d-4dd5-970b-f8e972fc9047: Personen # Personen
+    4c4ef055-f88d-4b63-825e-aebd5ea34ad2: 'Privacy policy' # Privacy policy
+    4c32edae-2824-4f0f-b38b-2477d2500dfe: 'Nieuws overzicht' # Nieuws overzicht
+    4ce05044-aa3d-4bbe-ad21-be03fbc1a273: Achtergrondkleur # Achtergrondkleur
+    4f0ce8b2-9e13-436b-bf2f-ba42ec932de6: 'Call to action' # Call to action
+    4f2d5351-ec66-4995-817c-a485f9bdc581: 'Raadsleden ' # Raadsleden 
+    5a25f3e9-a180-4a29-aa41-8721fbf815b9: 'Optimized Content' # Optimized Content
+    5ab19d98-4c56-4487-8d90-e3ed32917b0a: Adviezen # Adviezen
+    5d236e94-b6a8-472c-9296-a5c992cdd49a: Contact # Contact
+    5de34e6a-c463-4fa7-a514-de31e477076e: Ondertitel # Ondertitel
+    5e9cb47a-530d-4aa9-a98f-5049e6d0eb9e: Titel # Titel
+    6ca94949-c3f4-465d-88c7-3d4736d97ed4: Address # Address
+    6d99d3e8-e687-44e6-9e4f-8724da1c5123: Link # Link
+    6de046f0-6167-4af1-aa91-ffaf83e36a14: 'Vario NL' # Vario NL
+    7aa44d5f-5d7a-4d09-8d01-500e6823b802: cta # cta
+    7af3cfe3-ea40-49ec-ab35-cf5bdce6aa7b: Personen # Personen
+    7b5ab248-6255-4b42-88bc-80c1dee62b20: 'Call To Action' # Call To Action
+    7bfca6b9-10b5-45cf-a470-29d85f876c61: Achtergrondkleur # Achtergrondkleur
+    7ceb565a-09c3-4e51-aeb1-d006495e178e: Embed # Embed
+    7d7ac2ae-38ea-488e-b5bb-926fdda4aaf6: '1 kolom met foto' # 1 kolom met foto
+    7def856e-47b3-4b83-ba43-23b5da28a176: 'Afbeelding ' # Afbeelding 
+    7e0359ef-8129-44b8-be96-867110c0ae04: 'Embed code' # Embed code
+    7fbcaf6a-cf75-4e78-b880-6067e1007424: 'Bedankt inschrijving nieuwsbrief' # Bedankt inschrijving nieuwsbrief
+    8ac00bfd-1f66-444a-9ccb-ae430c6c79b4: Archief # Archief
+    8b19ab9b-df0a-4172-a1bb-c61950e883f3: GSM # GSM
+    8dd3ea65-76f3-48f6-baf2-5d3c37d61e18: 'Over Vario' # Over Vario
+    8fa3e75a-c69d-4482-9083-e416986b4788: Table # Table
+    9a0dd6a8-9ebb-44f8-a62a-03f12bf2a504: Auteur # Auteur
+    9abed6d9-3042-4dd4-add0-3115a6e2693b: 'Afbeelding positie' # Afbeelding positie
+    9b3e482b-e0fa-48ac-8853-00a271d807ac: 'Tekst kolom 2' # Tekst kolom 2
+    9b825b00-aa1c-4ad2-b013-e29ee855e551: Tekst # Tekst
+    9bc4b9f2-7fc6-48b0-a3df-8e9c061a70c6: Instagram # Instagram
+    09df7d5c-a6f9-49e1-9694-7bf67f30498f: Startpagina # Startpagina
+    9f39fdda-793c-4506-9dd4-e764d46cad28: 'Pagina''s' # Pagina's
+    9faf6a00-afea-4a29-a217-e6af774f6b55: 'Call to action' # Call to action
+    10fdc148-c0a4-486b-a5d1-3d36f2862352: 'Social Media' # Social Media
+    15ed2b72-8955-4cec-93f8-9736a9e50e80: 'Overzicht afbeelding' # Overzicht afbeelding
+    17c9098e-21dc-4c7b-9e13-5eaef59c6959: Nieuwsbrief # Nieuwsbrief
+    24bd0074-b53d-404d-9285-a0be9f26bbd4: Overzicht # Overzicht
+    29ce1a5b-53b3-4361-96e4-20fc58e90dac: SEO # SEO
+    39b3406d-d1bb-4a84-a13a-bce5cc293238: Globals # Globals
+    39f07216-d49a-4917-b05e-bec26f425843: 'Image Caption' # Image Caption
+    40e14f90-0640-452d-9c8a-9f30f73bacbb: 'Afbeelding positie' # Afbeelding positie
+    45b7c78f-587d-441b-bbd1-605ca629d0bd: 'Pagina''s' # Pagina's
+    46db520a-e5b5-4ca7-983a-15fc4c31e207: Naam # Naam
+    50da4649-b0bc-47d4-8f98-24ab08443b4f: Tekst # Tekst
+    52ef71e9-1ec1-45e9-adef-e4158bc931aa: Afbeelding # Afbeelding
+    54bd36e4-dbbf-4bfe-8ed9-a0102b0b0d1e: '2 kolommen met foto' # 2 kolommen met foto
+    56d715d0-6a9d-4562-9c66-e5b4caad7f44: 'Content builder' # Content builder
+    60b48ff5-1ab2-471b-8592-cdc623e0882c: 'Optimized Text Image' # Optimized Text Image
+    61b9a78d-f3c0-4c99-8e91-d97e9768023c: 'Optimized Images' # Optimized Images
+    61cbb04c-ab3f-421e-bb8f-9e81ecc0da41: Site # Site
+    063c0983-8106-4412-a2c4-d55211370e04: Titel # Titel
+    71a7d521-3217-4254-8b3f-f778279d342c: Title # Title
+    74a30650-eb90-462f-a104-de1d41ac8221: Formulier # Formulier
+    83fa774c-84db-4b8b-9f5a-ef7cde0bf9a5: 'Hoofd bijlage' # Hoofd bijlage
+    84a6a70f-85ce-43a5-ad74-738a0cbea388: 'CTA kolom 2' # CTA kolom 2
+    89c47888-bddf-4633-9352-1d5dc3bb452f: Home # Home
+    93b76161-6ea0-4b21-845e-aa6950341b6f: Blok # Blok
+    95f49084-026d-4884-96b9-8b2fb5a00d3d: CTA # CTA
+    97e1c649-ce58-4388-bbc1-1f4e41d938b6: Link # Link
+    109f5d44-e366-49e7-826d-6b13de779861: Nieuws # Nieuws
+    196e7d74-70b3-4d1b-955f-3fc8a2b39233: 'Annual Report' # Annual Report
+    0207f1a0-8ec0-4b87-9197-c1d5a9a7b61d: 'Optimized Overview' # Optimized Overview
+    302aeb89-2e5c-42f2-a735-98e504b28a37: 'Call to action' # Call to action
+    364c7935-6852-4da4-9ae8-afeaa8eb4212: 'Over Vario' # Over Vario
+    0396f80c-a192-4beb-a6e7-075075cf0f70: Afbeelding # Afbeelding
+    477c5c36-d045-4085-b488-70b5e04e9538: Jaarverslag # Jaarverslag
+    521ab425-da0f-4950-916e-0eb371571e18: 'Archief categorie' # Archief categorie
+    533f63b6-4322-4a92-ab10-8131b672a07e: Titel # Titel
+    616d7338-f2b8-4962-9ec8-eca38b466a36: Ondertitel # Ondertitel
+    619bd9f6-6c7e-4be7-8b8a-8ff4b6356750: Werkprogramma # Werkprogramma
+    655b59ef-5329-40e5-9a85-6ea2ac1d8a14: Tekst # Tekst
+    683cbd88-ef11-45e0-83b4-e20d03f6ea6b: 'Afbeelding breedte' # Afbeelding breedte
+    721dae79-34a2-435f-aa3d-a1be41624a88: Impact # Impact
+    746b6976-906c-4492-b0c3-a8319ce2a26c: Nieuwsbrief # Nieuwsbrief
+    776fa716-10bb-48bb-ae08-28870f9d77e7: Entries # Entries
+    913fcb0b-7cf0-49a7-be43-c788b7d37327: 'Entries 1ste rij ' # Entries 1ste rij 
+    928e5aea-e1ef-4d05-8d67-d0526becc555: 'Bedankt inschrijving nieuwsbrief' # Bedankt inschrijving nieuwsbrief
+    933f619e-82e4-4b3d-a27f-9d7d9cce42b8: Tekst # Tekst
+    979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca: Files # Files
+    1319d4b9-dade-4a26-b68b-0afd3da6d26a: Tekst # Tekst
+    1743b11c-7713-46e6-8b84-0348507cece0: Afbeelding # Afbeelding
+    2184d090-d3e1-413b-8d21-b537c5141ef8: Afbeelding # Afbeelding
+    02482f0b-2650-4903-acb3-f24ea73b95a8: Table # Table
+    2561c4fb-34b5-49e6-ade6-f774411e48ba: Video # Video
+    3196b984-5af4-44dd-a6db-ac2c8f7924d9: 'Content Managers' # Content Managers
+    3698dda1-5942-4177-a819-d4b52890e1ac: 'Raadsleden ' # Raadsleden 
+    4389ba83-8e69-4edb-b3c3-ca0ba89617c1: Achtergrondkleur # Achtergrondkleur
+    4666d048-0521-4d0f-9a4a-208e6182fb85: Fallback # Fallback
+    4769bfc3-3064-404b-baa5-1bd5c5ff2acf: Titel # Titel
+    5272d01a-b93a-440b-bed2-214c9c82b591: Tekst # Tekst
+    5611e98d-93ec-4bd4-95dd-18f282b8c5e8: Home # Home
+    5769c4a7-6939-40b1-8feb-5675564a8e99: Link # Link
+    6221c006-75b9-4fa5-a352-4cd4317fb5d7: Youtube # Youtube
+    7256a782-20ff-4771-9d85-ed3f49e13ef4: Quote # Quote
+    7476de34-afe0-4a43-a173-e19f6648fea5: 'Advies tekst' # Advies tekst
+    8346cf33-1e17-43e8-91d6-c657af62edf2: Link # Link
+    8556a5a9-464d-45c0-a2e5-b92173c7b334: Blokken # Blokken
+    8594a6ee-0a6b-48e7-adeb-954bd3d7b72f: Colloquium # Colloquium
+    9084b802-1468-4763-a867-2e4b1ebd3f09: 'Toon een grotere versie van de afbeelding in een popup' # Toon een grotere versie van de afbeelding in een popup
+    24983cba-9d55-413d-80dc-0374abd19ec0: 'Titel kolom 1' # Titel kolom 1
+    37471b2c-6c44-4b1a-bc50-3788e9de05d5: Hero # Hero
+    44549f86-4264-4c94-964c-a927c53c2a38: 'Auteur afbeelding' # Auteur afbeelding
+    45127d25-4280-4735-807b-31d1b3bf5047: Werkprogramma # Werkprogramma
+    62533b8e-b5bf-4ff0-a0c9-c45bfc8cc5fd: 'General Info' # General Info
+    64516e7d-b46e-44ff-aa53-34e7e1e0a89d: 'Type Advies' # Type Advies
+    072209d1-1c68-4ee5-9a66-a209b518da6d: Mail # Mail
+    98082a0c-2f96-4f8e-a03c-2773b74efeda: Default # Default
+    154121f0-1c13-4ed8-a315-d7aa41c5aab2: Bestandnaam # Bestandnaam
+    197566c6-94bb-4e67-86d7-8945f2589a1d: 'Optimized Hero' # Optimized Hero
+    209777db-293c-48b6-9897-1fe97b278510: Video # Video
+    352695ed-fd54-49e1-b4be-8895f3cd4c62: 'Overzicht met blokken' # Overzicht met blokken
+    685530fc-e1f1-4be1-813b-ebf9ac3aa108: SEO # SEO
+    811394e0-7634-4f3e-a74f-b59e35e18fee: 'Nieuwsbrief CTA' # Nieuwsbrief CTA
+    959759d2-6f65-4f9d-a9e1-47f32ac3d7c6: Team # Team
+    979748ce-20aa-49ae-8d43-8fec0906eb3f: Link # Link
+    1952956c-87d4-4cf3-a854-cfaee9c25263: 'Adviezen & rapporten' # Adviezen & rapporten
+    2515374d-65d4-4b56-a2b9-4dd6f1cfc354: People # People
+    4750849d-9328-4d3e-956d-9d317da5e6eb: 'Pagina niet gevonden' # Pagina niet gevonden
+    07719191-c791-4ff2-9e89-8b84820b88bc: 'Adviezen & rapporten Overzicht' # Adviezen & rapporten Overzicht
+    12248550-55a8-4e8e-9aa8-f7a295fefb1f: 'Adviezen & rapporten' # Adviezen & rapporten
+    27520833-950a-4384-bd4d-068488e995cb: 'Extra downloads' # Extra downloads
+    36895330-a28e-477f-9327-bdbe66dabf99: 'Cookie policy' # Cookie policy
+    37534392-baa0-46b7-8d25-a7a8e1178e63: Personen # Personen
+    66558857-ea0d-4d76-8f50-a21442b51011: 'Entries 2e rij' # Entries 2e rij
+    95920915-f806-4fbc-9c22-979ec9085fe8: 'Tekst + Video' # Tekst + Video
+    a0b91d56-640a-4fd1-881b-3865781e83a4: Personen # Personen
+    a2d7684e-6737-4123-ad14-2c4e4221bbdd: 'Tekst kolom 2' # Tekst kolom 2
+    a5c5b738-ae52-4b69-a209-d515d2e7b71a: 'Public Schema' # Public Schema
+    a242da31-5fb1-4ec1-93fb-6ec8fb966aa9: 'Type Advies' # Type Advies
+    a578ec40-7ca2-4ad8-a25a-a0802af1bd01: Advies # Advies
+    a3573b91-af94-43de-8ceb-dc11cb7175b1: Link # Link
+    a44287f8-d6ed-4f2c-8a63-0c1312ef236e: Image # Image
+    ac60331a-e9bd-4399-8b44-42a2c469fd52: Achtergrondkleur # Achtergrondkleur
+    ae73d04c-119e-4cc7-a3fc-bf41d36c5510: Achtergrondkleur # Achtergrondkleur
+    afc6b45d-400d-46d7-86a1-c0016cd100c8: Team # Team
+    b1ca80f0-4eed-4f99-bebc-bca6c694cb00: 'Contact Form' # Contact Form
+    b1cd3558-d939-48d0-8628-239236ff699c: 'Tekst kolom 1' # Tekst kolom 1
+    b5de6dcf-80e6-48e2-b846-0dab7f35c4c8: 'Intro tekst' # Intro tekst
+    b6e7bafe-e8eb-4b12-b8e7-d81e1ba9d7c4: Site # Site
+    b8bf7de4-8025-4da7-9040-09ec8b731016: Tekst # Tekst
+    b13fc4bd-af47-4f5c-b349-05e9e24dfecc: Zoekresultaten # Zoekresultaten
+    b144d468-0854-483a-8899-f7dc2ecc64a7: Name # Name
+    b1424b4b-17cb-4f44-b72e-63bf261659d9: 'Nieuws aan/uit knop' # Nieuws aan/uit knop
+    b511518c-9c6d-4063-92df-054c64bd2d02: Tekst # Tekst
+    bcf87482-b5f3-4be6-9a63-153f0458466b: 'Image Copyright' # Image Copyright
+    bd732ee5-59bb-41a5-81e1-b0de29ca7146: Achtergrondkleur # Achtergrondkleur
+    bde7c3e4-1530-4cdf-94a4-6ac068e88c8a: 'CTA kolom 1' # CTA kolom 1
+    be8c0ed1-8b8b-4cfe-bcca-d4f54be7bfff: 'Pagina niet gevonden' # Pagina niet gevonden
+    bf259e27-2460-4cc6-bbb9-d82419fcf6db: Link # Link
+    bfa2f99e-1c8c-4348-8f89-00708397a119: Content # Content
+    c5cf3c0c-0095-4eaf-ae28-ca0480e99396: Nieuwsbrief # Nieuwsbrief
+    c7f05fcd-6b9c-44dd-baee-f3e9cd0c47ac: 'Nieuws categorie' # Nieuws categorie
+    c9d6819e-8ea5-4d16-91de-4c691d11b42d: New # New
+    c2131ba1-4a42-4d09-8c7c-ebe682580569: Layouts # Layouts
+    c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e: 'Privacy policy' # Privacy policy
+    c8533e19-1c6c-4d33-8e50-71babb409313: 'Video positie' # Video positie
+    c576870d-abd8-46aa-8fe5-cdd12c40dfa8: Nieuws # Nieuws
+    ca8bb389-d0f3-4dbb-af40-e2f6ef211040: 'Call to action' # Call to action
+    cc93d3b9-10be-4698-8656-cdad4201aa45: Ondertitel # Ondertitel
+    cd736fb3-c9b7-4ce1-88a8-da8b64249eb1: Afbeelding # Afbeelding
+    ce1fab3c-0b02-49d8-8d8f-1bab2d7c05e2: LinkedIn # LinkedIn
+    d04eb799-5eb6-46db-92f8-88c4e6b8812e: Intro # Intro
+    d08ad844-2cdf-40f5-8981-be1d51f8483f: Video # Video
+    d3b383b6-5ad7-494f-bc13-c06a53a5e5e9: 'Nieuws overzicht' # Nieuws overzicht
+    d3ce3a4f-d766-4346-b38d-e2482ad644bb: Afbeelding # Afbeelding
+    d8d1d5d4-1fab-4aaa-b9e7-0eca37062865: Tekst # Tekst
+    d66ffcef-8ccc-4e89-9e36-bce49e0dd17a: Video # Video
+    d67b49c6-ccb0-4d66-a1dd-9ff1355a0906: 'Call To Actions' # Call To Actions
+    d78fb62f-53b6-477a-a9b8-8b19a7a9c23b: Jaar # Jaar
+    d693fcdb-455f-4e38-85e8-da32344aab6b: 'Detail met foto' # Detail met foto
+    d729ed12-3a7f-4473-8aa1-4cbc4e0d1e88: 'Adviezen & rapporten Overzicht' # Adviezen & rapporten Overzicht
+    d86336d6-7efa-44f9-9a10-8619c79beeca: 'Tekst (+ Afbeelding)' # Tekst (+ Afbeelding)
+    dca9a285-0c74-4a39-a131-2cf59c3b0b3a: 'Hero Afbeelding' # Hero Afbeelding
+    df7389a1-233e-4f41-8340-9d16eee18c51: CTA # CTA
+    e2e2a303-7d29-4edb-846d-84e6c8494c50: Titel # Titel
+    e3bed4e1-82ae-45e8-908c-0a6669141b31: Zoekresultaten # Zoekresultaten
+    e8c01ebd-74ac-43cf-89d8-2f971dc839a6: Reports # Reports
+    e57cf13b-f9cb-484a-8093-a897fa43eb68: EN # EN
+    e59b7ba4-aaed-43e6-a1fe-ac905a85e1f3: Titel # Titel
+    e73dd38a-5d76-40ba-99eb-25ee65bf7ab5: 'Titel kolom 2' # Titel kolom 2
+    e85a2f89-c711-4452-8eda-43dac6449f63: '503' # 503
+    e6665f06-bacd-4421-bd2e-cdf693c23eaf: Titel # Titel
+    e48813cd-24dc-4b06-a97d-2a95520dcc24: Telefoonnummer # Telefoonnummer
+    e449448b-2199-429a-8dac-576bf4f50a07: Functie # Functie
+    e9218327-8360-4a72-aae4-ff2db8be2c18: Overview # Overview
+    ee7556c4-470f-41bf-9956-7f5932c3f3b4: 'Tekst kolom 1' # Tekst kolom 1
+    eedbaa8c-8390-46c7-af27-09fa9294335d: Tekst # Tekst
+    f0b68b46-6927-4184-87c9-30305793e641: 'Overzicht zonder foto' # Overzicht zonder foto
+    f2cda3ff-d4de-4c81-a8c2-944f82c303db: Titel # Titel
+    f2d8b097-d5ba-4224-9736-4dc41bd6580f: Contact # Contact
+    f3f6d3ea-ccb1-48a5-bb33-93e1e31aff24: Achtergrondkleur # Achtergrondkleur
+    f9bf34b7-61cc-440c-a197-0b140eb8d4f2: Colloquium # Colloquium
+    f694fce1-48ca-4bfe-9fba-196195547a36: Facebook # Facebook
+    f3211a4e-d5f8-4514-a372-c5b8cfc2c44a: Formulier # Formulier
+    f21594e6-d83e-4047-a36c-0d6b709719e1: Afbeelding # Afbeelding
+    f936530d-29a5-4460-9ccd-b586bfb25329: 'Call to actions' # Call to actions
+    fa6e0764-a31c-4304-a4d7-76bd3a679e3e: '503' # 503
+    fc9b3c7f-00f8-4113-aa56-b2328011d192: Link # Link
+    fca40313-aa0d-4206-a530-c638a5166f69: Achtergrondkleur # Achtergrondkleur
+    fd713f9e-c964-4dd0-9bff-630fb6a09429: Entries # Entries
+    ffcb7357-715a-462b-9baa-51a6a940f889: 'Afbeelding hoofding' # Afbeelding hoofding
+plugins:
+  assetusage:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  campaign-monitor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      apiKey: $CM_API_KEY
+      clientId: $CM_CLIENT_ID
+  config-values-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cookie-banner:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cta:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  dumper:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  element-index-defaults:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      elementDefaults:
+        __assoc__:
+          -
+            - craft\elements\Entry
+            -
+              - dateCreated
+              - author
+              - dateUpdated
+              - revisionCreator
+              - link
+          -
+            - craft\elements\Category
+            -
+              - dateCreated
+              - dateUpdated
+          -
+            - craft\elements\Asset
+            -
+              - filename
+              - size
+              - dateModified
+              - uploader
+              - usage
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      expandSingles: '1'
+      redirectToEntry: '1'
+  formie:
+    edition: standard
+    enabled: true
+    licenseKey: A5CFILCDC9CCY0XQEZSQ3JWL
+    schemaVersion: 2.0.8
+    settings:
+      ajaxTimeout: '10'
+      alertEmails: null
+      captchas:
+        __assoc__:
+          -
+            - recaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Recaptcha
+                -
+                  - enabled
+                  - false
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - recaptcha
+                      -
+                        - secretKey
+                        - ''
+                      -
+                        - siteKey
+                        - ''
+                      -
+                        - type
+                        - v3
+                      -
+                        - size
+                        - normal
+                      -
+                        - theme
+                        - light
+                      -
+                        - badge
+                        - bottomright
+                      -
+                        - language
+                        - en
+                      -
+                        - minScore
+                        - '0.5'
+                      -
+                        - projectId
+                        - ''
+          -
+            - hcaptcha
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Hcaptcha
+                -
+                  - enabled
+                  - false
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - hcaptcha
+                      -
+                        - secretKey
+                        - ''
+                      -
+                        - siteKey
+                        - ''
+                      -
+                        - size
+                        - normal
+                      -
+                        - theme
+                        - light
+                      -
+                        - language
+                        - en
+                      -
+                        - minScore
+                        - '0.5'
+          -
+            - duplicate
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Duplicate
+                -
+                  - enabled
+                  - false
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - duplicate
+          -
+            - honeypot
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Honeypot
+                -
+                  - enabled
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - honeypot
+          -
+            - javascript
+            -
+              __assoc__:
+                -
+                  - type
+                  - verbb\formie\integrations\captchas\Javascript
+                -
+                  - enabled
+                  - true
+                -
+                  - settings
+                  -
+                    __assoc__:
+                      -
+                        - handle
+                        - javascript
+                      -
+                        - minTime
+                        - ''
+      defaultDateDisplayType: ''
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: site
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: statik
+      defaultInstructionsPosition: verbb\formie\positions\AboveInput
+      defaultLabelPosition: verbb\formie\positions\AboveInput
+      defaultPage: forms
+      enableCsrfValidationForGuests: '1'
+      enableGatsbyCompatibility: false
+      enableUnloadWarning: '1'
+      maxIncompleteSubmissionAge: '30'
+      maxSentNotificationsAge: 30
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      pluginName: Formie
+      saveSpam: true
+      sendEmailAlerts: false
+      sentNotifications: true
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamEmailNotifications: false
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: ''
+      useQueueForNotifications: ''
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: N1AW4QWHBOTNF5C2HCN14SLA
+    schemaVersion: 1.0.0
+  navigate:
+    edition: standard
+    enabled: true
+    licenseKey: R3CPY6ZNWPAN90GL1LU4ZVG8
+    schemaVersion: 2.4.0
+    settings:
+      anyoneCanAdd: ''
+      pluginLabel: Navigations
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  postmark:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+  redactor:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 2.3.0
+    settings: null
+  seo-fields:
+    edition: standard
+    enabled: true
+    licenseKey: ISE7A0Q95UBOMAB3QAN1FX4V
+    schemaVersion: 2.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 3.0.0
+    settings: null
+  translate:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  video-parser:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $SYSTEM_NAME
+  retryDuration: null
+  schemaVersion: 4.0.0.9
+  timeZone: Europe/Brussels

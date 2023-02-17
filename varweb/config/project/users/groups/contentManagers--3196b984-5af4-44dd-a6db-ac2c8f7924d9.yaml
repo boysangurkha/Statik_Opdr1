@@ -1,0 +1,191 @@
+description: null
+handle: contentManagers
+name: 'Content Managers'
+permissions:
+  - accesscp
+  - accessplugin-formie
+  - accessplugin-navigate
+  - accessplugin-seo-fields
+  - accessplugin-translate
+  - administrateusers
+  - 'assignusergroup:3196b984-5af4-44dd-a6db-ac2c8f7924d9' # Content Managers
+  - 'createentries:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'createentries:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'createentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'createentries:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'createentries:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'createentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'createfolders:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'deleteassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'deletecategories:64516e7d-b46e-44ff-aa53-34e7e1e0a89d' # Type Advies
+  - 'deletecategories:8ac00bfd-1f66-444a-9ccb-ae430c6c79b4' # Archief
+  - 'deleteentries:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'deleteentries:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'deleteentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'deleteentries:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'deleteentries:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'deleteentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'deletepeerassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'deletepeercategorydrafts:64516e7d-b46e-44ff-aa53-34e7e1e0a89d' # Type Advies
+  - 'deletepeercategorydrafts:8ac00bfd-1f66-444a-9ccb-ae430c6c79b4' # Archief
+  - 'deletepeerentries:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'deletepeerentries:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'deletepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'deletepeerentries:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'deletepeerentries:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'deletepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'deletepeerentrydrafts:07719191-c791-4ff2-9e89-8b84820b88bc' # Adviezen & rapporten Overzicht
+  - 'deletepeerentrydrafts:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'deletepeerentrydrafts:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'deletepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'deletepeerentrydrafts:3698dda1-5942-4177-a819-d4b52890e1ac' # Raadsleden 
+  - 'deletepeerentrydrafts:45127d25-4280-4735-807b-31d1b3bf5047' # Werkprogramma
+  - 'deletepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'deletepeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Pagina niet gevonden
+  - 'deletepeerentrydrafts:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'deletepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # Nieuws overzicht
+  - 'deletepeerentrydrafts:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'deletepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'deletepeerentrydrafts:8dd3ea65-76f3-48f6-baf2-5d3c37d61e18' # Over Vario
+  - 'deletepeerentrydrafts:928e5aea-e1ef-4d05-8d67-d0526becc555' # Bedankt inschrijving nieuwsbrief
+  - 'deletepeerentrydrafts:959759d2-6f65-4f9d-a9e1-47f32ac3d7c6' # Team
+  - 'deletepeerentrydrafts:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'deletepeerentrydrafts:c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e' # Privacy policy
+  - 'deletepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'deletepeerentrydrafts:c5cf3c0c-0095-4eaf-ae28-ca0480e99396' # Nieuwsbrief
+  - 'deletepeerentrydrafts:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Zoekresultaten
+  - 'deletepeerentrydrafts:f9bf34b7-61cc-440c-a197-0b140eb8d4f2' # Colloquium
+  - 'editglobalset:10fdc148-c0a4-486b-a5d1-3d36f2862352' # Social Media
+  - 'editglobalset:4666d048-0521-4d0f-9a4a-208e6182fb85' # Fallback
+  - 'editglobalset:62533b8e-b5bf-4ff0-a0c9-c45bfc8cc5fd' # General Info
+  - 'editglobalset:746b6976-906c-4492-b0c3-a8319ce2a26c' # Nieuwsbrief
+  - 'editimages:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'editpeerimages:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'editsite:6de046f0-6167-4af1-aa91-ffaf83e36a14' # Vario NL
+  - 'editsite:e57cf13b-f9cb-484a-8093-a897fa43eb68' # EN
+  - editusers
+  - formie-createforms
+  - formie-deleteforms
+  - formie-editforms
+  - formie-editsubmissions
+  - formie-manageformbehavior
+  - formie-managenotifications
+  - formie-managenotificationstemplates
+  - formie-viewforms
+  - formie-viewsentnotifications
+  - formie-viewsubmissions
+  - moderateusers
+  - registerusers
+  - 'replacefiles:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'replacepeerfiles:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'saveassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'savecategories:64516e7d-b46e-44ff-aa53-34e7e1e0a89d' # Type Advies
+  - 'savecategories:8ac00bfd-1f66-444a-9ccb-ae430c6c79b4' # Archief
+  - 'saveentries:07719191-c791-4ff2-9e89-8b84820b88bc' # Adviezen & rapporten Overzicht
+  - 'saveentries:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'saveentries:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'saveentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'saveentries:3698dda1-5942-4177-a819-d4b52890e1ac' # Raadsleden 
+  - 'saveentries:45127d25-4280-4735-807b-31d1b3bf5047' # Werkprogramma
+  - 'saveentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'saveentries:4750849d-9328-4d3e-956d-9d317da5e6eb' # Pagina niet gevonden
+  - 'saveentries:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'saveentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # Nieuws overzicht
+  - 'saveentries:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'saveentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'saveentries:8dd3ea65-76f3-48f6-baf2-5d3c37d61e18' # Over Vario
+  - 'saveentries:928e5aea-e1ef-4d05-8d67-d0526becc555' # Bedankt inschrijving nieuwsbrief
+  - 'saveentries:959759d2-6f65-4f9d-a9e1-47f32ac3d7c6' # Team
+  - 'saveentries:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'saveentries:c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e' # Privacy policy
+  - 'saveentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'saveentries:c5cf3c0c-0095-4eaf-ae28-ca0480e99396' # Nieuwsbrief
+  - 'saveentries:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Zoekresultaten
+  - 'saveentries:f9bf34b7-61cc-440c-a197-0b140eb8d4f2' # Colloquium
+  - 'savepeerassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'savepeercategorydrafts:64516e7d-b46e-44ff-aa53-34e7e1e0a89d' # Type Advies
+  - 'savepeercategorydrafts:8ac00bfd-1f66-444a-9ccb-ae430c6c79b4' # Archief
+  - 'savepeerentries:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'savepeerentries:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'savepeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'savepeerentries:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'savepeerentries:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'savepeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'savepeerentrydrafts:07719191-c791-4ff2-9e89-8b84820b88bc' # Adviezen & rapporten Overzicht
+  - 'savepeerentrydrafts:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'savepeerentrydrafts:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'savepeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'savepeerentrydrafts:3698dda1-5942-4177-a819-d4b52890e1ac' # Raadsleden 
+  - 'savepeerentrydrafts:45127d25-4280-4735-807b-31d1b3bf5047' # Werkprogramma
+  - 'savepeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'savepeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Pagina niet gevonden
+  - 'savepeerentrydrafts:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'savepeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # Nieuws overzicht
+  - 'savepeerentrydrafts:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'savepeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'savepeerentrydrafts:8dd3ea65-76f3-48f6-baf2-5d3c37d61e18' # Over Vario
+  - 'savepeerentrydrafts:928e5aea-e1ef-4d05-8d67-d0526becc555' # Bedankt inschrijving nieuwsbrief
+  - 'savepeerentrydrafts:959759d2-6f65-4f9d-a9e1-47f32ac3d7c6' # Team
+  - 'savepeerentrydrafts:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'savepeerentrydrafts:c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e' # Privacy policy
+  - 'savepeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'savepeerentrydrafts:c5cf3c0c-0095-4eaf-ae28-ca0480e99396' # Nieuwsbrief
+  - 'savepeerentrydrafts:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Zoekresultaten
+  - 'savepeerentrydrafts:f9bf34b7-61cc-440c-a197-0b140eb8d4f2' # Colloquium
+  - 'seo-fields:default'
+  - 'seo-fields:notfound'
+  - 'seo-fields:redirects'
+  - 'viewassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'viewcategories:64516e7d-b46e-44ff-aa53-34e7e1e0a89d' # Type Advies
+  - 'viewcategories:8ac00bfd-1f66-444a-9ccb-ae430c6c79b4' # Archief
+  - 'viewentries:07719191-c791-4ff2-9e89-8b84820b88bc' # Adviezen & rapporten Overzicht
+  - 'viewentries:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'viewentries:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'viewentries:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewentries:3698dda1-5942-4177-a819-d4b52890e1ac' # Raadsleden 
+  - 'viewentries:45127d25-4280-4735-807b-31d1b3bf5047' # Werkprogramma
+  - 'viewentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'viewentries:4750849d-9328-4d3e-956d-9d317da5e6eb' # Pagina niet gevonden
+  - 'viewentries:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'viewentries:4c32edae-2824-4f0f-b38b-2477d2500dfe' # Nieuws overzicht
+  - 'viewentries:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'viewentries:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewentries:8dd3ea65-76f3-48f6-baf2-5d3c37d61e18' # Over Vario
+  - 'viewentries:928e5aea-e1ef-4d05-8d67-d0526becc555' # Bedankt inschrijving nieuwsbrief
+  - 'viewentries:959759d2-6f65-4f9d-a9e1-47f32ac3d7c6' # Team
+  - 'viewentries:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'viewentries:c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e' # Privacy policy
+  - 'viewentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'viewentries:c5cf3c0c-0095-4eaf-ae28-ca0480e99396' # Nieuwsbrief
+  - 'viewentries:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Zoekresultaten
+  - 'viewentries:f9bf34b7-61cc-440c-a197-0b140eb8d4f2' # Colloquium
+  - 'viewpeerassets:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+  - 'viewpeercategorydrafts:64516e7d-b46e-44ff-aa53-34e7e1e0a89d' # Type Advies
+  - 'viewpeercategorydrafts:8ac00bfd-1f66-444a-9ccb-ae430c6c79b4' # Archief
+  - 'viewpeerentries:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'viewpeerentries:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'viewpeerentries:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'viewpeerentries:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'viewpeerentries:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'viewpeerentries:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'viewpeerentrydrafts:07719191-c791-4ff2-9e89-8b84820b88bc' # Adviezen & rapporten Overzicht
+  - 'viewpeerentrydrafts:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  - 'viewpeerentrydrafts:1a86f1e5-d0ec-40ae-9ab5-b58e891d1ea3' # Impact
+  - 'viewpeerentrydrafts:36895330-a28e-477f-9327-bdbe66dabf99' # Cookie policy
+  - 'viewpeerentrydrafts:3698dda1-5942-4177-a819-d4b52890e1ac' # Raadsleden 
+  - 'viewpeerentrydrafts:45127d25-4280-4735-807b-31d1b3bf5047' # Werkprogramma
+  - 'viewpeerentrydrafts:45b7c78f-587d-441b-bbd1-605ca629d0bd' # Pagina's
+  - 'viewpeerentrydrafts:4750849d-9328-4d3e-956d-9d317da5e6eb' # Pagina niet gevonden
+  - 'viewpeerentrydrafts:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+  - 'viewpeerentrydrafts:4c32edae-2824-4f0f-b38b-2477d2500dfe' # Nieuws overzicht
+  - 'viewpeerentrydrafts:5611e98d-93ec-4bd4-95dd-18f282b8c5e8' # Home
+  - 'viewpeerentrydrafts:5d236e94-b6a8-472c-9296-a5c992cdd49a' # Contact
+  - 'viewpeerentrydrafts:8dd3ea65-76f3-48f6-baf2-5d3c37d61e18' # Over Vario
+  - 'viewpeerentrydrafts:928e5aea-e1ef-4d05-8d67-d0526becc555' # Bedankt inschrijving nieuwsbrief
+  - 'viewpeerentrydrafts:959759d2-6f65-4f9d-a9e1-47f32ac3d7c6' # Team
+  - 'viewpeerentrydrafts:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+  - 'viewpeerentrydrafts:c2198cbb-f6e1-478a-ab4a-bbbaea43ce0e' # Privacy policy
+  - 'viewpeerentrydrafts:c576870d-abd8-46aa-8fe5-cdd12c40dfa8' # Nieuws
+  - 'viewpeerentrydrafts:c5cf3c0c-0095-4eaf-ae28-ca0480e99396' # Nieuwsbrief
+  - 'viewpeerentrydrafts:e3bed4e1-82ae-45e8-908c-0a6669141b31' # Zoekresultaten
+  - 'viewpeerentrydrafts:f9bf34b7-61cc-440c-a197-0b140eb8d4f2' # Colloquium

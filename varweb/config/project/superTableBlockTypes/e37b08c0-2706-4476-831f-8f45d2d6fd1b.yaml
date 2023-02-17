@@ -1,0 +1,106 @@
+changedFieldIndicator: null
+field: 09df7d5c-a6f9-49e1-9694-7bf67f30498f # Startpagina
+fieldLayouts:
+  9aebcf58-6527-4673-b97e-7d9a4b4ed968:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 913fcb0b-7cf0-49a7-be43-c788b7d37327 # Entries 1ste rij 
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c003dd4-e66f-461b-b363-47d4edc89276
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 66558857-ea0d-4d76-8f50-a21442b51011 # Entries 2e rij
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bb056842-fc47-4a75-840d-f397a42bdbc0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e71fb4ca-b5e8-4293-932c-864c413dca41
+        userCondition: null
+fields:
+  913fcb0b-7cf0-49a7-be43-c788b7d37327: # Entries 1ste rij 
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entriesFirstRow
+    instructions: 'Selecteer maximum 3 Jaarverslag entries'
+    name: 'Entries 1ste rij '
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: 3
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Voeg een entry toe '
+      showSiteMenu: false
+      source: null
+      sources:
+        - 'section:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  66558857-ea0d-4d76-8f50-a21442b51011: # Entries 2e rij
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entriesSecondRow
+    instructions: 'Selecteer maximum 3 Jaarverslag entries'
+    name: 'Entries 2e rij'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: 3
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Voeg een entry toe'
+      showSiteMenu: false
+      source: null
+      sources:
+        - 'section:477c5c36-d045-4085-b488-70b5e04e9538' # Jaarverslag
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries

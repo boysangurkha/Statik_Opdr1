@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: index
+instructions: null
+name: Startpagina
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 330610209
+  columns:
+    __assoc__:
+      -
+        - 913fcb0b-7cf0-49a7-be43-c788b7d37327 # Entries 1ste rij 
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 66558857-ea0d-4d76-8f50-a21442b51011 # Entries 2e rij
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_index}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

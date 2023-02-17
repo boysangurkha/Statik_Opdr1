@@ -1,0 +1,61 @@
+field: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+fieldLayouts:
+  8351f83d-72d7-47b0-96af-84fb4db69ab2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 37534392-baa0-46b7-8d25-a7a8e1178e63 # Personen
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42ce8185-09f8-4dc0-a9b4-58bdc71622f8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d8c09cda-0d9c-4288-b473-5b027308e362
+        userCondition: null
+fields:
+  37534392-baa0-46b7-8d25-a7a8e1178e63: # Personen
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: people
+    instructions: 'Selecteer de gewenste team- of raadsleden'
+    name: Personen
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Voeg een persoon toe'
+      showSiteMenu: false
+      source: null
+      sources:
+        - 'section:a0b91d56-640a-4fd1-881b-3865781e83a4' # Personen
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: people
+name: Personen
+sortOrder: 12

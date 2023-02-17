@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e8c01ebd-74ac-43cf-89d8-2f971dc839a6 # Reports
+handle: report
+instructions: null
+name: Advies
+searchable: true
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Selecteer een advies'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:1952956c-87d4-4cf3-a854-cfaee9c25263' # Adviezen & rapporten
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

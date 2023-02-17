@@ -1,0 +1,19 @@
+columnSuffix: xokpllsj
+contentColumnType: text
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: year
+instructions: null
+name: Jaar
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

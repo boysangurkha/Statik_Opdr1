@@ -1,0 +1,172 @@
+changedFieldIndicator: null
+field: d693fcdb-455f-4e38-85e8-da32344aab6b # Detail met foto
+fieldLayouts:
+  1b9a5570-a0e5-40cf-ac42-ffd96cad85b5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5de34e6a-c463-4fa7-a514-de31e477076e # Ondertitel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23b29ba2-b3de-4c25-8b74-0ef1a88f77e5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1da17888-94b9-40d9-bc41-300248ad28c8 # Tekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f4fa102-ecd4-49db-afc9-af038758f097
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1743b11c-7713-46e6-8b84-0348507cece0 # Afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bb5c3134-e090-4b4a-8e57-4cb0d7a7c88e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4f0ce8b2-9e13-436b-bf2f-ba42ec932de6 # Call to action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 265b6950-bea3-443b-b323-2c58090828ce
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 75cc9741-6abc-4838-b7cd-4adb854c8ebd
+        userCondition: null
+fields:
+  1da17888-94b9-40d9-bc41-300248ad28c8: # Tekst
+    columnSuffix: jxblrhsm
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: 'Geef hier de tekst in'
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  4f0ce8b2-9e13-436b-bf2f-ba42ec932de6: # Call to action
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: 'Voeg één of meerdere call to actions toe, vul een entry of link in en kies de styling (knop of link)'
+    name: 'Call to action'
+    searchable: false
+    settings:
+      contentTable: '{{%matrixcontent_cta}}'
+      maxBlocks: null
+      minBlocks: null
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  5de34e6a-c463-4fa7-a514-de31e477076e: # Ondertitel
+    columnSuffix: kcdmtgov
+    contentColumnType: text
+    fieldGroup: null
+    handle: subtitle
+    instructions: 'Voeg een optionele ondertitel toe aan het blok'
+    name: Ondertitel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  1743b11c-7713-46e6-8b84-0348507cece0: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'De minimale breedte voor deze afbeelding is 660px. De ideale breedte is 1320px.'
+    name: Afbeelding
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

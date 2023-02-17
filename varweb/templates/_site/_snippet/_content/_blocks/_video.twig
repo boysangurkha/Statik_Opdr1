@@ -1,0 +1,12 @@
+{% if block.video|length %}
+    <div class="w-full md:w-2/3 mx-auto">
+        {% set embed = craft.videoparser.parse(block.video) %}
+
+        {% if embed %}
+            <div class="embed-container">
+                <iframe type="text/html" src="{{ embed.embedSrc }}?iv_load_policy=3&rel=0" frameborder="0"
+                        title="Embedded video" allowfullscreen></iframe>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

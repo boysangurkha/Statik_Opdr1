@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: overviewWithBlocks
+instructions: null
+name: 'Overzicht met blokken'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1225612368
+  columns:
+    __assoc__:
+      -
+        - b511518c-9c6d-4063-92df-054c64bd2d02 # Tekst
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 8556a5a9-464d-45c0-a2e5-b92173c7b334 # Blokken
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_overviewwithblocks}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

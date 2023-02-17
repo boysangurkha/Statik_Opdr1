@@ -1,0 +1,368 @@
+fieldLayouts:
+  c84cba4c-e2e0-448b-9072-3f547c09f985:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 22e090f0-a0c6-40e6-9a48-9b58e341ccfc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\LevelConditionRule
+                  maxValue: ''
+                  operator: '='
+                  uid: 549f5009-93b2-47c2-ae1d-cdb5a28565a0
+                  value: '1'
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 710b074a-83df-4b02-aecf-8155215a1ec2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\LevelConditionRule
+                  maxValue: ''
+                  operator: '='
+                  uid: 0d405e0f-0212-4978-bc83-fd374d7567cb
+                  value: '1'
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 154121f0-1c13-4ed8-a315-d7aa41c5aab2 # Bestandnaam
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: efb76487-9918-4c2e-b3bd-4e886e2b3878
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\LevelConditionRule
+                  maxValue: ''
+                  operator: '='
+                  uid: f7bfbcab-96c6-41c1-b607-8aaa603af817
+                  value: '1'
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: d78fb62f-53b6-477a-a9b8-8b19a7a9c23b # Jaar
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7d62d03-3fa4-4805-beac-df4d13dc6bb7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\LevelConditionRule
+                  maxValue: ''
+                  operator: '='
+                  uid: cd9f702b-e88b-4c67-a00e-016506b63ea5
+                  value: '1'
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 68dcb647-9bd1-40c4-862c-0ca203a26345
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\LevelConditionRule
+                  maxValue: ''
+                  operator: '!='
+                  uid: 80523306-75c5-46d7-8f04-09aac47cf825
+                  value: '1'
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: c2131ba1-4a42-4d09-8c7c-ebe682580569 # Layouts
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eca55399-7599-4884-8107-bb8d4a9e3b8d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\LevelConditionRule
+                  maxValue: ''
+                  operator: '!='
+                  uid: 25dfc42b-395b-4866-8e48-f779c1bb3b5e
+                  value: '1'
+              elementType: craft\elements\Entry
+              fieldContext: global
+            template: /_cp/_reportPreview.twig
+            type: craft\fieldlayoutelements\Template
+            uid: 3db9230f-1375-4818-8320-bae350fd847b
+            userCondition: null
+            width: 50
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: c2131ba1-4a42-4d09-8c7c-ebe682580569 # Layouts
+                  operator: in
+                  uid: 5d54bb22-355b-4399-abf3-cb12a268b52e
+                  values:
+                    - index
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 09df7d5c-a6f9-49e1-9694-7bf67f30498f # Startpagina
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23b608e2-b8ad-41a9-8fc8-937931e21078
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: c2131ba1-4a42-4d09-8c7c-ebe682580569 # Layouts
+                  operator: in
+                  uid: 1c2b6471-4954-4a8d-9ed0-0617291b8b80
+                  values:
+                    - overviewWithoutImage
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: f0b68b46-6927-4184-87c9-30305793e641 # Overzicht zonder foto
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 639a10fb-e5a4-4432-9294-1590be9d4695
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: c2131ba1-4a42-4d09-8c7c-ebe682580569 # Layouts
+                  operator: in
+                  uid: 00198bf5-be99-4239-8080-4256575c4d3f
+                  values:
+                    - textImage
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 7d7ac2ae-38ea-488e-b5bb-926fdda4aaf6 # 1 kolom met foto
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e2ce17d-e2a4-4c4b-aa11-936839545e78
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: c2131ba1-4a42-4d09-8c7c-ebe682580569 # Layouts
+                  operator: in
+                  uid: acfa89fe-da26-43ae-a3a2-bf9a53942cd1
+                  values:
+                    - textTwoColumns
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 54bd36e4-dbbf-4bfe-8ed9-a0102b0b0d1e # 2 kolommen met foto
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 031fe302-02a4-42fb-ad8f-299f6bb6191e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: c2131ba1-4a42-4d09-8c7c-ebe682580569 # Layouts
+                  operator: in
+                  uid: e68e765e-7649-4281-8060-1671d8bd0ed8
+                  values:
+                    - detailWithImage
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: d693fcdb-455f-4e38-85e8-da32344aab6b # Detail met foto
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3f15dcc-5e02-41e6-9e85-5997a266e976
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: c2131ba1-4a42-4d09-8c7c-ebe682580569 # Layouts
+                  operator: in
+                  uid: d1019f4c-8902-41dd-b9eb-ff67da3345d7
+                  values:
+                    - overviewWithBlocks
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 352695ed-fd54-49e1-b4be-8895f3cd4c62 # Overzicht met blokken
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bab1aa21-0b63-47a2-8c5c-2daa9b8d615b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b33587d5-8eac-4740-860c-fc303457929e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overzicht titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d10b7cc2-bfc3-4b91-af44-81d4f4d5f410
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overzicht beschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ddb44589-bbc0-4bca-a2ac-eadadec3b802
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overzicht afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2780d78e-ccd9-4a1e-87cb-a0a714f033d6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 6fbb43bd-8ad3-49b5-b8f6-757b4c8eaafa
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 63d0432b-d8c8-4a05-a964-2d339be68b66
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 4ee2894e-572b-4263-a652-892ef21bf41b
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 477c5c36-d045-4085-b488-70b5e04e9538 # Jaarverslag
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

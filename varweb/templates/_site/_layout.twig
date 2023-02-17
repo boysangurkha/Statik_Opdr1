@@ -1,0 +1,80 @@
+{% set baseUrl = craft.app.config.general.aliases.baseUrl %}
+{% set currentLocale = craft.app.language|split('-') %}
+<!doctype html>
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="{{ currentLocale[0] }}"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="" lang="{{ currentLocale[0] }}"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/frontend/inert.css" id="inert-style"/>
+
+		{# Change these when you have a multisite with different layout #}
+		{{ craft.vite.script("tailoff/js/site.ts", false) }}
+		{{ craft.vite.inline("@webroot/favicon/site/webapp.html") }}
+
+		{% hook 'seo-fields' %}
+
+		{% block head_scripts %}
+			<link rel="preconnect" href="//www.googletagmanager.com">
+			{# <link rel="preconnect" href="//fonts.gstatic.com">  #}
+		{% endblock %}
+
+		{% if 'statik.be' in baseUrl  %}
+			<meta name="robots" content="noindex">
+			<meta name="robots" content="nofollow">
+		{% endif %}
+	</head>
+
+	<body class="page-{{ craft.app.request.getSegment(1) ?: 'home' }} {% block bodyClasses %}{% endblock %}">
+
+		{% if systemOffline is not defined %}
+			{% set systemOffline = false %}
+		{% endif %}
+
+		{% if currentUser and entry is defined and not systemOffline and not craft.app.request.isPreview() %}
+			<a href="{{ entry.getCpEditUrl() }}" target="_blank" class="hidden md:inline-block transform translate-x-[115px] fixed px-4 py-2 text-white bg-primary right-0 rounded-l-full shadow-lg top-10 z-99 transition ease duration-400 hover:translate-x-0">
+				<span>{{ svg('@webroot/frontend/icons/pencil.svg')|attr({class: 'icon -mt-1'}) }}</span>
+				<span class="ml-2">Edit this page</span>
+			</a>
+		{% endif %}
+
+		{# Cookiebanner #}
+		{{ craft.cookieBanner.render({
+            supportIE: true,
+			showCookieBanner: (entry.type is defined and entry.type.handle != 'cookiePolicy')
+        }) }}
+		
+		{% if craft.statik.isIE() %}
+			{% include '_site/_snippet/_ie/_banner' %}
+		{% endif %}
+
+		<div class="flex flex-col min-h-screen page-wrap " id="mainContentBlock">
+
+			<div class="sr-only skip-to-main ie-sr-only">
+				<a href="#main">{{ 'Ga verder naar de inhoud'|t }}</a>
+			</div>
+
+			{% include '_site/_snippet/_global/_header' %}
+			{% include '_site/_snippet/_global/_flyout' %}
+
+			<main class="flex-1 page-main" id="main">
+				{% block content %}{% endblock %}
+			</main>
+
+			{% include '_site/_snippet/_global/_footer' %}
+
+		</div>
+
+		{% block inline_scripts %}
+			<script type="text/javascript">
+				window.app = window.app || {};
+				app.variables = {
+					assetsPath: "/"
+				};
+			</script>
+		{% endblock %}
+	</body>
+</html>

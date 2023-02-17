@@ -1,0 +1,139 @@
+fieldLayouts:
+  0a147b66-1fac-4281-8bf7-a62ab2ff8970:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f92a291a-ed3e-44cc-b572-046fac0fa8e1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3bab6073-85a4-4894-a84e-722e24476827 # Voornaam
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2798e328-3e07-4350-988e-536e9fdf9763
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 46db520a-e5b5-4ca7-983a-15fc4c31e207 # Naam
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4dce4d8-7329-47db-99c3-aca46bae57cd
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e449448b-2199-429a-8dac-576bf4f50a07 # Functie
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f8a3fc5c-96bd-4088-9ed8-232cba02e18e
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a44287f8-d6ed-4f2c-8a63-0c1312ef236e # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98172905-6be8-41e5-acb4-8d9ec55f54c6
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 944cdd12-c99b-4a12-a45c-0c522e231973
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e48813cd-24dc-4b06-a97d-2a95520dcc24 # Telefoonnummer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec8ad921-da8e-4043-abb2-28c23a5ac211
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 8b19ab9b-df0a-4172-a1bb-c61950e883f3 # GSM
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ed7af606-0d7b-4cf8-88ff-7afe712d7987
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 072209d1-1c68-4ee5-9a66-a209b518da6d # Mail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7fe2601f-80cf-411a-9304-8c94d07c8b0e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e0f16c18-8e1d-40a2-b4d6-02218ce2bdfa
+        userCondition: null
+handle: people
+hasTitleField: false
+name: Personen
+section: a0b91d56-640a-4fd1-881b-3865781e83a4 # Personen
+sortOrder: 1
+titleFormat: '{peopleFirstName} {peopleName}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,72 @@
+fieldLayouts:
+  7b44eba5-0989-4758-9121-7ea7b806a4e6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: 'Vul de titel van de pagina in'
+            label: Titel
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fa9dd57d-646a-4706-9972-8db2c22610ad
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31920860-eb95-41f8-a920-35c75d9f8485
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 92e5769f-2ffc-4cdf-88c5-38ea18b3241f
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a7b2b84-6bf2-4680-828d-644f824ec5e5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 546514e1-9a88-43f4-bd50-cb231791b471
+        userCondition: null
+handle: pageNotFound
+hasTitleField: true
+name: 'Pagina niet gevonden'
+section: 4750849d-9328-4d3e-956d-9d317da5e6eb # Pagina niet gevonden
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

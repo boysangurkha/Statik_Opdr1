@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  1b49eabd-d61b-40dd-a404-ca58dc0553d1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 292cd81e-bf71-4ad3-864c-2fb51b7a22f7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e62337be-7190-402e-94f7-5d0a97950f83
+        userCondition: null
+handle: archive
+name: Archief
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # Vario NL
+    hasUrls: false
+    template: null
+    uriFormat: null
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 9de48c55-bd72-41ab-9806-8060ecc017f0

@@ -1,0 +1,32 @@
+{% if entry.hero|length %}
+	{% set hero = entry.hero.one() %}
+	{% set heroImage = hero.image.one() %}
+	<div class="relative py-10 bg-cover sm:py-20 js-bg-target bg-light before:bg-black before:opacity-50 before:inset-0 before:w-full before:h-full before:absolute" style="background-position: {% for focalPoint in heroImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %};">
+		<div class="container">
+			<div class="w-full md:w-1/2">
+				<div class="relative z-10">
+					{% if hero.heroTitle|length %}
+						<h1 class="text-white">{{ hero.heroTitle }}</h1>
+					{% endif %}
+					{% if hero.intro|length %}
+						<div class="mt-6 text-lg text-white md:text-xl">{{ hero.intro }}</div>
+					{% endif %}
+					{% if hero.ctas|length %}
+						<div class="flex flex-wrap items-center mt-2">
+							{% for cta in hero.ctas.all() %}
+								<div class="mt-4 mr-4">{{ cta.linkit.getLink() }}</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+			{% set optimizedHero = heroImage.optimizedHero %}
+			<picture>
+				{% if craft.imageOptimize.serverSupportsWebP() and heroImage.extension != 'svg' %}
+					<source srcset="{{ optimizedHero.srcsetWebP() }}" sizes="100vw" type="image/webp"/>
+				{% endif %}
+				<img src="{{ optimizedHero.placeholderBox() }}" srcset="{{ optimizedHero.srcset() }}" sizes="100vw" alt="" class="sr-only js-bg-src" loading="lazy"/>
+			</picture>
+		</div>
+	</div>
+{% endif %}

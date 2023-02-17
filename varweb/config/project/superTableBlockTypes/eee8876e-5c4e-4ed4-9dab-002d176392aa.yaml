@@ -1,0 +1,151 @@
+changedFieldIndicator: null
+field: 54bd36e4-dbbf-4bfe-8ed9-a0102b0b0d1e # 2 kolommen met foto
+fieldLayouts:
+  5948087e-dada-4c66-af90-535c01c7cb31:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ee7556c4-470f-41bf-9956-7f5932c3f3b4 # Tekst kolom 1
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6ff4a23-e7b6-4adc-a07f-349600954e50
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9b3e482b-e0fa-48ac-8853-00a271d807ac # Tekst kolom 2
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf1c98d3-aa9b-4dc0-883b-ca04363e3875
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 52ef71e9-1ec1-45e9-adef-e4158bc931aa # Afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81d33a6d-e5e8-45ef-9006-55335b0c8b24
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2de39628-ba03-47de-97e3-28a040d33779
+        userCondition: null
+fields:
+  9b3e482b-e0fa-48ac-8853-00a271d807ac: # Tekst kolom 2
+    columnSuffix: xxsqnitj
+    contentColumnType: text
+    fieldGroup: null
+    handle: textColumn2
+    instructions: 'Geef hier de tekst in van de tweede kolom'
+    name: 'Tekst kolom 2'
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  52ef71e9-1ec1-45e9-adef-e4158bc931aa: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'De minimale breedte voor deze afbeelding is 660px. De ideale breedte is 1320px.'
+    name: Afbeelding
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  ee7556c4-470f-41bf-9956-7f5932c3f3b4: # Tekst kolom 1
+    columnSuffix: vhvzxsmy
+    contentColumnType: text
+    fieldGroup: null
+    handle: textColumn1
+    instructions: 'Geef hier de tekst in van de eerste kolom'
+    name: 'Tekst kolom 1'
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field

@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: textImage
+instructions: null
+name: '1 kolom met foto'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 28504745
+  columns:
+    __assoc__:
+      -
+        - 1319d4b9-dade-4a26-b68b-0afd3da6d26a # Tekst
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d3ce3a4f-d766-4346-b38d-e2482ad644bb # Afbeelding
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_textimage}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,170 @@
+fieldLayouts:
+  df0c700a-44f3-4c74-892c-8abc4c2a42b8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: 'Vul de titel van de pagina in'
+            label: Titel
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f8c544ab-a86d-4077-970d-d358e2956820
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ffcb7357-715a-462b-9baa-51a6a940f889 # Afbeelding hoofding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62c9a989-73c7-4a3c-ba8e-6353b51e9341
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a68082d-3508-40e0-aefa-8ebcfec70f77
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d67b49c6-ccb0-4d66-a1dd-9ff1355a0906 # Call To Actions
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f3ec2e6-4ef9-4c22-9752-573687806682
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: f558d256-2830-40c6-a714-b5a288dad32a
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cce30472-7923-4358-804e-332acb3ffb10
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            style: tip
+            tip: 'Hieronder verschijnt automatisch een overzicht van alle adviezen en rapporten'
+            type: craft\fieldlayoutelements\Tip
+            uid: 134fb130-3c39-421b-abdf-86f538fc34e0
+            userCondition: null
+          -
+            elementCondition: null
+            style: tip
+            tip: 'Hieronder verschijnt automatisch de algemene call to action om in te schrijven op de nieuwsbrief'
+            type: craft\fieldlayoutelements\Tip
+            uid: b2e3b4ca-b4bf-455d-a03d-8359142629c6
+            userCondition: null
+        name: Content
+        uid: d18dccbc-cbe3-471b-89d6-45fe4cadac01
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overzicht titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65700ee1-8523-4344-ab9a-96f2a5b325da
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overzicht beschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b088f1f2-7d44-4e21-b98b-345ddc408088
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overzicht afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6425ac1-dba0-4545-a609-34136739bd87
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 3857469c-4fd1-4afd-b5f2-4e916ddbb68d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67564645-2f53-43db-8a51-b56fac0ed382
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: a8e984b9-90af-4848-bd61-88c6b56f24df
+        userCondition: null
+handle: advisoryReportsOverview
+hasTitleField: true
+name: 'Adviezen & rapporten Overzicht'
+section: 07719191-c791-4ff2-9e89-8b84820b88bc # Adviezen & rapporten Overzicht
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,98 @@
+changedFieldIndicator: null
+field: f0b68b46-6927-4184-87c9-30305793e641 # Overzicht zonder foto
+fieldLayouts:
+  b8cf67ca-ec02-4555-8416-dbd56aa03b2a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: eedbaa8c-8390-46c7-af27-09fa9294335d # Tekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 037f480d-c55f-446d-8357-914269b0dbc9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fd713f9e-c964-4dd0-9bff-630fb6a09429 # Entries
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7eaa2179-2211-404a-9d3b-8869c59f7469
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dc26bb74-5172-4064-ac93-54ce6c4ebac2
+        userCondition: null
+fields:
+  eedbaa8c-8390-46c7-af27-09fa9294335d: # Tekst
+    columnSuffix: xghaafpn
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Extended.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  fd713f9e-c964-4dd0-9bff-630fb6a09429: # Entries
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entries
+    instructions: 'Selecteer maximum 4 entries'
+    name: Entries
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      localizeRelations: false
+      maxRelations: 4
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Voeg een entry toe'
+      showSiteMenu: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries

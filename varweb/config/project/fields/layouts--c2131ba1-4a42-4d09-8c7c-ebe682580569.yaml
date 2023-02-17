@@ -1,0 +1,78 @@
+columnSuffix: iptntisk
+contentColumnType: string
+fieldGroup: 196e7d74-70b3-4d1b-955f-3fc8a2b39233 # Annual Report
+handle: layouts
+instructions: null
+name: Layouts
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Startpagina
+        -
+          - value
+          - index
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Overzicht zonder foto'
+        -
+          - value
+          - overviewWithoutImage
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '1 kolom met foto'
+        -
+          - value
+          - textImage
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '2 kolommen met foto'
+        -
+          - value
+          - textTwoColumns
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Detail met foto'
+        -
+          - value
+          - detailWithImage
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Overzicht met blokken'
+        -
+          - value
+          - overviewWithBlocks
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

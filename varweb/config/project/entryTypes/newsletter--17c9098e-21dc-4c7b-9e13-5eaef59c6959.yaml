@@ -1,0 +1,163 @@
+fieldLayouts:
+  b831fbc1-09a1-41ec-a569-5bfa8cd53778:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 678ca880-a029-4b65-8bd3-46ea0fbb3eae
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ffcb7357-715a-462b-9baa-51a6a940f889 # Afbeelding hoofding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 358bbd43-1f24-47db-80fb-aa256eecea59
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7154bab9-d67b-4f90-a654-78bd71ba1bc7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d67b49c6-ccb0-4d66-a1dd-9ff1355a0906 # Call To Actions
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7e4fcc2d-5b15-4525-a496-5b1801ee9b12
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 668e548f-2e80-492e-99e1-313f1ae4e617
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6fa83f5-7d47-4ec5-8fb9-2b357dfdd43d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            style: tip
+            tip: 'Hieronder verschijnt automatisch het formulier om in te schrijven op de nieuwsbrief'
+            type: craft\fieldlayoutelements\Tip
+            uid: 9857e410-588f-4ce0-8108-61fb4969a80c
+            userCondition: null
+        name: Content
+        uid: a08e3688-b92b-4708-8779-e3bf4af9e992
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4a2bad07-8d89-4689-b0bf-774eed764660 # Overzicht titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dab623c5-a62d-4724-aa08-25918122a119
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f8a6ddc-4ab7-4f9f-a2ea-72c6cb387f38 # Overzicht beschrijving
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd2fd692-0331-4204-a0c5-77b8015dda99
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15ed2b72-8955-4cec-93f8-9736a9e50e80 # Overzicht afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 17d74ce4-544e-40c6-be64-92c949441adb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Overview
+        uid: 7853dd51-f482-4afc-8c29-3a0067ee3e0f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 685530fc-e1f1-4be1-813b-ebf9ac3aa108 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b3d3d234-d3bd-4125-8705-f702ec1a6d05
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: ce452bf7-9787-4e43-8ba8-95f76850885b
+        userCondition: null
+handle: newsletter
+hasTitleField: true
+name: Nieuwsbrief
+section: c5cf3c0c-0095-4eaf-ae28-ca0480e99396 # Nieuwsbrief
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

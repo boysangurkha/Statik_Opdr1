@@ -1,0 +1,89 @@
+changedFieldIndicator: null
+field: 27520833-950a-4384-bd4d-068488e995cb # Extra downloads
+fieldLayouts:
+  2418f7c7-ee99-4411-831a-754e0ccb4ddb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0f1f7543-7931-423b-9e0d-0158da0cc08f # Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 714d171a-58ed-4204-ba86-3a39f4246238
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 34d374e5-58e0-46af-ae95-83c0124c87e2
+        userCondition: null
+fields:
+  0f1f7543-7931-423b-9e0d-0158da0cc08f: # Link
+    columnSuffix: hkkpbjbl
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkit
+    instructions: null
+    name: Link
+    searchable: false
+    settings:
+      allowClass: ''
+      allowCustomText: '1'
+      allowTarget: ''
+      allowedLinkNames:
+        1: asset
+      class: null
+      classes: null
+      defaultLinkName: asset
+      defaultText: 'Download document'
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: statikbe\cta\fields\CTAField

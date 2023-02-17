@@ -1,0 +1,30 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e8c01ebd-74ac-43cf-89d8-2f971dc839a6 # Reports
+handle: extraDownloads
+instructions: null
+name: 'Extra downloads'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 749368147
+  columns:
+    __assoc__:
+      -
+        - 0f1f7543-7931-423b-9e0d-0158da0cc08f # Link
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_extradownloads}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Voeg download toe'
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,200 @@
+changedFieldIndicator: null
+field: 37471b2c-6c44-4b1a-bc50-3788e9de05d5 # Hero
+fieldLayouts:
+  63a576be-e5a1-42a0-8eda-4165892703fd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2184d090-d3e1-413b-8d21-b537c5141ef8 # Afbeelding
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c2d6ef90-7210-48ad-a51c-200fb5b1e1e9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d08ad844-2cdf-40f5-8981-be1d51f8483f # Video
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 59dbab02-e71f-4024-ac1e-f98c7318f79b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f2cda3ff-d4de-4c81-a8c2-944f82c303db # Titel
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 003f98c4-765a-40ca-a3e3-54a939e9dd59
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d04eb799-5eb6-46db-92f8-88c4e6b8812e # Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b54acd3-0bf2-44fa-83a9-bbf84c59e917
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f936530d-29a5-4460-9ccd-b586bfb25329 # Call to actions
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f10f7bbc-a341-46d7-9548-1c3111ff6e01
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f0a1f43c-d76e-40d3-9b39-e2a0e2021a72
+        userCondition: null
+fields:
+  2184d090-d3e1-413b-8d21-b537c5141ef8: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'De minimum breedte voor deze afbeelding is 2200px. De ideale breedte is 4400px.'
+    name: Afbeelding
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: true
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Kies een afbeelding'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d04eb799-5eb6-46db-92f8-88c4e6b8812e: # Intro
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: intro
+    instructions: null
+    name: Intro
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  d08ad844-2cdf-40f5-8981-be1d51f8483f: # Video
+    columnSuffix: ynjichvm
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: video
+    instructions: 'Dit kan een youtube of Vimeo link zijn. '
+    name: Video
+    searchable: false
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  f2cda3ff-d4de-4c81-a8c2-944f82c303db: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heroTitle
+    instructions: null
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  f936530d-29a5-4460-9ccd-b586bfb25329: # Call to actions
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: ctas
+    instructions: null
+    name: 'Call to actions'
+    searchable: false
+    settings:
+      contentTable: '{{%matrixcontent_ctas}}'
+      maxBlocks: 2
+      minBlocks: null
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix

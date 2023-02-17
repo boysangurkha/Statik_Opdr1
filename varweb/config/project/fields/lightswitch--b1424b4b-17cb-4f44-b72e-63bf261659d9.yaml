@@ -1,0 +1,14 @@
+columnSuffix: jiezjgra
+contentColumnType: boolean
+fieldGroup: 2c770290-8edc-4f26-b846-6d99d36d7844 # Common
+handle: lightswitch
+instructions: 'Wanneer de schuifknop aan staat, wordt automatisch het laatste nieuws hieronder getoond'
+name: 'Nieuws aan/uit knop'
+searchable: false
+settings:
+  default: true
+  offLabel: Uit
+  onLabel: Aan
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
