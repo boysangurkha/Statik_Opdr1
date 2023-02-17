@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+
 const colorShade = require('../../tailwind/color-shades');
 // const underlineAnimation = require('./tailoff/tailwind/underline-animation');
 
@@ -103,9 +104,23 @@ module.exports = {
                 '10': '192px',
             },
             fontFamily: {
-                'sans': ['ui-sans-serif', 'FlandersArtSans'],
-                'body': ['ui-serif', 'FlandersArtSerif'],
+                'sans': ['FlandersArtSans'],
+                'body': ['FlandersArtSerif'],
             },
+
+            fontWeight: {
+                thin: '100',
+                hairline: '100',
+                extralight: '200',
+                light: '300',
+                normal: '400',
+                medium: '500',
+                semibold: '600',
+                bold: '700',
+                extrabold: '800',
+                'extra-bold': '800',
+                black: '900',
+              },
             
         },
     },

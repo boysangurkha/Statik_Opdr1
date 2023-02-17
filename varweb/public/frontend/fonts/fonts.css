@@ -1,55 +1,55 @@
 @font-face {
   font-family: 'FlandersArtSans';
-  src: url('/tailoff/fonts/FlandersArtSans/FlandersArtSans-Regular.woff') format('woff');
+  src: url('./FlandersArtSans/FlandersArtSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FlandersArtSans';
-  src: url('/tailoff/fonts/FlandersArtSans/FlandersArtSans-Light.woff') format('woff');
+  src: url('./FlandersArtSans/FlandersArtSans-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FlandersArtSans';
-  src: url('/tailoff/fonts/FlandersArtSans/FlandersArtSans-Medium.woff') format('woff');
+  src: url('./FlandersArtSans/FlandersArtSans-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FlandersArtSans';
-  src: url('/tailoff/fonts/FlandersArtSans/FlandersArtSans-Bold.woff') format('woff');
+  src: url('./FlandersArtSans/FlandersArtSans-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FlandersArtSerif';
-  src: url('/tailoff/fonts/FlandersArtSerif/FlandersArtSerif-Regular.woff') format('woff');
+  src: url('./FlandersArtSerif/FlandersArtSerif-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FlandersArtSerif';
-  src: url('/tailoff/fonts/FlandersArtSerif/FlandersArtSerif-Light.woff') format('woff');
+  src: url('./FlandersArtSerif/FlandersArtSerif-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FlandersArtSerif';
-  src: url('/tailoff/fonts/FlandersArtSerif/FlandersArtSerif-Medium.woff') format('woff');
+  src: url('./FlandersArtSerif/FlandersArtSerif-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FlandersArtSerif';
-  src: url('/tailoff/fonts/FlandersArtSerif/FlandersArtSerif-Bold.woff') format('woff');
+  src: url('./FlandersArtSerif/FlandersArtSerif-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
