@@ -106,7 +106,7 @@ module.exports = {
                 'sans': ['ui-sans-serif', 'FlandersArtSans'],
                 'body': ['ui-serif', 'FlandersArtSerif'],
             },
-            }
+            
         },
     },
     plugins: [
