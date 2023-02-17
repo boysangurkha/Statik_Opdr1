@@ -1,4 +1,4 @@
-dateModified: 1676632374
+dateModified: 1676644593
 elementSources:
   craft\elements\Entry:
     -
@@ -411,6 +411,7 @@ meta:
     3196b984-5af4-44dd-a6db-ac2c8f7924d9: 'Content Managers' # Content Managers
     3698dda1-5942-4177-a819-d4b52890e1ac: 'Raadsleden ' # Raadsleden 
     4389ba83-8e69-4edb-b3c3-ca0ba89617c1: Achtergrondkleur # Achtergrondkleur
+    4498fb8d-c0a2-4773-9732-1df2af737466: 'Hero Afbeelding' # Hero Afbeelding
     4666d048-0521-4d0f-9a4a-208e6182fb85: Fallback # Fallback
     4769bfc3-3064-404b-baa5-1bd5c5ff2acf: Titel # Titel
     5272d01a-b93a-440b-bed2-214c9c82b591: Tekst # Tekst
@@ -452,6 +453,7 @@ meta:
     a0b91d56-640a-4fd1-881b-3865781e83a4: Personen # Personen
     a2d7684e-6737-4123-ad14-2c4e4221bbdd: 'Tekst kolom 2' # Tekst kolom 2
     a5c5b738-ae52-4b69-a209-d515d2e7b71a: 'Public Schema' # Public Schema
+    a5e54bf0-8b90-48a0-b9f7-16056fe4f7fd: 'Hero Afbeelding' # Hero Afbeelding
     a242da31-5fb1-4ec1-93fb-6ec8fb966aa9: 'Type Advies' # Type Advies
     a578ec40-7ca2-4ad8-a25a-a0802af1bd01: Advies # Advies
     a3573b91-af94-43de-8ceb-dc11cb7175b1: Link # Link
@@ -496,7 +498,6 @@ meta:
     d693fcdb-455f-4e38-85e8-da32344aab6b: 'Detail met foto' # Detail met foto
     d729ed12-3a7f-4473-8aa1-4cbc4e0d1e88: 'Adviezen & rapporten Overzicht' # Adviezen & rapporten Overzicht
     d86336d6-7efa-44f9-9a10-8619c79beeca: 'Tekst (+ Afbeelding)' # Tekst (+ Afbeelding)
-    dca9a285-0c74-4a39-a131-2cf59c3b0b3a: 'Hero Afbeelding' # Hero Afbeelding
     df7389a1-233e-4f41-8340-9d16eee18c51: CTA # CTA
     e2e2a303-7d29-4edb-846d-84e6c8494c50: Titel # Titel
     e3bed4e1-82ae-45e8-908c-0a6669141b31: Zoekresultaten # Zoekresultaten
@@ -521,6 +522,7 @@ meta:
     f21594e6-d83e-4047-a36c-0d6b709719e1: Afbeelding # Afbeelding
     f936530d-29a5-4460-9ccd-b586bfb25329: 'Call to actions' # Call to actions
     fa6e0764-a31c-4304-a4d7-76bd3a679e3e: '503' # 503
+    fb0b9913-fe09-4bad-8603-2140524cc6f5: 'Hero Afbeelding' # Hero Afbeelding
     fc9b3c7f-00f8-4113-aa56-b2328011d192: Link # Link
     fca40313-aa0d-4206-a530-c638a5166f69: Achtergrondkleur # Achtergrondkleur
     fd713f9e-c964-4dd0-9bff-630fb6a09429: Entries # Entries

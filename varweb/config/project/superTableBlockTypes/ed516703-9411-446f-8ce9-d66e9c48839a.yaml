@@ -1,4 +1,4 @@
-changedFieldIndicator: 653563330
+changedFieldIndicator: 860460836
 field: 37471b2c-6c44-4b1a-bc50-3788e9de05d5 # Hero
 fieldLayouts:
   63a576be-e5a1-42a0-8eda-4165892703fd:
@@ -27,6 +27,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 59dbab02-e71f-4024-ac1e-f98c7318f79b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4498fb8d-c0a2-4773-9732-1df2af737466 # Hero Afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee996f44-7c09-4583-abc4-13f90a44450a
             userCondition: null
             warning: null
             width: 100
@@ -107,6 +119,54 @@ fields:
             - class
             - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Kies een afbeelding'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  4498fb8d-c0a2-4773-9732-1df2af737466: # Hero Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: heroAfbeelding
+    instructions: 'De minimum breedte voor deze afbeelding is 2200px. De ideale breedte is 4400px.'
+    name: 'Hero Afbeelding'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:979c3eeb-f99a-4ca1-bcbe-ce9298a4e4ca' # Files
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
       showSiteMenu: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false

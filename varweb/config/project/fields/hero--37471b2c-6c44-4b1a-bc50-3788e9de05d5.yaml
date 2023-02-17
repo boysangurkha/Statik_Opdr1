@@ -7,7 +7,7 @@ name: Hero
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 162056863
+  changedFieldIndicator: 502758761
   columns:
     __assoc__:
       -
@@ -19,6 +19,13 @@ settings:
               - ''
       -
         - d08ad844-2cdf-40f5-8981-be1d51f8483f # Video
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 4498fb8d-c0a2-4773-9732-1df2af737466 # Hero Afbeelding
         -
           __assoc__:
             -

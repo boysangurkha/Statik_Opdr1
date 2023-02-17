@@ -5,9 +5,9 @@ const colorShade = require('../../tailwind/color-shades');
 
 const siteColors = {
     primary: {
-        DEFAULT: '#EE4737',
+        DEFAULT: '#2D92BF',
         contrast: '#ffffff',
-        hover: '#f27266',
+        hover: '#1F5B93',
         hoverContrast: '#ffffff',
     },
     secondary: {
@@ -96,11 +96,16 @@ module.exports = {
                 '3': '16px',
                 '4': '24px',
                 '5': '32px',
-                '6': '48px',
+                '6': '40px',
                 '7': '64px',
                 '8': '96px',
                 '9': '128px',
                 '10': '192px',
+            },
+            fontFamily: {
+                'sans': ['ui-sans-serif', 'FlandersArtSans'],
+                'body': ['ui-serif', 'FlandersArtSerif'],
+            },
             }
         },
     },

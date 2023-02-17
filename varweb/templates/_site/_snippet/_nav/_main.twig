@@ -2,11 +2,14 @@
 {% set searchResultsEntry = craft.entries.section('searchResults').one() %}
 
 {% if mainNav|length %}
-	<nav class="w-full flex items-center justify-between" aria-label="{{ 'Main'|t }}">
+	<nav class="w-full flex items-center justify-between py-5" aria-label="{{ 'Main'|t }}">
 		<a href="{{ siteUrl }}" class="">
-			{{ svg('@webroot/frontend/img/site/logo.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
+			{{ svg('logo.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
 		</a>
-		<ul class="flex flex-wrap space-x-4">
+		<a href="{{ siteUrl }}" class="">
+			{{ svg('logo-vlaanderen.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
+		</a>
+		<ul class="flex flex-wrap space-x-5 items-center" >
 			{% for node in mainNav %}
 				<li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
 					<a href="{{ node.url }}" class="font-bold text-xl hover:underline hover:text-primary {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
@@ -18,8 +21,8 @@
 			{#                    {% include '_site/_snippet/_global/_search' %}#}
 			{#                </li>#}
 			{# {% endif %} #}
-			<div class="ml-6">
-				<button class="text-lg cursor-pointer text-primary js-search-trigger js-search-animated">
+			<div class="ml-7 ">
+				<button class="bg-primary w-6 h-6 rounded-full text-2xl cursor-pointer text-white js-search-trigger js-search-animated">
 					<span class="sr-only">{{ 'Zoeken'|t }}</span>
 					{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}
 				</button>
