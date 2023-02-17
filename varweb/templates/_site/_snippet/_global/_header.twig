@@ -1,25 +1,18 @@
 <header class="page-header">
-	<div class="container">
-		<div class="flex items-center justify-between md:items-stretch">
-			<a href="{{ siteUrl }}" class="">
-				{{ svg('@webroot/frontend/img/site/logo.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
-			</a>
+	<div class="w-full bg-tertiary">
+		<div class="w-full container relative flex flex-wrap items-center justify-end py-2 min-w-searchbox">
+			<div class="flex items-center js-search-hide">
+				{% include '_site/_snippet/_nav/_service.twig' %}
+				{% include "_site/_snippet/_nav/_language" %}
+			</div>
+			{#{% include "_site/_snippet/_global/_search.twig" %}#}
+		</div>
+	</div>
 
+	<div class="w-full container">
+		<div class="w-full flex items-center justify-between md:items-stretch">
 			{% if not systemOffline %}
-				<div class="flex-col items-end hidden md:flex">
-					<div class="relative flex flex-wrap items-center justify-end py-4 pl-10 min-w-searchbox">
-						<div class="flex items-center js-search-hide">
-							{% include '_site/_snippet/_nav/_service.twig' %}
-							{% include "_site/_snippet/_nav/_language" %}
-							<div class="ml-6">
-								<button class="text-lg cursor-pointer text-primary js-search-trigger js-search-animated">
-									<span class="sr-only">{{ 'Zoeken'|t }}</span>
-									{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}
-								</button>
-							</div>
-						</div>
-						{% include "_site/_snippet/_global/_search.twig" %}
-					</div>
+				<div class="w-full flex-col items-end hidden md:flex">
 					{% include '_site/_snippet/_nav/_main.twig' %}
 				</div>
 				<a href="#flyout" class="text-3xl js-flyout-toggle md:hidden ie-hidden print:hidden" role="button">

@@ -16,6 +16,10 @@ const siteColors = {
         hover: '#050cd8',
         hoverContrast: '#ffffff',
     },
+    tertiary: {
+        DEFAULT: '#E7EBEE',
+        contrast: '#ffffff',
+    },
 };
 
 module.exports = {
@@ -85,6 +89,19 @@ module.exports = {
             inset: {
                 '1/2': '50%',
             },
+
+            spacing: {
+                '1': '8px',
+                '2': '12px',
+                '3': '16px',
+                '4': '24px',
+                '5': '32px',
+                '6': '48px',
+                '7': '64px',
+                '8': '96px',
+                '9': '128px',
+                '10': '192px',
+            }
         },
     },
     plugins: [

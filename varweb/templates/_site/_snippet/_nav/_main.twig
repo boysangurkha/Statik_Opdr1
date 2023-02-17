@@ -2,7 +2,10 @@
 {% set searchResultsEntry = craft.entries.section('searchResults').one() %}
 
 {% if mainNav|length %}
-	<nav class="" aria-label="{{ 'Main'|t }}">
+	<nav class="w-full flex items-center justify-between" aria-label="{{ 'Main'|t }}">
+		<a href="{{ siteUrl }}" class="">
+			{{ svg('@webroot/frontend/img/site/logo.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
+		</a>
 		<ul class="flex flex-wrap space-x-4">
 			{% for node in mainNav %}
 				<li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
@@ -15,6 +18,13 @@
 			{#                    {% include '_site/_snippet/_global/_search' %}#}
 			{#                </li>#}
 			{# {% endif %} #}
+			<div class="ml-6">
+				<button class="text-lg cursor-pointer text-primary js-search-trigger js-search-animated">
+					<span class="sr-only">{{ 'Zoeken'|t }}</span>
+					{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}
+				</button>
+			</div>
 		</ul>
+		
 	</nav>
 {% endif %}
