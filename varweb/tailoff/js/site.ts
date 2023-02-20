@@ -14,6 +14,9 @@ if (import.meta.hot) {
 import { GeneralComponent } from './components/general.component';
 new GeneralComponent();
 
+import { Navigation } from './components/navigatie.component';
+new Navigation();
+
 import { ResponsiveBackgroundComponent } from './components/responsiveBackground.component';
 new ResponsiveBackgroundComponent();
 

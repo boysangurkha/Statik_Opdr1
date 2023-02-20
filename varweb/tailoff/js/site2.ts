@@ -23,6 +23,9 @@ new ResponsiveBackgroundComponent();
 import { AjaxPagingComponent } from './components/ajaxPaging.component';
 new AjaxPagingComponent();
 
+import { Navigation } from './components/navigatie.component';
+new Navigation();
+
 import { AjaxSearchComponent } from './components/ajaxSearch.component';
 new AjaxSearchComponent();
 
