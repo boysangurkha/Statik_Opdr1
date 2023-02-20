@@ -21,6 +21,14 @@ const siteColors = {
         DEFAULT: '#E7EBEE',
         contrast: '#ffffff',
     },
+    gray: {
+        DEFAULT: '#687483',
+        contrast: '#ffffff',
+    },
+    offwhite: {
+        DEFAULT: '#F2F2F2',
+        contrast: '#ffffff',
+    },
 };
 
 module.exports = {
