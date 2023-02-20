@@ -2,7 +2,7 @@
 {% set currentLocal = currentLanguage|split('-')  %}
 {% set group = craft.app.getSites().getGroupById(currentSite.groupId) %}
 
-<ul class="flex space-x-2">
+<ul class="flex space-x-2 font-sans font-normal">
 	{% for site in group.getSites() %}
 		{% if entry is defined %}
 			{% set localeEntry = craft.entries.id(entry.id).siteId(site.id).one() %}

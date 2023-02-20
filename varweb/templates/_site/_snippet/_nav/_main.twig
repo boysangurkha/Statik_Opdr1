@@ -12,7 +12,7 @@
 		<ul class="flex flex-wrap space-x-5 items-center" >
 			{% for node in mainNav %}
 				<li class="py-5 {% if node.classes|length %}{{ node.classes }}{% endif %}">
-					<a href="{{ node.url }}" class="font-bold text-xl hover:no-underline {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
+					<a href="{{ node.url }}" class="font-sans text-md hover:no-underline {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
 					</a>
 				</li>
 			{% endfor %}
@@ -22,7 +22,7 @@
 			{#                </li>#}
 			{# {% endif %} #}
 			<div class="ml-7 ">
-				<button class="bg-primary w-6 h-6 rounded-full text-2xl cursor-pointer text-white js-search-trigger js-search-animated">
+				<button class="bg-primary transition ease-in-out duration-200 hover:bg-primary-hover w-6 h-6 rounded-full text-sm cursor-pointer text-white js-search-trigger js-search-animated">
 					<span class="sr-only">{{ 'Zoeken'|t }}</span>
 					{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}
 				</button>

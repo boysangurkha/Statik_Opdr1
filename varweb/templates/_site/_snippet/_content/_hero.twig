@@ -6,15 +6,15 @@
 			<div class="w-full md:w-1/2">
 				<div class="relative z-10">
 					{% if hero.heroTitle|length %}
-						<h1 class="text-white font-sans font-medium">{{ hero.heroTitle }}</h1>
+						<h1 class="text-2xl text-white font-serif">{{ hero.heroTitle }}</h1>
 					{% endif %}
 					{% if hero.intro|length %}
-						<div class="mt-6 text-lg text-white md:text-xl">{{ hero.intro }}</div>
+						<div class="mt-6 font-sans text-base text-white">{{ hero.intro }}</div>
 					{% endif %}
 					{% if hero.ctas|length %}
 						<div class="flex flex-wrap items-center mt-2">
 							{% for cta in hero.ctas.all() %}
-								<div class="mt-4 mr-4">{{ cta.linkit.getLink() }}</div>
+								<div class="font-sans text-md mt-4 mr-4">{{ cta.linkit.getLink() }}</div>
 							{% endfor %}
 						</div>
 					{% endif %}

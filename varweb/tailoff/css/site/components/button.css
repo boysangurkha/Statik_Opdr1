@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-flex items-center px-4 py-2 leading-none border-2 rounded-none;
+  @apply inline-flex items-center px-4 py-3 leading-none border-2 rounded-sm;
 
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-timing-function: ease-in-out;
@@ -43,11 +43,11 @@
   }
 
   &--secondary {
-    @apply text-white no-underline bg-secondary border-secondary;
+    @apply text-white no-underline bg-transparent border-white;
 
     &:hover,
     .group:hover & {
-      @apply text-white no-underline bg-secondary-hover border-secondary-hover;
+      @apply text-black no-underline bg-white border-white;
     }
 
     &-inverse {

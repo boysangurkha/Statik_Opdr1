@@ -3,10 +3,12 @@
 @import './base/icon.css';
 /* @import './base/fonts.css'; */
 @import './base/base.css';
+@import './base/fonts.css';
 @import './base/print.css';
 
 @import 'tailwindcss/components';
 
+@import './components/nav.css';
 @import './components/ajax-search.css';
 @import './components/autocomplete.css';
 @import './components/button.css';
