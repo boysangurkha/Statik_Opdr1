@@ -29,6 +29,10 @@ const siteColors = {
         DEFAULT: '#F2F2F2',
         contrast: '#ffffff',
     },
+    pitchblack:{
+        DEFAULT: '#000000',
+        contrast: '#ffffff',
+    },
 };
 
 module.exports = {
@@ -74,7 +78,7 @@ module.exports = {
         extend: {
             colors: {
                 ...siteColors,
-                black: '#333333',
+                black: '#1C1B1F',
                 light: '#f5f5f5',
             },
             screens: {

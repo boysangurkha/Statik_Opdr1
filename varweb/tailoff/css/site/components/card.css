@@ -1,0 +1,24 @@
+/*.card,
+.card .link--ext, .card .cardDate{
+  transition:0.3s ease;
+}
+
+.card:hover{
+  color: white;
+  background-color: #2D92BF;
+}
+
+.card:hover .link--ext, .card:hover .cardDate{
+    color: white;
+}
+
+.svg-icon path{
+    stroke: #687483;
+    transition: fill 0.3s ease;
+    fill: #687483;
+}
+
+.svg-icon:hover path{
+    stroke: #FFFFFF;
+    fill: #FFFFFF;
+}*/

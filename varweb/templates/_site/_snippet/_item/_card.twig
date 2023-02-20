@@ -15,13 +15,13 @@
 {% endif %}
 
 <div class="flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
-    <div class="hover:text-white relative flex flex-col w-full min-h-full overflow-hidden transition duration-300 ease-in-out cursor-pointer card {% if showContrast %}bg-light{% else %}bg-white{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
+    <div class="card pb-5 group hover:bg-primary relative flex flex-col w-full min-h-full overflow-hidden transition duration-300 ease-in-out cursor-pointer card {% if showContrast %}bg-light{% else %}bg-white{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
         {% if showImage %}
             {% set overviewImage = cardEntry.headerImage.collect().first() ? cardEntry.headerImage.collect().first() : fallback.image.one() %}
             {% if overviewImage|length %}
                 {% set optimizedImage = overviewImage.optimizedOverview %}
                 {% if optimizedImage|length %}
-                    <div class="{% if not showInColumns %}w-full md:w-1/2 flex{% endif %}">
+                    <div class="{% if not showInColumns %}w-full md:w-1/2 flex{% endif %} bg-pitchblack transition-opacity duration-300 group-hover:opacity-50 ">
                         {% set sizes = "(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 819px) 298px, (min-width: 820px) and (max-width: 1199px) 295px, (min-width: 1200px) 368px" %}
                         {% if not showInColumns %}
                             {% set sizes = "(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 306px, (min-width: 820px) and (max-width: 979px) 386px, (min-width: 980px) and (max-width: 1199px) 466px, (min-width: 1200px) 576px" %}
@@ -46,18 +46,18 @@
                 {% endif %}
             {% endif %}
         {% endif %}
-        <div class="w-full flex flex-col flex-auto  p-4{% if not showInColumns %}md:w-1/2{% endif %}">
-            <h3 class="mb-1 font-serif text-lg font-medium">
-                <a class="underline [@supports(background:paint(something))]:transition [@supports(background:paint(something))]:duration-300 link--extended decoration-transparent hover:decoration-current" href="{{ cardEntry.getUrl() }}">{{ cardEntry.overviewTitle ?? cardEntry.title }}</a>
+        <div class="group-hover:text-white cardDateCon w-full flex flex-col flex-auto  p-4{% if not showInColumns %}md:w-1/2{% endif %}">
+            <h3 class="mb-1 font-serif text-lg font-medium ">
+                <a class="underline-offset-2 underline [@supports(background:paint(something))]:transition [@supports(background:paint(something))]:duration-300 link--extended decoration-transparent decoration-0 hover:decoration-current" href="{{ cardEntry.getUrl() }}">{{ cardEntry.overviewTitle ?? cardEntry.title }}</a>
             </h3>
             {% if showDate or cardEntry.section.handle == 'news' %}
-                <div class="py-1 font-sans text-xxs font-normal text-gray flex"><img class="px-1" src="/frontend/icons/vector.svg" />{{'Advies ' ~ cardEntry.id ~ ' • ' ~ cardEntry.postDate|date('j F Y'|t) }}</div>
+                <div class="group-hover:text-white cardDate py-1 font-sans text-xxs font-normal text-gray flex"><img class="pr-1 svg-icon group-hover:fill-white" src="/frontend/icons/vector.svg" />{{'Advies ' ~ cardEntry.id ~ ' • ' ~ cardEntry.postDate|date('j F Y'|t) }}</div>
             {% endif %}
             {% if cardEntry.overviewDescription|length or cardEntry.intro|length %}
                 <div class="my-2 redactor font-sans font-normal">
                     {{ cardEntry.overviewDescription ?? (cardEntry.intro ?? '')|striptags|truncate(200)|raw }}
                 </div> 
-                <div class="font-sans font-medium text-black link link--ext">{{ "Meer lezen"|t }}</div>
+                <div class="group-hover:text-white font-sans font-medium text-pitchblack link link--ext">{{ "Meer lezen"|t }}</div>
             {% endif %}
             
         </div>

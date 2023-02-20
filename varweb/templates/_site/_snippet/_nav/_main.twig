@@ -9,7 +9,7 @@
 		<a href="{{ siteUrl }}" class="">
 			{{ svg('logo-vlaanderen.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
 		</a>
-		<ul class="flex flex-wrap space-x-5 items-center" >
+		<ul class="flex flex-wrap space-x-5 items-center text-pitchblack" >
 			{% for node in mainNav %}
 				<li class="py-5 {% if node.classes|length %}{{ node.classes }}{% endif %}">
 					<a href="{{ node.url }}" class="font-sans text-md hover:no-underline {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
