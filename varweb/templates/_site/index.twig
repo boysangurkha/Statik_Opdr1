@@ -5,30 +5,24 @@
 
     {% include '_site/_snippet/_content/_hero' %}
 
-
-    <div class="section section--default">
-        <div class="container">
-            <div class="w-full md:w-3/4">
-                <p class="">If you want to know how to use the various J components, you can
-                    <a class="underline" href="/jsPlugins/overview.twig">
-                    take a look at the examples.
-                    {{ svg('@webroot/frontend/icons/chevron-right.svg')|attr({class: 'icon text-primary'}) }}
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
+    {% for block in entry.contentBuilder.all() %}
+        {% if block.type == 'textImage' %}
+            {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
+        {% endif %}
+    {% endfor %}
 
     {% set news = craft.entries().section('news').with(['overviewImage']).orderBy('postDate DESC').limit(3).collect() %}
     {% if news|length %}
         <div class="section section--default bg-offwhite">
             <div class="container">
-            <div class="flex justify-between ">
+            <div class="flex justify-between pt-7.5">
                 {% set newsOverview = craft.entries.section('newsOverview').one() %}
                 {% if newsOverview|length %}
-                    <h2 class="heading-2">{{ 'Laatste nieuws'|t }}</h2>
+                    <h2 class="heading-2 font-serif font-medium text-xl">
+                        {{ 'laatste nieuws'|t }}
+                    </h2>
                 {% endif %}
-                <a href="{{ newsOverview.url }}" class="btn btn--primary btn--ext">{{ "Meer nieuws"|t }}</a>
+                <a href="{{ newsOverview.url }}" class="font-sans font-medium text-pitchblack link link--ext2 hover:underline">{{ "Alle adviezen bekijken"|t }}</a>
             </div>
                 <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
                     {% for cardEntry in news.all() %}
@@ -39,5 +33,11 @@
             </div>
         </div>
     {% endif %}
+
+    {% for block in entry.contentBuilder.all() %}
+        {% if block.type == 'textVideo' %}
+            {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
+        {% endif %}
+    {% endfor %}
 
 {% endblock %}

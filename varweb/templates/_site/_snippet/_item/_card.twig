@@ -14,7 +14,7 @@
     {% set showContrast = false %}
 {% endif %}
 
-<div class="flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
+<div class="pb-7.7 flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
     <div class="card pb-5 group hover:bg-primary relative flex flex-col w-full min-h-full overflow-hidden transition duration-300 ease-in-out cursor-pointer card {% if showContrast %}bg-light{% else %}bg-white{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
         {% if showImage %}
             {% set overviewImage = cardEntry.headerImage.collect().first() ? cardEntry.headerImage.collect().first() : fallback.image.one() %}
@@ -60,7 +60,7 @@
                 <div class="my-2 redactor font-sans font-normal">
                     {{ cardEntry.overviewDescription ?? (cardEntry.intro ?? '')|striptags|truncate(200)|raw }}
                 </div> 
-                <div class="group-hover:text-white font-sans font-medium text-pitchblack link link--ext">{{ "Meer lezen"|t }}</div>
+                <div class="group-hover:text-white font-sans font-medium text-pitchblack link link--ext2">{{ "Meer lezen"|t }}</div>
             {% endif %}
             
         </div>

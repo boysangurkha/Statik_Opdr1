@@ -15,6 +15,17 @@
       }
     }
 
+    &--ext2 {
+      @apply items-center;
+      @mixin icon chevron-right;
+      
+      &::after {
+        @apply ml-1;
+        @apply text-primary;
+
+      }
+    }
+
     &--extended::before {
       content: '';
       position: absolute;
