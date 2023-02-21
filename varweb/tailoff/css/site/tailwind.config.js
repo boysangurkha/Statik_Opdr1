@@ -81,6 +81,16 @@ module.exports = {
             xl: '1200px',
         },
         extend: {
+            
+            brightness: {
+                0: '0',
+                25: '.25',
+                35: '.35',
+                50: '.5',
+                75: '.75',
+                100: '1',
+                175: '1.75',
+            },
             colors: {
                 ...siteColors,
                 black: '#1C1B1F',
@@ -145,6 +155,7 @@ module.exports = {
             },
 
             spacing: {
+                '0.4': '4px',
                 '1': '8px',
                 '2': '12px',
                 '3': '16px',

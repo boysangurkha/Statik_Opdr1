@@ -1,14 +1,8 @@
-/*.card,
-.card .link--ext, .card .cardDate{
-  transition:0.3s ease;
+.card{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: clip-path 0.3s ease-in-out;
 }
 
 .card:hover{
-  color: white;
-  background-color: #2D92BF;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
-
-.card:hover .link--ext, .card:hover .cardDate{
-    color: white;
-}
-*/
