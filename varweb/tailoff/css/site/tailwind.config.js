@@ -38,6 +38,11 @@ const siteColors = {
 module.exports = {
     content: [`tailoff/js/**/*.{ts,js}`, `templates/_site/**/*`, `templates/jsPlugins/**/*`],
     theme: {
+        fill:{
+            'black': '#000000',
+            'white': '#ffffff',
+            'gray': '#687483',
+        },
         borderRadius: {
             DEFAULT: '4px',
             'none': '0',

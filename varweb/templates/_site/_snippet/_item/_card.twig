@@ -51,7 +51,7 @@
                 <a class="underline-offset-2 underline [@supports(background:paint(something))]:transition [@supports(background:paint(something))]:duration-300 link--extended decoration-transparent decoration-0 hover:decoration-current" href="{{ cardEntry.getUrl() }}">{{ cardEntry.overviewTitle ?? cardEntry.title }}</a>
             </h3>
             {% if showDate or cardEntry.section.handle == 'news' %}
-                <div class="group-hover:text-white cardDate py-1 font-sans text-xxs font-normal text-gray flex"><img class="pr-1 svg-icon group-hover:fill-white" src="/frontend/icons/vector.svg" />{{'Advies ' ~ cardEntry.id ~ ' • ' ~ cardEntry.postDate|date('j F Y'|t) }}</div>
+                <div class="group-hover:text-white cardDate py-1 font-sans text-xxs font-normal text-gray flex"><img class="pr-1 fill-white svg-icon group-hover:fill-white" src="/frontend/icons/vector.svg" />{{'Advies ' ~ cardEntry.id ~ ' • ' ~ cardEntry.postDate|date('j F Y'|t) }}</div>
             {% endif %}
             {% if cardEntry.overviewDescription|length or cardEntry.intro|length %}
                 <div class="my-2 redactor font-sans font-normal">

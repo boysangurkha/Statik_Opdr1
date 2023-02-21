@@ -3,12 +3,16 @@
 
 {% if mainNav|length %}
 	<nav class="navigatie w-full flex items-center justify-between h-full relative" aria-label="{{ 'Main'|t }}">
-		<a href="{{ siteUrl }}" class="">
-			{{ svg('logo.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
-		</a>
-		<a href="{{ siteUrl }}" class="">
-			{{ svg('logo-vlaanderen.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
-		</a>
+		<div class="flex">
+			<a href="{{ siteUrl }}" class="">
+				{{ svg('logo.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
+			</a>
+			<a href="{{ siteUrl }}" class="px-6">
+				{{ svg('logo-vlaanderen.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
+			</a>
+		</div>
+
+		
 		<ul class="flex flex-wrap space-x-5 items-center text-pitchblack" >
 			{% for node in mainNav %}
 				<li class="py-5 {% if node.classes|length %}{{ node.classes }}{% endif %}">
