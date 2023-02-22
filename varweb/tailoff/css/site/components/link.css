@@ -1,9 +1,9 @@
 @layer components {
   .link {
-    @apply inline-flex underline text-primary;
+    @apply inline-flex underline text-pitchblack;
 
     &:hover {
-      @apply no-underline;
+      @apply text-primary-hover;
     }
 
     &--ext {
@@ -12,6 +12,12 @@
 
       &::after {
         @apply ml-1;
+        @apply text-primary
+      }
+
+      &:hover::after,
+      .group:hover &::after {
+        @apply text-primary-hover;
       }
     }
 
@@ -35,4 +41,5 @@
       left: 0;
     }
   }
+  
 }

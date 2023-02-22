@@ -8,7 +8,7 @@ const siteColors = {
     primary: {
         DEFAULT: '#2D92BF',
         contrast: '#ffffff',
-        hover: '#1F5B93',
+        hover: '#104A80',
         hoverContrast: '#ffffff',
     },
     secondary: {
@@ -19,6 +19,11 @@ const siteColors = {
     },
     tertiary: {
         DEFAULT: '#E7EBEE',
+        contrast: '#ffffff',
+    },
+
+    green:{
+        DEFAULT: '#4BCFA5',
         contrast: '#ffffff',
     },
     gray: {
@@ -152,6 +157,8 @@ module.exports = {
             },
             inset: {
                 '1/2': '50%',
+                '98': '30rem',
+                '100': '38rem',
             },
 
             spacing: {

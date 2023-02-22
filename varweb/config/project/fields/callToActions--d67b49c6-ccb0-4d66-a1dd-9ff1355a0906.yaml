@@ -7,7 +7,16 @@ name: 'Call To Actions'
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 2019877280
+  changedFieldIndicator: 731863859
+  columns:
+    __assoc__:
+      -
+        - 979748ce-20aa-49ae-8d43-8fec0906eb3f # Link
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_calltoactions}}'
   fieldLayout: matrix
   maxRows: null

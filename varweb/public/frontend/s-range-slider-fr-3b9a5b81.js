@@ -1,0 +1,1 @@
+const e="Select the under limit of your range. It can not be lower than %s.",t="Select the upper limit of your range. It can not be higher than %s.",a={minLabel:e,maxLabel:t};export{a as default,t as maxLabel,e as minLabel};

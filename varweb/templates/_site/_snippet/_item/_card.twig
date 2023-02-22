@@ -14,8 +14,8 @@
     {% set showContrast = false %}
 {% endif %}
 
-<div class="pb-7.7 flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
-    <div class="card pb-5 group hover:bg-primary relative flex flex-col w-full min-h-full overflow-hidden transition duration-300 ease-in-out cursor-pointer card {% if showContrast %}bg-light{% else %}bg-white{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
+<div class="pb-8 flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
+    <div class="card pb-5 group hover:bg-primary relative flex flex-col w-full min-h-full overflow-hidden cursor-pointer card {% if showContrast %}bg-light{% else %}bg-white{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
         {% if showImage %}
             {% set overviewImage = cardEntry.headerImage.collect().first() ? cardEntry.headerImage.collect().first() : fallback.image.one() %}
             {% if overviewImage|length %}
@@ -52,9 +52,10 @@
             </h3>
             {% if showDate or cardEntry.section.handle == 'news' %}
                 <div class="group-hover:text-white cardDate py-1 font-sans text-xxs font-normal text-gray flex">{#<img class="pr-1 fill-white svg-icon group-hover:fill-white group-hover:invert" src="/frontend/icons/vector.svg" />#}<svg class="mt-0.4 mr-0.4 vector fill-gray group-hover:fill-white" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.75 6.5H7.25V3.5H8.75V6.5ZM8.75 8H7.25V9.5H8.75V8ZM15.5 2V11C15.5 11.3978 15.342 11.7794 15.0607 12.0607C14.7794 12.342 14.3978 12.5 14 12.5H3.5L0.5 15.5V2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5H14C14.3978 0.5 14.7794 0.658035 15.0607 0.93934C15.342 1.22064 15.5 1.60218 15.5 2ZM14 2H2V11.9L2.9 11H14V2Z"/>
-</svg>
-{{'Advies ' ~ cardEntry.id ~ ' • ' ~ cardEntry.postDate|date('j F Y'|t) }}</div>
+                    <path d="M8.75 6.5H7.25V3.5H8.75V6.5ZM8.75 8H7.25V9.5H8.75V8ZM15.5 2V11C15.5 11.3978 15.342 11.7794 15.0607 12.0607C14.7794 12.342 14.3978 12.5 14 12.5H3.5L0.5 15.5V2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5H14C14.3978 0.5 14.7794 0.658035 15.0607 0.93934C15.342 1.22064 15.5 1.60218 15.5 2ZM14 2H2V11.9L2.9 11H14V2Z"/>
+                    </svg>
+                    {{'Advies ' ~ cardEntry.id ~ ' • ' ~ cardEntry.postDate|date('j F Y'|t) }}
+                </div>
             {% endif %}
             {% if cardEntry.overviewDescription|length or cardEntry.intro|length %}
                 <div class="my-2 redactor font-sans font-normal">

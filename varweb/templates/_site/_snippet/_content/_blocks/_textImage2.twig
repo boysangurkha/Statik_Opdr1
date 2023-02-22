@@ -1,0 +1,67 @@
+
+
+{% set inverseClass = block.position == 'right' and block.image|length ? 'flex-row-reverse' : '' %}
+{% set bgColor = block.backgroundColor == 'section--light' ? 'bg-offwhite py-7' : block.backgroundColor == 'section--default' ? 'bg-white' : (block.backgroundColor == 'section--primary' and block.position == 'right') ? 'bg-secondary' : 'bg-primary' %} 
+
+
+<div class="flex  flex-wrap -mx-4 {{ inverseClass }}">
+	{% if block.image.collect().first() %}
+		<div class="w-full px-4  md:w-1/2">
+			{% set image = block.image.collect().first() %}
+			{% set optimizedImage = image.optimizedTextImage %}
+			<picture>
+				{% if craft.imageOptimize.serverSupportsWebP() and image.extension != 'svg' and image.extension != 'gif' %}
+					<source srcset="{{ optimizedImage.srcsetWebP() }}"
+							sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
+							type="image/webp"/>
+				{% endif %}
+				{% if image.extension == 'svg' or image.extension == 'gif' %}
+					<img src="{{ image.getUrl() }}"
+						width="{{image.width}}" height="{{image.height}}"
+						alt="{{ image.imageCaption }}"
+						class="w-full" loading="lazy"/>
+				{% else %}
+					<img src="{{ optimizedImage.placeholderBox() }}"
+						srcset="{{ optimizedImage.srcset() }}"
+						sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
+						width="{{optimizedImage.placeholderWidth}}" height="{{optimizedImage.placeholderHeight}}"
+						alt="{{ image.imageCaption }}"
+						class="w-full" loading="lazy"/>
+				{% endif %}
+			</picture>
+			{% if image.imageCopyright|length or image.imageCaption|length %}
+				<div class="mt-1 text-sm italic opacity-50">
+					{% if image.imageCaption|length %}
+						{{ image.imageCaption }}
+					{% endif %}
+					{% if image.imageCopyright|length and image.imageCaption|length %}
+						- 
+					{% endif %}
+					{% if image.imageCopyright|length %}
+						{{ image.imageCopyright }}
+					{% endif %}
+				</div>
+			{% endif %}
+		</div>
+	{% endif %}
+	<div class="{{ bgColor }} w-full {% if block.image|length %}mt-8 md:mt-0 md:w-1/2{% else %}lg:w-3/4{% endif %}">
+		{% if block.blockTitle|length %}
+			<div class="text-xl font-serif font-medium" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+		{% endif %}
+		{% if block.subTitle|length %}
+			<div class="pb-4 font-sans text-xxs font-normal text-gray">{{ block.subTitle }}</div>
+		{% endif %}
+		{% if block.text|length %}
+			<div class="redactor font-sans text-xs font-normal">
+				{{ block.text }}
+			</div>
+		{% endif %}
+		{% if block.cta|length %}
+			<div class="flex flex-wrap items-baseline">
+				{% for cta in block.cta.all() %}
+					{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+</div>

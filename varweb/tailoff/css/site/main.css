@@ -8,6 +8,7 @@
 
 @import 'tailwindcss/components';
 
+@import './components/textImage.css';
 @import './components/card.css';
 @import './components/nav.css';
 @import './components/ajax-search.css';

@@ -6,7 +6,7 @@
   transition-duration: 200ms;
 
   &::after {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, opacity, box-shadow, transform;
     transition-timing-function: ease-in-out;
     transition-duration: 200ms;
   }
@@ -43,11 +43,11 @@
   }
 
   &--secondary {
-    @apply text-white no-underline bg-transparent border-white;
+    @apply text-pitchblack no-underline bg-green border-green;
 
     &:hover,
     .group:hover & {
-      @apply text-black no-underline bg-white border-white;
+      @apply no-underline bg-primary-hover border-primary-hover text-white;
     }
 
     &-inverse {
@@ -60,8 +60,44 @@
     }
   }
 
+  &--tertiary {
+    @apply text-white no-underline bg-pitchblack border-pitchblack;
+
+    &:hover,
+    .group:hover & {
+      @apply text-white no-underline bg-primary-hover border-primary-hover;
+    }
+
+    &-inverse {
+      @apply no-underline bg-white border-white text-primary;
+
+      &:hover,
+      .group:hover & {
+        @apply text-white no-underline bg-primary-hover border-primary-hover;
+      }
+    }
+  }
+
+  &--quaternary {
+    @apply text-white no-underline bg-transparent border-white;
+
+    &:hover,
+    .group:hover & {
+      @apply text-white no-underline bg-primary-hover border-primary-hover;
+    }
+
+    &-inverse {
+      @apply no-underline bg-white border-white text-primary;
+
+      &:hover,
+      .group:hover & {
+        @apply text-white no-underline bg-primary-hover border-primary-hover;
+      }
+    }
+  }
+
   &--ghost {
-    @apply no-underline bg-transparent text-primary border-primary;
+    @apply text-pitchblack no-underline bg-transparent border-pitchblack;
 
     &:hover,
     .group:hover & {
