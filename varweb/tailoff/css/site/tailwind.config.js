@@ -135,6 +135,11 @@ module.exports = {
                     fontWeight: '400',
                 }],
 
+                'foot': ['22px', {
+                    lineHeight: '26.4px',
+                    fontWeight: '500',
+                }],
+
                 'lg': ['26px', {
                     lineHeight: '31.21px',
                     fontWeight: '500',

@@ -1,51 +1,76 @@
 <footer class="page-footer">
-	<div class="py-8 bg-light doormat print:hidden">
-		<div class="container">
-			<div class="flex flex-wrap -mx-4">
-				<div class="w-full px-4 mt-4 sm:w-1/2 md:w-1/3">
-					<a href="{{ siteUrl }}" class="">
-						{{ svg('@webroot/frontend/img/site/logo.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'logo' }) }}
-					</a>
-					<h3 class="text-3xl">{{ systemName }}</h3>
+	<div >
+		<div class="py-8 bg-white doormat print:hidden">
+			<div class="container relative">
+					<div class="flex flex-wrap -mx-4">
+						<div class="w-full px-1 sm:w-1/2 md:w-1/3">
+							<a href="{{ siteUrl }}" class="">
+								<div class="flex">
+									{{ svg('logo.svg')|attr({ class: 'w-full max-w-logo pr-5', role: 'img', 'aria-label': 'logo' }) }}
+									{{ svg('logo-vlaanderen2.svg')|attr({ class: 'w-full max-w-logo', role: 'img', 'aria-label': 'logo' }) }}
+								</div>
+							</a>
+							<h3 class="text-foot font-serif font-medium mt-6">{{ generalInfo.siteName }}</h3>
 
-					{% if generalInfo.address|length %}
-						<div class="mt-6">
-							{{ generalInfo.address|nl2br }}
-						</div>
-					{% endif %}
-					{% if generalInfo.mail|length or generalInfo.phone|length %}
-						<div class="mt-6 space-y-2">
-							{% if generalInfo.mail|length %}
-								<div class="">
-									{{ svg('@webroot/frontend/icons/envelope.svg')|attr({class: 'icon '}) }}
-									<a class="no-underline hover:underline" href="mailto:{{generalInfo.mail}}">{{generalInfo.mail}}</a>
+							{% if generalInfo.address|length %}
+								<div class="mt-4 font-sm font-sans">
+									{{ generalInfo.address|nl2br }}
 								</div>
 							{% endif %}
-							{% if generalInfo.phone|length %}
-								<div class="">
-									{{ svg('@webroot/frontend/icons/phone.svg')|attr({class: 'icon '}) }}
-									<a class="no-underline hover:underline" href="tel:{{generalInfo.phone}}">{{generalInfo.phone}}</a>
+							{% if generalInfo.mail|length or generalInfo.phone|length %}
+								<div class="mt-4 space-y-1 font-sans font-sm">
+									{% if generalInfo.phone|length %}
+										<div class="">
+											{{ svg('@webroot/frontend/icons/phone.svg')|attr({class: 'icon text-primary mr-1'}) }}
+											<a class="hover:no-underline underline" href="tel:{{generalInfo.phone}}">{{generalInfo.phone}}</a>
+										</div>
+									{% endif %}
+									{% if generalInfo.mail|length %}
+										<div class="">
+											{{ svg('@webroot/frontend/icons/envelope.svg')|attr({class: 'icon text-primary mr-1'}) }}
+											<a class="hover:no-underline underline" href="mailto:{{generalInfo.mail}}">{{generalInfo.mail}}</a>
+										</div>
+									{% endif %}
+								</div>
+							{% endif %}
+							<div class="mt-4">
+								{% include '_site/_snippet/_content/_socialShare.twig' %}
+							</div>
+						</div>
+						<div class="w-full text-md font-sans font-medium px-4 -mt-2 sm:w-1/2 md:w-1/3">
+							{% if not systemOffline %}
+								{% include '_site/_snippet/_nav/_doormat'%}
+								<div class='text-xxs font-normal'>
+									{% include '_site/_snippet/_nav/_doormat'%}
 								</div>
 							{% endif %}
 						</div>
-					{% endif %}
-				</div>
-				<div class="w-full px-4 mt-4 sm:w-1/2 md:w-1/3">
-					{% if not systemOffline %}
-						{% include '_site/_snippet/_nav/_doormat' %}
-					{% endif %}
-				</div>
-				<div class="w-full px-4 mt-4 sm:w-1/2 md:w-1/3"></div>
+						<div class="w-full px-4 mt-4 sm:w-1/2 md:w-1/3"></div>
+					</div>
+					{% set newsLetters = craft.entries().section('newsLetter').all()%}
+					{% for entry in newsLetters %}
+						{% for contentBuilder in entry.contentBuilder %}
+							<div class="">
+								<h3 class="text-foot font-serif font-medium">
+									{{ contentBuilder.blockTitle }}
+								</h3>
+								<p>{{ contentBuilder.text }}</p>
+								<input type="email" class="w-full border border-gray-300 py-2 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="E-mailadres">
+					
+							</div>
+						{% endfor %}
+					{% endfor %}
 			</div>
 		</div>
 	</div>
-	<div class="py-6 footer">
+
+
+	<div class="py-6 footer font-sans text-xxs font-normal bg-light">
 		<div class="container">
 			<div class="flex flex-wrap justify-between">
 				<div class="">
 					<span>&copy;
-						{{ now|date('Y') }}
-						{{ systemName }}
+						{{ systemName ~ '.be' }}
 						- Built with
 						<span class="sr-only">
 							love
@@ -58,6 +83,15 @@
 				<div class="pt-4 xs:pt-0 print:hidden">
 					<nav class="">
 						<ul class="flex-wrap space-y-1 xs:space-y-0 xs:space-x-4 xs:flex">
+							<li>
+								<a href="#" class="underline hover:no-underline">{{ 'Toegankelijkheidsverklaring'|t }}</a>
+							</li>
+							{% set privacyPage = craft.entries.section('privacyPolicy').one() %}
+							{% if privacyPage %}
+								<li class="">
+									<a href="{{ privacyPage.url }}" class="underline hover:no-underline">{{ privacyPage.title }}</a>
+								</li>
+							{% endif %}
 							{% set cookiePage = craft.entries.section('cookiePolicy').one() %}
 							{% if cookiePage %}
 								<li>
@@ -67,24 +101,11 @@
 									<a href="{{ cookiePage.url }}" class="underline hover:no-underline">{{ cookiePage.title }}</a>
 								</li>
 							{% endif %}
-							{% set privacyPage = craft.entries.section('privacyPolicy').one() %}
-							{% if privacyPage %}
-								<li class="">
-									<a href="{{ privacyPage.url }}" class="underline hover:no-underline">{{ privacyPage.title }}</a>
+								<li>
+									{% include '_site/_snippet/_nav/_language.twig' %}
 								</li>
-							{% endif %}
-							{% if socialMedia.facebook or socialMedia.instagram or socialMedia.linkedin or socialMedia.twitter or socialMedia.youtube %}
-								<li class="">{{ 'Volg ons'|t }}</li>
-							{% endif %}
 						</ul>
 					</nav>
-					{% if socialMedia.facebook or  socialMedia.instagram or socialMedia.linkedin or socialMedia.twitter or socialMedia.youtube %}
-						<div class="">
-							<ul class="">
-								{% include '_site/_snippet/_content/_socialMedia' %}
-							</ul>
-						</div>
-					{% endif %}
 				</div>
 			</div>
 		</div>
