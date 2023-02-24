@@ -35,14 +35,14 @@
 	{% set rela = 'relative' %}
 	{% if block.position == 'right' %}
 		{% set inverseClass = 'flex-row-reverse' %}
-		{% set bgColor = 'bg-primary z-99 clipBlue absolute right-96' %}
+		{% set bgColor = 'bg-green z-99 clipBlue absolute right-96' %}
 		{% set additionalClasses = ' relative py-9 flex-wrap' %}
-		{% set paddingClasses = 'pl-5 pr-10 text-white' %}
+		{% set paddingClasses = 'pl-5 pr-10 text-pitchblack' %}
 	{% else %}
 		{% set inverseClass = 'flex-row' %}
-		{% set bgColor = 'bg-green z-99 clipGreen  absolute left-96' %}
+		{% set bgColor = 'bg-primary z-99 clipGreen absolute left-96' %}
 		{% set additionalClasses = ' relative py-9 w-full' %}
-		{% set paddingClasses = 'pl-9 pr-5' %}
+		{% set paddingClasses = 'pl-9 pr-5 text-white' %}
 	{% endif %}
 {% endif %}
 

@@ -5,30 +5,29 @@
 
     {% include '_site/_snippet/_content/_hero' %}
 
-    {% for block in entry.contentBuilder %}
-        {% if block.type == 'textImage' %}
-        <div class="container">
-            {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
+    {% set firstTextImageBlock = entry.contentBuilder|filter(block => block.type == 'textImage')|first %}
+    {% if firstTextImageBlock is not null %}
+        <div class="container py-5">
+            {% include '_site/_snippet/_content/_blocks/_' ~ firstTextImageBlock.type with { block: firstTextImageBlock }  %}
         </div>
-        {% endif %}
-    {% endfor %}
+    {% endif %}
 
-    {% set news = craft.entries().section('news').with(['overviewImage']).orderBy('postDate DESC').limit(3).collect() %}
-    {% if news|length %}
+    {% set advisoryReports = craft.entries().section('advisoryReports').with(['overviewImage']).orderBy('postDate DESC').limit(3).collect() %}
+    {% if advisoryReports|length %}
         <div class="section section--default bg-offwhite">
             <div class="container">
                 <div class="flex justify-between pt-7.5 pb-2">
-                    {% set newsOverview = craft.entries.section('newsOverview').one() %}
-                    {% if newsOverview|length %}
+                    {% set advisoryReportsOverview = craft.entries.section('advisoryReportsOverview').one() %}
+                    {% if advisoryReportsOverview|length %}
                         <h2 class="heading-2 font-serif font-medium text-xl">
                             {{ 'laatste nieuws'|t }}
                         </h2>
                     {% endif %}
-                    <a href="{{ newsOverview.url }}" class="font-sans font-medium text-pitchblack link link--ext hover:underline">{{ "Alle adviezen bekijken"|t }}</a>
+                    <a href="{{ advisoryReportsOverview.url }}" class="font-sans font-medium text-pitchblack link link--ext hover:underline">{{ "Alle adviezen bekijken"|t }}</a>
                 </div>
                 <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-                    {% for cardEntry in news.all() %}
-                        {% include '_site/_snippet/_item/_card' with {amount: news.count()} %}
+                    {% for cardEntry in advisoryReports.all() %}
+                        {% include '_site/_snippet/_item/_card' with {amount: advisoryReports.count()} %}
                     {% endfor %}
                 </div> 
             </div>
@@ -37,8 +36,19 @@
 
     {% for block in entry.contentBuilder %}
         {% if block.type == 'textVideo' %}
+        <div class="container py-5">
             {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
+        </div>
         {% endif %}
     {% endfor %}
+
+    {% set remainingTextImageBlocks = entry.contentBuilder|filter(block => block.type == 'textImage')|slice(1) %}
+    {% if remainingTextImageBlocks is not empty %}
+        {% for remainingTextImageBlock in remainingTextImageBlocks %}
+            <div class="container py-5">
+                {% include '_site/_snippet/_content/_blocks/_' ~ remainingTextImageBlock.type with { block: remainingTextImageBlock } %}
+            </div>
+        {% endfor %}
+    {% endif %}
 
 {% endblock %}
