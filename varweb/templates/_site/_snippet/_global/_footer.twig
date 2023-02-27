@@ -1,6 +1,6 @@
 <footer class="page-footer">
 	<div >
-		<div class="py-8 bg-white doormat print:hidden">
+		<div class="py-6 doormat print:hidden ">
 			<div class="container relative">
 					<div class="flex flex-wrap -mx-4">
 						<div class="w-full px-1 sm:w-1/2 md:w-1/3">
@@ -13,12 +13,12 @@
 							<h3 class="text-foot font-serif font-medium mt-6">{{ generalInfo.siteName }}</h3>
 
 							{% if generalInfo.address|length %}
-								<div class="mt-4 font-sm font-sans">
+								<div class="mt-4 text-sm font-normal font-sans">
 									{{ generalInfo.address|nl2br }}
 								</div>
 							{% endif %}
 							{% if generalInfo.mail|length or generalInfo.phone|length %}
-								<div class="mt-4 space-y-1 font-sans font-sm">
+								<div class="mt-4 space-y-1 font-sans text-sm font-normal">
 									{% if generalInfo.phone|length %}
 										<div class="">
 											{{ svg('@webroot/frontend/icons/phone.svg')|attr({class: 'icon text-primary mr-1'}) }}
@@ -50,13 +50,26 @@
 					{% set newsLetters = craft.entries().section('newsLetter').all()%}
 					{% for entry in newsLetters %}
 						{% for contentBuilder in entry.contentBuilder %}
+							<div class="bg-primary absolute -top-3/4 z-0 right-0 left-1/2 pl-9 pr-9 pb-9 pt-11 clip-foot text-white">
 							<div class="">
-								<h3 class="text-foot font-serif font-medium">
+								<h3 class="text-foot font-serif font-medium pt-3">
 									{{ contentBuilder.blockTitle }}
 								</h3>
-								<p>{{ contentBuilder.text }}</p>
-								<input type="email" class="w-full border border-gray-300 py-2 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="E-mailadres">
-					
+								<div class="font-normal font-sans text-sm">{{ contentBuilder.text }}</div>
+								<input type="email" class="my-4 w-full bg-pitchblack-500/10  border border-white py-1 px-2 placeholder-white text-sm font-normal font-sans" placeholder="E-mailadres">
+								<div>
+									<input id="default-checkbox" type="checkbox" value="" class="h-3 w-3 bg-red-100 border-red-300 text-red-500 focus:ring-red-200">
+    								<label for="default-checkbox" class="ml-2 text-sm font-sans font-normal text-white">Ik verklaar dat ik de privacy policy heb gelezen en goedgekeurd</label>
+								</div>
+
+								{% if contentBuilder.cta|length %}
+								<div class="flex flex-wrap items-baseline pt-3 font-md font-sans font-medium">
+									{% for cta in contentBuilder.cta.all() %}
+									{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+									{% endfor %}
+								</div>
+								{% endif %}
+							</div>
 							</div>
 						{% endfor %}
 					{% endfor %}
@@ -65,7 +78,7 @@
 	</div>
 
 
-	<div class="py-6 footer font-sans text-xxs font-normal bg-light">
+	<div class="py-6 footer font-sans text-xxs font-normal bg-light relative z-10">
 		<div class="container">
 			<div class="flex flex-wrap justify-between">
 				<div class="">

@@ -12,7 +12,11 @@ return [
         'btn btn--quaternary btn--ext'  => 'Quaternary >',
         'btn btn--ghost'                => 'Ghost',
         'btn btn--ghost btn--ext'       => 'Ghost >',
+        'btn btn--fifth'                => 'Fifth',
+        'btn btn--fifth btn--ext'       => 'Fifth >',
         'link'                          => 'Link',
-        'link link--ext'                => 'Link >'
+        'link link--ext'                => 'Link >',
+        'link2'                    => 'Link white',
+        'link2 link2--ext'          => 'Link white >',
     ]
 ];

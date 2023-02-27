@@ -27,6 +27,7 @@
                 </div>
                 <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
                     {% for cardEntry in advisoryReports.all() %}
+                        {% set bgColor = 'bg-white' %}
                         {% include '_site/_snippet/_item/_card' with {amount: advisoryReports.count()} %}
                     {% endfor %}
                 </div> 
@@ -53,7 +54,7 @@
     {% if entry.lightswitch %}
         {% set news = craft.entries().section('news').with(['overviewImage']).orderBy('postDate DESC').limit(3).collect() %}
         {% if news|length %}
-            <div class="section section--default bg-offwhite">
+            <div class="section section--default bg-offwhite clip-gray relative z-10">
                 <div class="container">
                     <div class="flex justify-between pt-7.5 pb-2">
                         {% set newsOverview = craft.entries.section('newsOverview').one() %}

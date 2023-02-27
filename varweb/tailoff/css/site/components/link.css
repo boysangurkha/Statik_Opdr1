@@ -1,6 +1,6 @@
 @layer components {
   .link {
-    @apply inline-flex underline text-pitchblack;
+    @apply inline-flex underline text-pitchblack transition-colors;
 
     &:hover {
       @apply text-primary-hover;
@@ -32,14 +32,27 @@
       }
     }
 
-    &--extended::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+  }
+  .link2{
+    @apply inline-flex underline text-primary;
+
+    &:hover {
+      @apply text-white;
+    }
+
+    &--ext {
+      @apply items-center;
+      @mixin icon chevron-right;
+
+      &::after {
+        @apply ml-1;
+        @apply text-white;
+      }
+
+      &:hover::after,
+      .group:hover &::after {
+        @apply text-white;
+      }
     }
   }
-  
 }

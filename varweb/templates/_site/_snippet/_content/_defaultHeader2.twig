@@ -1,0 +1,56 @@
+{% if entry.headerImage|length %}
+    {% set headerImage = entry.headerImage.one() %}
+    {% set crumbColor1 = true %}
+    {% set crumbColor2 = true %}
+
+    <div class="relative pt-6 pb-8 bg-cover bg-no-repeat sm:py-20 js-bg-target" style="background-position: {% for focalPoint in headerImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; height: 50vh;">
+        <div class="container h-full flex flex-col justify-center">
+            <div class="w-full md:w-1/2">
+                <div class="relative z-10">
+                    {% include '_site/_snippet/_nav/_breadcrumb' with {'crumbColor1': crumbColor1, 'crumbColor2': crumbColor2} %}
+                    <div class="text-white">
+                    {% include '_site/_snippet/_content/_pageTitle' %}
+                    {% include '_site/_snippet/_content/_intro' %}
+                    </div>
+                    {% if entry.callToActions|length %}
+                        <div class="flex flex-wrap items-baseline pt-3 font-md font-sans font-medium">
+                            {% for cta in entry.callToActions.all() %}
+                            {% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+                            {% endfor %}
+                        </div>
+					{% endif %}
+                </div>
+            </div>
+            {% set optimizedImage = headerImage.optimizedContent %}
+            <picture>
+                {% if craft.imageOptimize.serverSupportsWebP() and headerImage.extension != 'svg' %}
+                    <source srcset="{{ optimizedImage.srcsetWebP() }}" sizes="100vw" type="image/webp"/>
+                {% endif %}
+                <img src="{{ optimizedImage.placeholderBox() }}" srcset="{{ optimizedImage.srcset() }}" sizes="100vw" alt="" class="sr-only js-bg-src" loading="lazy"/>
+            </picture>
+        </div>
+    </div>
+
+{% else %}
+    {% set crumbColor1 = false %}
+    {% set crumbColor2 = false %}
+    <div class="bg-light pt-6 pb-8">
+        <div class="container">
+            <div class="w-full px-4 {% if entry.headerImage|length %}md:w-1/2{% else %}md:w-3/4{% endif %}">
+                    {% include '_site/_snippet/_nav/_breadcrumb' %}
+                    <div class="text-black">
+                    {% include '_site/_snippet/_content/_pageTitle' %}
+                    {% include '_site/_snippet/_content/_intro' %}
+                    </div>
+                    {% if entry.callToActions|length %}
+                        <div class="flex flex-wrap items-baseline pt-3 font-md font-sans font-medium">
+                            {% for cta in entry.callToActions.all() %}
+                            {% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+                            {% endfor %}
+                        </div>
+					{% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+

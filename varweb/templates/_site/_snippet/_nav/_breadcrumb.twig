@@ -1,4 +1,4 @@
-<div class="flex flex-wrap mt-4 text-sm text-black breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<div class="pb-4 flex flex-wrap mt-4 text-sm {% if crumbColor1 %}text-white{% else %}text-black{% endif %} breadcrumb font-sans font-normal text-xxxs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 	{% set segmentUri = '/' %}
 	<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="flex items-center breadcrumb__scope">
 		<a href="{{ siteUrl }}" itemprop="item" class="flex underline hover:no-underline">
@@ -11,7 +11,7 @@
 		{% for crumb in breadcrumbs %}
 			{% if not crumb is null %}
 				<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="flex items-center breadcrumb__scope">
-					<a href="{{ crumb.url }}" itemprop="item" class="flex underline hover:no-underline{% if loop.last %} no-underline{% endif %}">
+					<a href="{{ crumb.url }}" itemprop="item" class="{% if crumbColor2 %}text-white opacity-50{% else %}text-black opacity-50{% endif %} flex underline hover:no-underline{% if loop.last %} no-underline{% endif %}">
 						<span itemprop="name">{{ crumb.title }}</span>
 					</a>
 					{% if not loop.last %}
@@ -25,7 +25,7 @@
 		{% for segment in craft.app.request.segments %}
 			{% set segmentUri = segmentUri ~ segment ~ "/"  %}
 			<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="flex items-center breadcrumb__scope">
-				<a href="{{ segmentUri }}" itemprop="item" class="flex underline hover:no-underline{% if loop.last %} no-underline{% endif %}">
+				<a href="{{ segmentUri }}" itemprop="item" class="{% if crumbColor2 %}text-white opacity-50{% else %}text-black opacity-50{% endif %} flex underline hover:no-underline{% if loop.last %} no-underline{% endif %}">
 					<span itemprop="name">{{ segment|replace('-',' ') }}</span>
 				</a>
 				<meta itemprop="position" content="{{ loop.index+1 }}">

@@ -14,7 +14,7 @@
     {% set showContrast = false %}
 {% endif %}
 
-<div class="pb-8 flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
+<div class="{% if showContrast %}{% else %}pb-8{% endif %} flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
     <div class="card pb-5 group hover:bg-primary relative flex flex-col w-full min-h-full overflow-hidden cursor-pointer card {% if showContrast %}bg-light{% else %}bg-white{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
         {% if showImage %}
             {% set overviewImage = cardEntry.headerImage.collect().first() ? cardEntry.headerImage.collect().first() : fallback.image.one() %}

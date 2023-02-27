@@ -113,6 +113,10 @@ module.exports = {
                 logo: '150px',
             },
             fontSize: {
+                'xxxs': ['14px', {
+                    lineHeight: '20px',
+                    fontWeight: '400',
+                }],
                 'xxs': ['16px', {
                     lineHeight: '24px',
                     fontWeight: '400',
@@ -181,6 +185,9 @@ module.exports = {
                 '9': '128px',
                 '9.5': '150px',
                 '10': '192px',
+                '11': '256px',
+                '3/5': '60%',
+                '55/100': '55%',
             },
             fontFamily: {
                 'sans': ['FlandersArtSans'],
@@ -199,6 +206,6 @@ module.exports = {
     },
     plugins: [
         colorShade(siteColors),
-        // underlineAnimation,
+        [require("@tailwindcss/forms")],
     ],
 };

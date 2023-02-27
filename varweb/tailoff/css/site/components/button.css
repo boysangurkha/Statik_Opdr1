@@ -113,4 +113,22 @@
       }
     }
   }
+
+  &--fifth{
+    @apply text-pitchblack no-underline bg-white border-white rounded-none;
+
+    &:hover,
+    .group:hover & {
+      @apply text-primary-hover no-underline bg-white;
+    }
+
+    &-inverse {
+      @apply no-underline bg-white border-white text-primary;
+
+      &:hover,
+      .group:hover & {
+        @apply text-white no-underline bg-primary-hover border-primary-hover;
+      }
+    }
+  }
 }
