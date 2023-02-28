@@ -6,7 +6,8 @@ return [
         'Background colors' => [
             'section--default' => 'Default',
             'section--light' => 'Light',
-            'section--primary' => 'Primary'
+            'section--primary' => 'Primary',
+            'section--secondary' => 'Secondary',
         ]
     ]
 ];

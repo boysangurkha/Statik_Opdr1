@@ -14,7 +14,7 @@
 
     {% set advisoryReports = craft.entries().section('advisoryReports').with(['overviewImage']).orderBy('postDate DESC').limit(3).collect() %}
     {% if advisoryReports|length %}
-        <div class="section section--default bg-offwhite">
+        <div class=" section--default bg-offwhite pb-9">
             <div class="container">
                 <div class="flex justify-between pt-7.5 pb-2">
                     {% set advisoryReportsOverview = craft.entries.section('advisoryReportsOverview').one() %}
@@ -54,7 +54,7 @@
     {% if entry.lightswitch %}
         {% set news = craft.entries().section('news').with(['overviewImage']).orderBy('postDate DESC').limit(3).collect() %}
         {% if news|length %}
-            <div class="section section--default bg-offwhite clip-gray relative z-10">
+            <div class="section--default bg-offwhite clip-gray relative z-10 pb-9">
                 <div class="container">
                     <div class="flex justify-between pt-7.5 pb-2">
                         {% set newsOverview = craft.entries.section('newsOverview').one() %}

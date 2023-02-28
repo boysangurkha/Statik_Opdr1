@@ -15,3 +15,7 @@
     border-bottom-color: #2D92BF;
   }
   
+.divNav nav div{
+  background-color: red;
+  position: absolute;
+}

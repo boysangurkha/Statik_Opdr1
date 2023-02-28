@@ -14,14 +14,15 @@
     {% set showContrast = false %}
 {% endif %}
 
-<div class="pb-8 flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
+<div class=" flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
+<a class="" href="{{ cardEntry.getUrl() }}">
     <div class="group relative flex flex-col w-full min-h-full overflow-hidden cursor-pointer card {% if showContrast %}bg-light{% else %}{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
         {% if showImage %}
             {% set overviewImage = cardEntry.headerImage.collect().first() ? cardEntry.headerImage.collect().first() : fallback.image.one() %}
             {% if overviewImage|length %}
                 {% set optimizedImage = overviewImage.optimizedOverview %}
                 {% if optimizedImage|length %}
-                    <div class="{% if not showInColumns %}w-full md:w-1/2 flex{% endif %}image transition-brightness duration-300 group-hover:brightness-50">
+                    <div class="{% if not showInColumns %}w-full md:w-1/2 flex{% endif %}image bg-primary mix-blend-multiply transition-all duration-300">
                         {% set sizes = "(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 819px) 298px, (min-width: 820px) and (max-width: 1199px) 295px, (min-width: 1200px) 368px" %}
                         {% if not showInColumns %}
                             {% set sizes = "(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 306px, (min-width: 820px) and (max-width: 979px) 386px, (min-width: 980px) and (max-width: 1199px) 466px, (min-width: 1200px) 576px" %}
@@ -47,8 +48,9 @@
             {% endif %}
         {% endif %}
         <div class="cardDateCon w-full flex flex-col flex-auto py-4 pr-4{% if not showInColumns %}md:w-1/2{% endif %}">
-            <h3 class="mb-1 font-serif text-sm font-medium ">
-                <a class="underline-offset-2 underline [@supports(background:paint(something))]:transition [@supports(background:paint(something))]:duration-300 link--extended decoration-transparent decoration-0 hover:decoration-current" href="{{ cardEntry.getUrl() }}">{{ cardEntry.overviewTitle ?? cardEntry.title }}</a>
+            <h3 class="mb-1 font-serif text-sm font-medium group-hover:underline decoration-1 underline-offset-2 ">
+                <div class="underline-offset-2 underline [@supports(background:paint(something))]:transition [@supports(background:paint(something))]:duration-300 link--extended decoration-transparent decoration-0 hover:decoration-current">{{ cardEntry.overviewTitle ?? cardEntry.title }}</div>
+
             </h3>
 
             <div class="cardDate py-1 font-sans text-xxs font-normal text-gray flex"><img class="pr-1" src="/frontend/icons/nieuws.svg" />
@@ -60,4 +62,5 @@
             
         </div>
     </div>
+</a>
 </div>

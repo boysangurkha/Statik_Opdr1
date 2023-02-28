@@ -9,16 +9,34 @@
 		</div>
 	</div>
 
-	<div class="w-full container">
-		<div class="w-full flex items-center justify-between md:items-stretch">
+	<div class="w-full container ">
+		<div class="w-full flex items-center justify-between xxs:py-4 xl:py-0">
 			{% if not systemOffline %}
-				<div class="w-full flex-col items-end hidden md:flex">
+				<div class="flex items-center">
+					<a href="{{ siteUrl }}" class="">
+					{{ svg('logo.svg')|attr({ class: 'w-10 max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
+					</a>
+					<a href="{{ siteUrl }}" class="px-6 xxs:hidden sm:flex">
+					{{ svg('logo-vlaanderen.svg')|attr({ class: 'w-10 max-w-logo', role: 'img', 'aria-label': 'homepage' }) }}
+					</a>
+				</div>
+
+				<div class="w-full flex-col hidden xl:flex">
 					{% include '_site/_snippet/_nav/_main.twig' %}
 				</div>
-				<a href="#flyout" class="text-3xl js-flyout-toggle md:hidden ie-hidden print:hidden" role="button">
-					<span class="sr-only">{{"Menu"|t}}</span>
-					{{ svg('@webroot/frontend/icons/menu.svg')|attr({class: 'icon '}) }}
-				</a>
+
+				<div class="flex items-center">
+					<div class="xl:ml-5 xs:mr-4 xl:mr-0">
+						<button class="bg-primary transition ease-in-out duration-200 hover:bg-primary-hover w-6 h-6 rounded-full text-sm cursor-pointer text-white js-search-trigger js-search-animated">
+						<span class="sr-only">{{ 'Zoeken'|t }}</span>
+						{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}
+						</button>
+					</div>
+					<a href="#flyout" class="text-3xl js-flyout-toggle xl:hidden ie-hidden print:hidden" role="button">
+						<span class="sr-only">{{"Menu"|t}}</span>
+						{{ svg('@webroot/frontend/icons/menu.svg')|attr({class: 'icon '}) }}
+					</a>
+				</div>
 			{% endif %}
 		</div>
 	</div>

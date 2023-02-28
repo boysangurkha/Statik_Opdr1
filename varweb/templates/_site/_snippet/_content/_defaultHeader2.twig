@@ -3,7 +3,7 @@
     {% set crumbColor1 = true %}
     {% set crumbColor2 = true %}
 
-    <div class="relative pt-6 pb-8 bg-cover bg-no-repeat sm:py-20 js-bg-target" style="background-position: {% for focalPoint in headerImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; height: 50vh;">
+    <div class="relative pt-6 pb-8 bg-cover bg-no-repeat sm:py-20 js-bg-target" style="background-position: {% for focalPoint in headerImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 50vh;">
         <div class="container h-full flex flex-col justify-center">
             <div class="w-full md:w-1/2">
                 <div class="relative z-10">

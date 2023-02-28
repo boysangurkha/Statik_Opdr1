@@ -2,50 +2,50 @@
 {#{% set bgColor = block.backgroundColor == 'section--light' ? 'bg-offwhite py-7' : block.backgroundColor == 'section--default' ? 'bg-white' : (block.backgroundColor == 'section--primary' and block.position == 'right') ? 'bg-secondary' : 'bg-primary' %} #}
 
 {% if block.backgroundColor == 'section--light' %}
-		{% set rela = 'relative' %}
-	{% if block.position == 'right' %}
-		{% set inverseClass = 'flex-row-reverse' %}
-		{% set bgColor = 'bg-offwhite clipRechts  absolute right-98' %}
-		{% set additionalClasses = 'relative py-9 w-full' %}
-		{% set paddingClasses = 'pl-7 pr-9' %}
-	{% else %}
-		{% set inverseClass = 'flex-row' %}
-		{% set bgColor = 'bg-offwhite  clipLinks py-7 absolute left-98' %}
-		{% set additionalClasses = 'relative py-9 w-full' %}
-		{% set paddingClasses = 'pl-9 pr-7' %}
-{% endif %}
-
-{% elseif block.backgroundColor == 'section--default' %}
-	{% set rela = 'relative' %}
-	{% if block.position == 'right' %}
-		{% set inverseClass = 'flex-row-reverse' %}
-		{% set bgColor = 'bg-white  absolute right-98' %}
-		{% set additionalClasses = ' relative py-9 flex-wrap' %}
-		{% set paddingClasses = 'pl-5 pr-10' %}
-	{% else %}
-		{% set inverseClass = 'flex-row' %}
-		{% set bgColor = 'bg-white  absolute left-98' %}
-		{% set additionalClasses = ' relative py-9 w-full' %}
-		{% set paddingClasses = 'pl-9 pr-5 ' %}
-{% endif %}
-
-{% elseif block.backgroundColor == 'section--primary' %}
-	{% set rela = 'relative' %}
-	{% if block.position == 'right' %}
-		{% set inverseClass = 'flex-row-reverse' %}
-		{% set bgColor = 'bg-primary z-99 clipBlue absolute right-96' %}
-		{% set additionalClasses = ' relative py-9 flex-wrap' %}
-		{% set paddingClasses = 'pl-5 pr-10 text-white' %}
-	{% else %}
-		{% set inverseClass = 'flex-row' %}
-		{% set bgColor = 'bg-green z-99 clipGreen  absolute left-96' %}
-		{% set additionalClasses = ' relative py-9 w-full' %}
-		{% set paddingClasses = 'pl-9 pr-5' %}
+			{% set rela = 'relative' %}
+		{% if block.position == 'right' %}
+			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+			{% set bgColor = 'bg-offwhite xxs:-mt-5 clipRechts  md:absolute xl:right-98 lg:right-90 md:right-80 ' %}
+			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
+			{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
+		{% else %}
+			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+			{% set bgColor = 'bg-offwhite xxs:-mt-5  clipLinks md:absolute xl:left-98 lg:left-90 md:left-80 ' %}
+			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
+			{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
 	{% endif %}
-{% endif %}
 
-<div class="flex items-center -mx-4 {{ inverseClass }}  {{ additionalClasses }}">
-	<div class="{{ bgColor }} py-9">
+	{% elseif block.backgroundColor == 'section--default' %}
+		{% set rela = 'relative' %}
+		{% if block.position == 'right' %}
+			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+			{% set bgColor = 'bg-white  md:absolute xl:right-98 lg:right-90 md:right-80' %}
+			{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
+			{% set paddingClasses = 'md:pl-5 md:pr-9 xxs:pt-5' %}
+		{% else %}
+			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+			{% set bgColor = 'bg-white  md:absolute xl:left-98 lg:left-90 md:left-80' %}
+			{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
+			{% set paddingClasses = 'md:pl-9 md:pr-5 xxs:pt-5' %}
+	{% endif %}
+
+	{% elseif block.backgroundColor == 'section--primary' %}
+		{% set rela = 'relative' %}
+		{% if block.position == 'right' %}
+			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+			{% set bgColor = 'bg-primary xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 ' %}
+			{% set additionalClasses = ' relative lg:py-9 w-full md:py-10 xxs:py-5' %}
+			{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
+		{% else %}
+			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+			{% set bgColor = 'bg-primary xxs:-mt-5  clipLinks md:absolute xl:left-98 lg:left-90 md:left-80 ' %}
+			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
+			{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
+		{% endif %}
+	{% endif %}
+
+<div class="flex items-center {{ inverseClass }}  {{ additionalClasses }}">
+	<div class="{{ bgColor }}">
 		<div class=" w-full {{ paddingClasses }}">
 			{% if block.blockTitle|length %}
 				<div class="text-xl font-serif font-medium" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>

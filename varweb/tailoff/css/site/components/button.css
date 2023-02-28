@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-flex items-center px-4 py-3 leading-none border-2 rounded-sm;
+  @apply inline-flex items-center px-4 py-3 leading-none border-2 rounded-sm text-md font-sans font-medium;
 
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-timing-function: ease-in-out;
@@ -115,20 +115,21 @@
   }
 
   &--fifth{
-    @apply text-pitchblack no-underline bg-white border-white rounded-none;
+    @apply text-pitchblack no-underline bg-white border-white;
 
     &:hover,
     .group:hover & {
-      @apply text-primary-hover no-underline bg-white;
+      @apply no-underline bg-primary-hover border-primary-hover text-white;
     }
 
     &-inverse {
-      @apply no-underline bg-white border-white text-primary;
+      @apply no-underline bg-white border-white text-secondary;
 
       &:hover,
       .group:hover & {
-        @apply text-white no-underline bg-primary-hover border-primary-hover;
+        @apply text-white no-underline bg-secondary-hover border-secondary-hover;
       }
     }
+
   }
 }

@@ -7,5 +7,9 @@
 }
 
 .clip-foot{
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(20% 20%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+.clip-footdiv{
+    clip-path: polygon(0 55%, 100% 55%, 100% 73%, 0 100%);
 }

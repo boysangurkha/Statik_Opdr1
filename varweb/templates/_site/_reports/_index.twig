@@ -5,5 +5,41 @@
 {% block content %}
 
 {% include '_site/_snippet/_content/_defaultHeader2' %}
+{% set entries = craft.entries.section('advisoryReports').with(['overviewImage']).orderBy('postDate DESC') %}
+{% paginate entries.limit(9) as pageInfo, advisoryReports %}
 
+<div class="section--default relative z-10">
+    <div class="container">
+        <div class="pb-7 pt-2">
+            <div class="font-serif font-medium text-xxs">
+                {{ entries.count }} {{ 'resultaten gevonden'|t }}
+            </div>
+
+        </div>
+        
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+            {% for cardEntry in advisoryReports %}
+                {% set showContrast = true %}
+                {% include '_site/_snippet/_item/_card' with {'showContrast' : showContrast } %}
+            {% endfor %}
+        </div>
+
+        <div class="my-7">
+        {{ craft.statik.paginate(pageInfo, {
+            pageRange: 2
+        }) }}
+        </div>
+
+        <div class="-mx-6">
+        {% for block in entry.contentBuilder.all() %}
+            {% if block.type == 'textImage' %}
+                {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+
+    {% include '_site/_snippet/_global/_footdiv' %}
+
+</div>
 {% endblock %}
