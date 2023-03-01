@@ -30,7 +30,7 @@
         }) }}
         </div>
 
-        <div class="-mx-6">
+        <div class="-mb-7">
         {% for block in entry.contentBuilder.all() %}
             {% if block.type == 'textImage' %}
                 {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}

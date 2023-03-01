@@ -6,9 +6,33 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
 
-.clip-foot{
-    clip-path: polygon(20% 20%, 100% 20%, 100% 100%, 0% 100%);
+@media screen and (min-width:400px){
+    .clip-foot{
+        clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+    }
 }
+
+@media screen and (min-width:820px){
+    .clip-foot{
+        clip-path: polygon(28% 20%, 100% 20%, 100% 100%, 18% 100%);
+    }
+}
+
+@media screen and (min-width:980px){
+    .clip-foot{
+        clip-path: polygon(25% 20%, 100% 20%, 100% 100%, 5% 100%);
+    }
+}
+
+@media screen and (min-width:1200px){
+    .clip-foot{
+        clip-path: polygon(20% 20%, 100% 20%, 100% 100%, 0% 100%);
+    }
+}
+
+
+
+
 
 .clip-footdiv{
     clip-path: polygon(0 55%, 100% 55%, 100% 73%, 0 100%);
