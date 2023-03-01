@@ -23,7 +23,7 @@
             {% if overviewImage|length %}
                 {% set optimizedImage = overviewImage.optimizedOverview %}
                 {% if optimizedImage|length %}
-                    <div class="{% if not showInColumns %}w-full md:w-1/2 flex{% endif %}image ">
+                    <div class="{% if not showInColumns %}w-full md:w-1/2 flex{% endif %}image bg-primary mix-blend-multiply	 transition-all duration-300 ">
                         {% set sizes = "(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 819px) 298px, (min-width: 820px) and (max-width: 1199px) 295px, (min-width: 1200px) 368px" %}
                         {% if not showInColumns %}
                             {% set sizes = "(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 306px, (min-width: 820px) and (max-width: 979px) 386px, (min-width: 980px) and (max-width: 1199px) 466px, (min-width: 1200px) 576px" %}

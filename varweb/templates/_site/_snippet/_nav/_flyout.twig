@@ -13,4 +13,7 @@
     </nav>
 {% endif %}
 
-{% include "_site/_snippet/_nav/_language" %}
+{% set flyoutClasses = true %}
+<div class="">
+    {% include "_site/_snippet/_nav/_main" with {'flyoutClasses': flyoutClasses} %}
+</div>

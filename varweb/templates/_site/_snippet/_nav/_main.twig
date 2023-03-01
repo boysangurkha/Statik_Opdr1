@@ -2,14 +2,14 @@
 {% set searchResultsEntry = craft.entries.section('searchResults').one() %}
 
 {% if mainNav|length %}
-	<nav class="navigatie w-full flex items-center justify-end h-full relative " aria-label="{{ 'Main'|t }}">
+	<nav class="navigatie w-full flex {% if flyoutClasses %} flex-col items-center justify-center {% else %} flex-row items-center justify-end h-full relative {% endif %}  " aria-label="{{ 'Main'|t }}">
 
 
 		
-		<ul class="flex flex-wrap space-x-5 items-center text-pitchblack" >
+		<ul class="flex text-pitchblack {% if flyoutClasses %} flex-col items-center justify-center {% else %} flex-row space-x-5 items-center  {% endif %} " >
 			{% for node in mainNav %}
-				<li class="xl:py-6 xxs:py-8 {% if node.classes|length %}{{ node.classes }}{% endif %}">
-					<a href="{{ node.url }}" class="font-sans text-md hover:no-underline {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
+				<li class="{% if flyoutClasses %} py-6 {% else %} xl:py-5 xxs:py-8 {% if node.classes|length %}{{ node.classes }}{% endif %} {% endif %}">
+					<a href="{{ node.url }}" class="font-sans {% if flyoutClasses %} text-xl {% else %} text-md {% endif %} hover:no-underline {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
 					</a>
 				</li>
 			{% endfor %}
@@ -19,6 +19,11 @@
 			{#                </li>#}
 			{# {% endif %} #}
 		</ul>
-		
+		<div class="{% if flyoutClasses %} mt-6 {% else %} xl:ml-5 xs:mr-4 xl:mr-0 {% endif %}">
+			<button class="bg-primary transition ease-in-out duration-200 hover:bg-primary-hover {% if flyoutClasses %} w-7 h-7 text-lg {% else %} w-6 h-6 text-sm {% endif %} rounded-full cursor-pointer text-white js-search-trigger js-search-animated">
+				<span class="sr-only">{{ 'Zoeken'|t }}</span>
+				{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}
+			</button>
+		</div>
 	</nav>
 {% endif %}
