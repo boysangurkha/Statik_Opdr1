@@ -1,4 +1,4 @@
-<div class="invisible flyout ie-hidden" id="flyout">
+<div class="invisible flyout ie-hidden overflow-y-hidden" id="flyout">
 	<div class="container">
 		<div class="absolute top-0 right-0 mt-4 mr-4">
 			<a href="#" class="text-2xl cursor-pointer js-flyout-close" tabindex="0" role="button">
@@ -6,9 +6,22 @@
 				<span class="sr-only">{{ 'Sluiten'|t }}</span>
 			</a>
 		</div>
-		<div class="mt-12">
+		<div class="mt-7">
 			{% include '_site/_snippet/_nav/_flyout' %}
 		</div>
+		
 	</div>
+	{% set flyoutClasses = true %}
+		<div class="bg-light overflow-y-hidden h-full flyoutClip -mt-5">
+			<div class="container">
+				{% include "_site/_snippet/_nav/_service.twig" with {'flyoutClasses': flyoutClasses} %}
+				<div class="mt-6">
+				{% include "_site/_snippet/_nav/_language.twig" with {'flyoutClasses': flyoutClasses} %}
+				</div>
+				<div class="mt-5">
+				{% include '_site/_snippet/_global/_search' with {'flyoutClasses': flyoutClasses} %}
+				</div>
+			</div>
+		</div>
 </div>
 <div class="flyout__overlay js-flyout-close"></div>

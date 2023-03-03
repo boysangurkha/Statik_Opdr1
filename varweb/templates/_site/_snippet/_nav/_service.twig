@@ -1,10 +1,10 @@
 {% set serviceNav = craft.navigate.raw('serviceNav') %}
 {% if serviceNav|length %}
 	<nav class="" aria-label="{{ 'Service'|t }}">
-		<ul class="flex flex-wrap space-x-5 pr-5">
+		<ul class="{% if flyoutClasses %} flex-col mt-7 {% else %} flex flex-wrap space-x-5 pr-5 {% endif %}">
 			{% for node in serviceNav %}
-				<li class="{% if node.classes|length %}{{ node.classes }}{% endif %}">
-					<a href="{{ node.url }}" class="text-xxs text-pitchblack font-sans hover:underline{% if node.active %} underline{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
+				<li class=" {% if flyoutClasses %} mb-4  {% else %} {% endif %}  {% if node.classes|length %}{{ node.classes }}{% endif %}">
+					<a href="{{ node.url }}" class=" text-pitchblack font-sans hover:underline text-xxs   {% if node.active %} underline{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
 					</a>
 				</li>
 			{% endfor %}

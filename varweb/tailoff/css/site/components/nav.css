@@ -19,3 +19,8 @@
   background-color: red;
   position: absolute;
 }
+
+.flyoutClip{
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+
+}

@@ -1,9 +1,10 @@
 <header class="page-header">
-	<div class="w-full bg-tertiary">
+	<div class="w-full bg-tertiary hidden xl:flex">
 		<div class="w-full container relative flex flex-wrap items-center sm:justify-end xxs:justify-around py-2 min-w-searchbox">
-			<div class="flex items-center js-search-hide">
-				{% include '_site/_snippet/_nav/_service.twig' %}
-				{% include "_site/_snippet/_nav/_language" %}
+			<div class="flex items-center js-search-hide ">
+				{% set flyoutClasses = false %}
+				{% include '_site/_snippet/_nav/_service.twig' with {'flyotClasses' : flyoutClasses}  %}
+				{% include "_site/_snippet/_nav/_language" with {'flyotClasses' : flyoutClasses}  %}
 			</div>
 			{#{% include "_site/_snippet/_global/_search.twig" %}#}
 		</div>
