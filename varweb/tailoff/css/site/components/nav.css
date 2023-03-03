@@ -13,7 +13,11 @@
   
   .navigatie li a:hover::before {
     border-bottom-color: #2D92BF;
+    transition: all 0.3s ease-in-out;
+    animation: move 0.3 ease-in-out    ;
   }
+
+
   
 .divNav nav div{
   background-color: red;

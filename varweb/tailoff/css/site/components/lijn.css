@@ -1,9 +1,25 @@
-.lijn{
-    position: absolute;
-    width: 80px;
-    height: 1px;
-    top: calc(50% - 0.5px);
-    left: calc(50% - 40px);
-    background-color: white;
-    transform: rotate(90deg);
+
+
+@media screen and (min-width:400px){
+    .lijn{
+        position: absolute;
+        width: 70%;
+        height: 1px;
+        bottom: -30px;
+        background-color: white;
+        opacity: 0.5;
+    }
+}
+
+
+@media screen and (min-width:1200px){
+    .lijn{
+        position: absolute;
+        width: 80px;
+        height: 1px;
+        top: calc(50% - 0.5px);
+        left: calc(50% - 40px);
+        background-color: white;
+        transform: rotate(90deg);
+    }
 }
