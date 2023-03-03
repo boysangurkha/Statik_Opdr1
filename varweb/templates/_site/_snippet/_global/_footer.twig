@@ -49,7 +49,7 @@
 				{% set newsLetters = craft.entries().section('newsLetter').all()%}
 				{% for entry in newsLetters %}
 					{% for contentBuilder in entry.contentBuilder %}
-						<div class=" bg-primary xxs:py-5 xs:pr-8 xxs:pr-6 xxs:pl-5 overflow-hidden md:absolute xl:-top-3/4 md:-top-4/5 md:z-0 md:right-0 md:left-1/2 md:pl-9 md:pr-7 md:pb-8 md:pt-11 clip-foot text-white">
+						<div class=" bg-primary xxs:mt-3 xs:mt-5  md:mt-0 xxs:relative xxs:z-10 md:-mx-0 overflow-hidden md:absolute xl:-top-3/4 md:-top-4/5 md:z-0 md:right-0 md:left-1/2 md:pl-9 md:pr-7 md:pb-8 md:pt-11 clip-foot text-white">
 							<div class="">
 								<h3 class="text-foot font-serif font-medium pt-3">
 									{{ contentBuilder.blockTitle }}
@@ -72,6 +72,9 @@
 						</div>
 					{% endfor %}
 				{% endfor %}
+		</div>
+		<div class="bg-primary w-full h-600 block absolute xxs:bottom-10.5 clip-foot2 xs:bottom-7 sm:bottom-4 md:hidden">
+		
 		</div>
 	</div>
 

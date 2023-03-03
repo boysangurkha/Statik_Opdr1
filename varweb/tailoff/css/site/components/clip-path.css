@@ -7,8 +7,9 @@
 }
 
 @media screen and (min-width:400px){
-    .clip-foot{
-        clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
+    .clip-foot2{
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
     }
 }
 
