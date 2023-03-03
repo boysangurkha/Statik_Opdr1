@@ -1,4 +1,6 @@
 {% extends "_site/_layout.twig" %}
+    {% set crumbColor1 = true %}
+    {% set crumbColor2 = true %}
 
 {% set breadcrumbs = entry.ancestors().all()|merge([entry]) %}
 
@@ -8,7 +10,7 @@
 
     {% embed "_site/_snippet/_content/_defaultHeader" %}
         {% block headerText %}
-            {% include '_site/_snippet/_nav/_breadcrumb' %}
+            {% include '_site/_snippet/_nav/_breadcrumb' with {'crumbColor1': crumbColor1, 'crumbColor2': crumbColor2} %}
             {% include '_site/_snippet/_content/_pageTitle' %}
             {% if q|length %}
                 <div class="text-xl font-light redactor">

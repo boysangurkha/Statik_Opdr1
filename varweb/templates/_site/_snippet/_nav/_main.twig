@@ -1,6 +1,7 @@
 {% set mainNav = craft.navigate.raw('mainNav') %}
 {% set searchResultsEntry = craft.entries.section('searchResults').one() %}
 
+
 {% if mainNav|length %}
 	<nav class="navigatie w-full flex {% if flyoutClasses %} flex-col items-center justify-center {% else %} flex-row items-center justify-end h-full relative {% endif %}  " aria-label="{{ 'Main'|t }}">
 
@@ -13,17 +14,19 @@
 					</a>
 				</li>
 			{% endfor %}
-			{# {% if searchResultsEntry %} #}
-		{#                <li>#}
-			{#                    {% include '_site/_snippet/_global/_search' %}#}
-			{#                </li>#}
-			{# {% endif %} #}
+			 {#{% if searchResultsEntry %} 
+		               <li>
+			                    {% include '_site/_snippet/_global/_search' %}
+			             </li>
+			 {% endif %} #}
 		</ul>
-		<div class="{% if flyoutClasses %} mt-6 {% else %} xl:ml-5 xs:mr-4 xl:mr-0 {% endif %}">
+		{#<div class="{% if flyoutClasses %} mt-6 {% else %} xl:ml-5 xs:mr-4 xl:mr-0 {% endif %}">
 			<button class="bg-primary transition ease-in-out duration-200 hover:bg-primary-hover {% if flyoutClasses %} w-7 h-7 text-lg {% else %} w-6 h-6 text-sm {% endif %} rounded-full cursor-pointer text-white js-search-trigger js-search-animated">
 				<span class="sr-only">{{ 'Zoeken'|t }}</span>
 				{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}
 			</button>
-		</div>
+		</div>#}
+	{% include '_site/_snippet/_global/_search' %}
+
 	</nav>
 {% endif %}

@@ -5,38 +5,118 @@
 {% block content %}
 
 {% include '_site/_snippet/_content/_defaultHeader2' %}
-{% set entries = craft.entries.section('advisoryReports').with(['overviewImage']).orderBy('postDate DESC') %}
-{% paginate entries.limit(9) as pageInfo, advisoryReports %}
+{% set entries = craft.entries.section('advisoryReports')%}
+{% set relationParam = ['and'] %}
+
+
+{% set searchQuery = craft.app.request.getParam('search') %}
+{% set catQuery = craft.app.request.getParam('category') %}
+
+{% if catQuery %}
+    {% set relationParam = relationParam|merge([{ targetElement: catQuery }]) %}
+{% endif %}
+
+{% if relationParam|length > 1 %}
+    {% set entries = entries.relatedTo(relationParam) %}
+{% endif %}
+
+{% if searchQuery %}
+    {% set entries = entries.search(searchQuery).orderBy('score') %}
+{% endif %}
+
+
+{% set totalEntries = entries|length %}
+
+{% paginate entries.limit(9) as pageInfo, advrep %}
+
 
 <div class="section--default relative z-10">
+
+    <div class="w-full bg-primary py-6">
+        <div class="container relative">
+            <div class="js-filter-mobile-collapse ">
+                <form action="" class="js-filter-form flex items-center">
+                    <div class="font-serif font-medium text-white text-foot mr-3">
+                        {{ 'Filteren: '|t }}
+                    </div>
+                    <div class="">
+                        <input type="text" name="search" value="{{ searchQuery }}" class="input--search py-3 pl-3 w-12 bg-pitchblack-500/10  border border-white placeholder-white placeholder-opacity-40 placeholder text-sm font-normal font-sans text-white" placeholder="{{ 'Titel, onderwerp, zoekterm'|t }}">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn--fifth btn--ext rounded-l-none  border-5">{{ 'Zoeken'|t }}</button>
+                    </div>
+                </form>
+            </div>
+            <div class="lijn">
+
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="pb-7 pt-2">
-            <div class="font-serif font-medium text-xxs">
-                {{ entries.count }} {{ 'resultaten gevonden'|t }}
+        <div class="js-filter-scroll-position">
+
+            <div class="hidden js-filter-loader items-center mt-7" tabindex="-1">
+                {% include '_site/_snippet/_item/_loader' %}
+            </div>
+
+            <div aria-live="polite" class="sr-only js-filter-aria-live" tabindex="-1">
+                <span>{{ "A total of {total} items found."|t({total: totalEntries}) }}</span>
+                {% if pageInfo.totalPages > 1 %}
+                    <span>{{ "Showing {totalItems} items on page {currentPage} of {totalPages}."|t({totalItems: totalEntries, currentPage: pageInfo.currentPage, totalPages: pageInfo.totalPages}) }}</span>
+                {% endif %}
+            </div>
+
+            <div class="js-filter-results mt-7">
+
+                <div class="mb-7">
+                    <div class="flex flex-wrap">
+                        {% set results = "resultaten" %}
+                        {% if totalEntries == 1 %}
+                            {% set results = "resultaat" %}
+                        {% endif %}
+                        <span class="mr-4 font-serif font-medium text-xxs">{{ totalEntries ~ " " ~ results ~ " gevonden"|t }}</span>
+                    </div>
+
+                    {% if searchQuery %}
+                        <div class="flex flex-wrap">
+                            <span class="mr-1 font-sans text-xxs">{{ "U zocht op:"|t }}</span>
+                            <button class="text-black js-clear-filter-element" data-filter-elements='[{"name": "search"}]'>
+                                <span class="underline">{{ searchQuery }}</span>
+                                {{svg('@webroot/frontend/icons/clear.svg')|attr({class: 'icon -ml-0.4 text-red-500'})}}
+                            </button>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 relative">
+                    {% for cardEntry in advrep %}
+                        {% set showContrast = true %}
+                        {% include '_site/_snippet/_item/_card' with {'showContrast' : showContrast } %}
+                    {% else %}
+                    <div class="bg-light w-full text-center py-5 absolute font-serif font-medium text-sm">
+                    {{ 'Geen resultaten gevonden'|t }}
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="">
+                {{ craft.statik.paginate(pageInfo, {
+                    pageRange: 2
+                }) }}
+                </div>
             </div>
 
         </div>
-        
-        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-            {% for cardEntry in advisoryReports %}
-                {% set showContrast = true %}
-                {% include '_site/_snippet/_item/_card' with {'showContrast' : showContrast } %}
-            {% endfor %}
-        </div>
 
-        <div class="my-7">
-        {{ craft.statik.paginate(pageInfo, {
-            pageRange: 2
-        }) }}
-        </div>
-
-        <div class="-mb-7">
+        <div class="-mb-7 mt-9">
         {% for block in entry.contentBuilder.all() %}
             {% if block.type == 'textImage' %}
                 {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
             {% endif %}
         {% endfor %}
         </div>
+
     </div>
 
     {% include '_site/_snippet/_global/_footdiv' %}
