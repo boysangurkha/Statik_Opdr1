@@ -12,3 +12,14 @@
 .card:hover .link--ext2::after{
   color: white;
 }
+
+.group:hover .overlayImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2D92BF;
+  mix-blend-mode: multiply;
+}
