@@ -1,7 +1,7 @@
 
-{% if filledInValue is not defined %}
+{#{% if filledInValue is not defined %}
 	{% set filledInValue = false %}
-{% endif %}
+{% endif %}#}
 
 {% set searchResultsEntry = craft.entries.section('searchResults').one() %}
 {% if searchResultsEntry %}
@@ -14,8 +14,8 @@
 		{# - - - #}
 
 		<div class="flex">
-			<input type="search" class="flex-1 px-1 text-base border-black border-1 rounded-xs" name="q" placeholder="{{ 'Zoeken'|t }}"
-			{% if filledInValue %}value="{{ filledInValue }}"{% endif %}/>
+			{#<input type="search" class="flex-1 px-1 text-base border-black border-1 rounded-xs" name="q" placeholder="{{ 'Zoeken'|t }}"
+			{% if filledInValue %}value="{{ filledInValue }}"{% endif %}/>#}
 			<button type="submit" class="bg-primary w-6 h-6 text-md transition ease-in-out duration-200 hover:bg-primary-hover rounded-full cursor-pointer text-white js-search-trigger js-search-animated">
 				<span class="sr-only">{{ 'Zoeken'|t }}</span>
 				{{ svg('@webroot/frontend/icons/magnify.svg')|attr({class: 'icon '}) }}

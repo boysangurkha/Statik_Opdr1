@@ -14,8 +14,10 @@
     {% set showContrast = false %}
 {% endif %}
 
+
 <div class="{% if showContrast %}{% else %}{% endif %} flex first-letter:w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
-<a class="" href="{{ cardEntry.getUrl() }}">
+<a class="w-full
+" href="{{ cardEntry.getUrl() }}">
 
     <div class="card pb-5 group hover:bg-primary relative flex flex-col w-full min-h-full overflow-hidden cursor-pointer card {% if showContrast %}bg-light{% else %}bg-white{% endif %} group {% if not showInColumns %}md:flex-row flex-wrap {% endif %}">
         {% if showImage %}
