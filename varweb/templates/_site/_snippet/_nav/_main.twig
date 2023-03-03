@@ -9,8 +9,8 @@
 		
 		<ul class="flex text-pitchblack {% if flyoutClasses %} flex-col items-center justify-center {% else %} flex-row space-x-5 items-center  {% endif %} " >
 			{% for node in mainNav %}
-				<li class="{% if flyoutClasses %} py-6 {% else %} xl:py-5 xxs:py-8 {% if node.classes|length %}{{ node.classes }}{% endif %} {% endif %}">
-					<a href="{{ node.url }}" class="font-sans {% if flyoutClasses %} text-xl {% else %} text-md {% endif %} hover:no-underline {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
+				<li class="mt-6 {% if node.classes|length %}{{ node.classes }}{% endif %}">
+					<a href="{{ node.url }}" class="font-sans flex items-center pb-6 {% if flyoutClasses %} text-xl {% else %} text-md {% endif %} hover:no-underline {% if node.active %}active{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>{{ node.name }}
 					</a>
 				</li>
 			{% endfor %}
