@@ -15,7 +15,9 @@
 {% endif %}
 
 <div class="{% if showContrast %}{% else %}{% endif %} flex w-full{% if scrollAnimate %}scroll-ani scroll-default scroll-delay{% endif %}">
-<a class="" href="{{ cardEntry.getUrl() }}">
+{% set crumbColor1 = true %}
+{% set crumbColor2 = true %}
+<a class="" href="{{ cardEntry.getUrl() }} ">
     <div class="card pb-5 group  relative flex flex-col w-full min-h-full overflow-hidden cursor-pointer {% if not showInColumns %}md:flex-row flex-wrap{% endif %}">
         {% if showImage %}
             {% set overviewImage = cardEntry.headerImage.collect().first() ? cardEntry.headerImage.collect().first() : fallback.image.one() %}

@@ -5,15 +5,17 @@
 {% for block in entry.contentBuilder.with(['textImage:image', 'image:image', 'callToAction:image']).collect()|filter(block => block.status == 'enabled') %}
 
 	{% if settings.section is defined %}
-		<div class="{{ settings.section }} {% if block['backgroundColor'] is defined %}{{ block.backgroundColor }}{% endif %}">
+		<div class="{{ settings.section }}">
 	{% endif %}
 
 		{% if settings.container is defined %}
-			<div class="{{ settings.container }}">
+			<div class="{{ settings.container }} ">
+
 	    {% endif %}
-
-			{% include '_site/_snippet/_content/_blocks/_'~block.type.handle with { settings: settings} %}
-
+			<div class="">
+			{% set entryBlock = true %}
+			{% include '_site/_snippet/_content/_blocks/_'~block.type.handle with { settings: settings, 'entryBlock' : entryBlock} %}
+			</div>
 		{% if settings.container is defined %}
 			</div>
 		{% endif %}

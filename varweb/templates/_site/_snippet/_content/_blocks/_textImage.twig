@@ -1,79 +1,165 @@
+{% if entryBlock %}
 
-{% if block.image|length %}
-	{% if block.backgroundColor == 'section--light' %}
+
+	{% if block.image|length %}
+		{% if block.backgroundColor == 'section--light' %}
+				{% set rela = 'relative' %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-offwhite xxs:-mt-5 clipRechts  md:absolute xl:right-98 lg:right-90 md:right-80 ' %}
+				{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5 mb-13' %}
+				{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:pb-8 xxs:pt-2' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-offwhite xxs:-mt-5  clipLinks md:absolute xl:left-98 lg:left-90 md:left-80 ' %}
+				{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5 mb-13' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:pb-8 xxs:pt-2' %}
+		{% endif %}
+
+		{% elseif block.backgroundColor == 'section--default' %}
 			{% set rela = 'relative' %}
-		{% if block.position == 'right' %}
-			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-offwhite xxs:-mt-5 clipRechts  md:absolute xl:right-98 lg:right-90 md:right-80 ' %}
-			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
-		{% else %}
-			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-offwhite xxs:-mt-5  clipLinks md:absolute xl:left-98 lg:left-90 md:left-80 ' %}
-			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
-	{% endif %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-white  md:absolute xl:right-98 lg:right-90 md:right-80' %}
+				{% set additionalClasses = ' relative w-full lg:py-6 md:py-7 xxs:py-5 mb-13' %}
+				{% set paddingClasses = 'md:pl-5 md:pr-9 ' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-white  md:absolute xl:left-98 lg:left-90 md:left-80' %}
+				{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-5 xxs:pt-5' %}
+		{% endif %}
 
-	{% elseif block.backgroundColor == 'section--default' %}
-		{% set rela = 'relative' %}
-		{% if block.position == 'right' %}
-			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-white  md:absolute xl:right-98 lg:right-90 md:right-80' %}
-			{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-5 md:pr-9 xxs:pt-5' %}
-		{% else %}
-			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-white  md:absolute xl:left-98 lg:left-90 md:left-80' %}
-			{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-9 md:pr-5 xxs:pt-5' %}
-	{% endif %}
+		{% elseif block.backgroundColor == 'section--primary' %}
+			{% set rela = 'relative' %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-primary xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 z-10' %}
+				{% set additionalClasses = ' relative w-full overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 text-white' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-primary xxs:-mt-5  clipGreen md:absolute xl:left-98 lg:left-90 md:left-80 z-10' %}
+				{% set additionalClasses = 'relative overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
+			{% endif %}
 
-	{% elseif block.backgroundColor == 'section--primary' %}
-		{% set rela = 'relative' %}
-		{% if block.position == 'right' %}
-			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-primary xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 z-10' %}
-			{% set additionalClasses = ' relative w-full mb-6 mt-3 overflow-hidden' %}
-			{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
+
+		{% elseif block.backgroundColor == 'section--secondary' %}
+			{% set rela = 'relative' %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-green xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 z-10' %}
+				{% set additionalClasses = ' relative w-full overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 text-pitchblack' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-green xxs:-mt-5  clipGreen md:absolute xl:left-98 lg:left-90 md:left-80 z-10' %}
+				{% set additionalClasses = 'relative overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-pitchblack' %}
+			{% endif %}
+		{% endif %}
+
+		<div class="flex {{ inverseClass }}  {{ additionalClasses }} ">
+			<div class="{{ bgColor }}  ">
+				<div class=" w-full {{ paddingClasses }} ">
+					{% if block.blockTitle|length %}
+						<div class="text-xl font-serif font-medium" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+					{% endif %}
+					{% if block.subTitle|length %}
+						<div class=" font-sans text-xxs font-normal text-gray">{{ block.subTitle }}</div>
+					{% endif %}
+					{% if block.text|length %}
+						<div class="pt-4 redactor font-sans text-xs font-normal">
+							{{ block.text }}
+						</div>
+					{% endif %}
+					{% if block.cta|length %}
+						<div class="flex flex-wrap items-baseline pt-3 font-md font-sans font-medium">
+							{% for cta in block.cta.all() %}
+								{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+			{% if block.image.collect().first() %}
+				<div class="w-full md:px-4  md:w-1/2 {{ rela }} ">
+					{% set image = block.image.collect().first() %}
+					{% set optimizedImage = image.optimizedTextImage %}
+					<picture>
+						{% if craft.imageOptimize.serverSupportsWebP() and image.extension != 'svg' and image.extension != 'gif' %}
+							<source srcset="{{ optimizedImage.srcsetWebP() }}"
+									sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
+									type="image/webp"/>
+						{% endif %}
+						{% if image.extension == 'svg' or image.extension == 'gif' %}
+							<img src="{{ image.getUrl() }}"
+								width="{{image.width}}" height="{{image.height}}"
+								alt="{{ image.imageCaption }}"
+								class="w-full" loading="lazy"/>
+						{% else %}
+							<img src="{{ optimizedImage.placeholderBox() }}"
+								srcset="{{ optimizedImage.srcset() }}"
+								sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
+								width="{{optimizedImage.placeholderWidth}}" height="{{optimizedImage.placeholderHeight}}"
+								alt="{{ image.imageCaption }}"
+								class="w-full" loading="lazy"/>
+						{% endif %}
+					</picture>
+					{% if image.imageCopyright|length or image.imageCaption|length %}
+						<div class="mt-1 text-sm italic opacity-50">
+							{% if image.imageCaption|length %}
+								{{ image.imageCaption }}
+							{% endif %}
+							{% if image.imageCopyright|length and image.imageCaption|length %}
+								- 
+							{% endif %}
+							{% if image.imageCopyright|length %}
+								{{ image.imageCopyright }}
+							{% endif %}
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
+			
+		</div>
+
+	{% else %}
+
+		{% if block.backgroundColor == 'section--light' or block.backgroundColor == 'section--default' or block.backgroundColor == 'section--secondary'%}
+				{% set textColor = 'text-pitchblack' %}
 		{% else %}
-			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-primary xxs:-mt-5  clipGreen md:absolute xl:left-98 lg:left-90 md:left-80 z-10' %}
-			{% set additionalClasses = 'relative overflow-hidden mb-6 mt-3' %}
-			{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
+				{% set textColor = 'text-white' %}
+		{% endif %}
+
+		{% if block.backgroundColor == 'section--light' %}
+			{% set bgColor = 'bg-light px-5' %}
+		{% elseif block.backgroundColor == 'section--default' %}
+			{% set bgColor = 'bg-white ' %}
+		{% elseif block.backgroundColor == 'section--secondary' %}
+			{% set bgColor = 'bg-green px-5' %}
+		{% elseif block.backgroundColor == 'section--primary' %}
+			{% set bgColor = 'bg-primary px-5' %}
 		{% endif %}
 
 
-	{% elseif block.backgroundColor == 'section--secondary' %}
-		{% set rela = 'relative' %}
-		{% if block.position == 'right' %}
-			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-green xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 z-10' %}
-			{% set additionalClasses = ' relative w-full overflow-hidden mb-6 mt-3' %}
-			{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 md- xl:py-9 lg:py-8 text-pitchblack' %}
-		{% else %}
-			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-green xxs:-mt-5  clipGreen md:absolute xl:left-98 lg:left-90 md:left-80 z-10' %}
-			{% set additionalClasses = 'relative overflow-hidden mb-6 mt-3' %}
-			{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-pitchblack' %}
-		{% endif %}
-	{% endif %}
 
-	<div class="flex items-center {{ inverseClass }}  {{ additionalClasses }} ">
-		<div class="{{ bgColor }}  ">
-			<div class=" w-full {{ paddingClasses }} ">
+		<div class="flex {{ textColor }} {{ bgColor }} flex-wrap py-7 mt-7">
+			<div class="w-full {% if block.image|length %}mt-8 md:mt-0 md:w-1/2{% else %}lg:w-3/4{% endif %}">
 				{% if block.blockTitle|length %}
-					<div class="text-xl font-serif font-medium" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+					<div class="text-xl font-serif font-medium mb-4" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
 				{% endif %}
 				{% if block.subTitle|length %}
-					<div class=" font-sans text-xxs font-normal text-gray">{{ block.subTitle }}</div>
+					<div class="pb-4 font-sans text-xxs font-normal">{{ block.subTitle }}</div>
 				{% endif %}
 				{% if block.text|length %}
-					<div class="pt-4 redactor font-sans text-xs font-normal">
+					<div class="redactor font-sans text-xs font-normal mb-4">
 						{{ block.text }}
 					</div>
 				{% endif %}
 				{% if block.cta|length %}
-					<div class="flex flex-wrap items-baseline pt-3 font-md font-sans font-medium">
+					<div class="flex flex-wrap items-baseline">
 						{% for cta in block.cta.all() %}
 							{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
 						{% endfor %}
@@ -81,90 +167,188 @@
 				{% endif %}
 			</div>
 		</div>
-		{% if block.image.collect().first() %}
-			<div class="w-full md:px-4  md:w-1/2 {{ rela }} ">
-				{% set image = block.image.collect().first() %}
-				{% set optimizedImage = image.optimizedTextImage %}
-				<picture>
-					{% if craft.imageOptimize.serverSupportsWebP() and image.extension != 'svg' and image.extension != 'gif' %}
-						<source srcset="{{ optimizedImage.srcsetWebP() }}"
-								sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
-								type="image/webp"/>
-					{% endif %}
-					{% if image.extension == 'svg' or image.extension == 'gif' %}
-						<img src="{{ image.getUrl() }}"
-							width="{{image.width}}" height="{{image.height}}"
-							alt="{{ image.imageCaption }}"
-							class="w-full" loading="lazy"/>
-					{% else %}
-						<img src="{{ optimizedImage.placeholderBox() }}"
-							srcset="{{ optimizedImage.srcset() }}"
-							sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
-							width="{{optimizedImage.placeholderWidth}}" height="{{optimizedImage.placeholderHeight}}"
-							alt="{{ image.imageCaption }}"
-							class="w-full" loading="lazy"/>
-					{% endif %}
-				</picture>
-				{% if image.imageCopyright|length or image.imageCaption|length %}
-					<div class="mt-1 text-sm italic opacity-50">
-						{% if image.imageCaption|length %}
-							{{ image.imageCaption }}
-						{% endif %}
-						{% if image.imageCopyright|length and image.imageCaption|length %}
-							- 
-						{% endif %}
-						{% if image.imageCopyright|length %}
-							{{ image.imageCopyright }}
-						{% endif %}
-					</div>
-				{% endif %}
-			</div>
-		{% endif %}
-		
-	</div>
+
+	{% endif %}
+
+
+
+{# -----------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------- #}
 
 
 {% else %}
 
-	{% if block.backgroundColor == 'section--light' or block.backgroundColor == 'section--default' or block.backgroundColor == 'section--secondary'%}
-			{% set textColor = 'text-pitchblack' %}
-	{% else %}
-			{% set textColor = 'text-white' %}
-	{% endif %}
-
-	{% if block.backgroundColor == 'section--light' %}
-		{% set bgColor = 'bg-light' %}
-	{% elseif block.backgroundColor == 'section--default' %}
-		{% set bgColor = 'bg-white' %}
-	{% elseif block.backgroundColor == 'section--secondary' %}
-		{% set bgColor = 'bg-green' %}
-	{% elseif block.backgroundColor == 'section--primary' %}
-		{% set bgColor = 'bg-primary' %}
-	{% endif %}
 
 
 
-	<div class="flex {{ textColor }} {{ bgColor }} flex-wrap p-7">
-		<div class="w-full {% if block.image|length %}mt-8 md:mt-0 md:w-1/2{% else %}lg:w-3/4{% endif %}">
-			{% if block.blockTitle|length %}
-				<div class="text-xl font-serif font-medium mb-4" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+	{% if block.image|length %}
+		{% if block.backgroundColor == 'section--light' %}
+				{% set rela = 'relative' %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-offwhite xxs:-mt-5 clipRechts  md:absolute xl:right-98 lg:right-90 md:right-80 ' %}
+				{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
+				{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-offwhite xxs:-mt-5  clipLinks md:absolute xl:left-98 lg:left-90 md:left-80 ' %}
+				{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
+		{% endif %}
+
+		{% elseif block.backgroundColor == 'section--default' %}
+			{% set rela = 'relative' %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-white  md:absolute xl:right-98 lg:right-90 md:right-80' %}
+				{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
+				{% set paddingClasses = 'md:pl-5 md:pr-9 xxs:pt-5' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-white  md:absolute xl:left-98 lg:left-90 md:left-80' %}
+				{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-5 xxs:pt-5' %}
+		{% endif %}
+
+		{% elseif block.backgroundColor == 'section--primary' %}
+			{% set rela = 'relative' %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-primary xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 z-10' %}
+				{% set additionalClasses = ' relative w-full overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 text-white' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-primary xxs:-mt-5  clipGreen md:absolute xl:left-98 lg:left-90 md:left-80 z-10' %}
+				{% set additionalClasses = 'relative overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
 			{% endif %}
-			{% if block.subTitle|length %}
-				<div class="pb-4 font-sans text-xxs font-normal">{{ block.subTitle }}</div>
+
+
+		{% elseif block.backgroundColor == 'section--secondary' %}
+			{% set rela = 'relative' %}
+			{% if block.position == 'right' %}
+				{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-green xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 z-10' %}
+				{% set additionalClasses = ' relative w-full overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 text-pitchblack' %}
+			{% else %}
+				{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
+				{% set bgColor = 'bg-green xxs:-mt-5  clipGreen md:absolute xl:left-98 lg:left-90 md:left-80 z-10' %}
+				{% set additionalClasses = 'relative overflow-hidden mb-6 mt-3' %}
+				{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-pitchblack' %}
 			{% endif %}
-			{% if block.text|length %}
-				<div class="redactor font-sans text-xs font-normal mb-4">
-					{{ block.text }}
+		{% endif %}
+
+		<div class="flex items-center {{ inverseClass }}  {{ additionalClasses }} ">
+			<div class="{{ bgColor }}  ">
+				<div class=" w-full {{ paddingClasses }} ">
+					{% if block.blockTitle|length %}
+						<div class="text-xl font-serif font-medium" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+					{% endif %}
+					{% if block.subTitle|length %}
+						<div class=" font-sans text-xxs font-normal text-gray">{{ block.subTitle }}</div>
+					{% endif %}
+					{% if block.text|length %}
+						<div class="pt-4 redactor font-sans text-xs font-normal">
+							{{ block.text }}
+						</div>
+					{% endif %}
+					{% if block.cta|length %}
+						<div class="flex flex-wrap items-baseline pt-3 font-md font-sans font-medium">
+							{% for cta in block.cta.all() %}
+								{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+			{% if block.image.collect().first() %}
+				<div class="w-full md:px-4  md:w-1/2 {{ rela }} ">
+					{% set image = block.image.collect().first() %}
+					{% set optimizedImage = image.optimizedTextImage %}
+					<picture>
+						{% if craft.imageOptimize.serverSupportsWebP() and image.extension != 'svg' and image.extension != 'gif' %}
+							<source srcset="{{ optimizedImage.srcsetWebP() }}"
+									sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
+									type="image/webp"/>
+						{% endif %}
+						{% if image.extension == 'svg' or image.extension == 'gif' %}
+							<img src="{{ image.getUrl() }}"
+								width="{{image.width}}" height="{{image.height}}"
+								alt="{{ image.imageCaption }}"
+								class="w-full" loading="lazy"/>
+						{% else %}
+							<img src="{{ optimizedImage.placeholderBox() }}"
+								srcset="{{ optimizedImage.srcset() }}"
+								sizes="(max-width: 479px) 95vw, (min-width: 480px) and (max-width: 659px) 448px, (min-width: 660px) and (max-width: 819px) 628px, (min-width: 820px) and (max-width: 979px) 378px, (min-width: 980px) and (max-width: 1199px) 458px, (min-width: 1200px) 568px"
+								width="{{optimizedImage.placeholderWidth}}" height="{{optimizedImage.placeholderHeight}}"
+								alt="{{ image.imageCaption }}"
+								class="w-full" loading="lazy"/>
+						{% endif %}
+					</picture>
+					{% if image.imageCopyright|length or image.imageCaption|length %}
+						<div class="mt-1 text-sm italic opacity-50">
+							{% if image.imageCaption|length %}
+								{{ image.imageCaption }}
+							{% endif %}
+							{% if image.imageCopyright|length and image.imageCaption|length %}
+								- 
+							{% endif %}
+							{% if image.imageCopyright|length %}
+								{{ image.imageCopyright }}
+							{% endif %}
+						</div>
+					{% endif %}
 				</div>
 			{% endif %}
-			{% if block.cta|length %}
-				<div class="flex flex-wrap items-baseline">
-					{% for cta in block.cta.all() %}
-						{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
-					{% endfor %}
-				</div>
-			{% endif %}
+			
 		</div>
-	</div>
 
+
+	{% else %}
+
+		{% if block.backgroundColor == 'section--light' or block.backgroundColor == 'section--default' or block.backgroundColor == 'section--secondary'%}
+				{% set textColor = 'text-pitchblack' %}
+		{% else %}
+				{% set textColor = 'text-white' %}
+		{% endif %}
+
+		{% if block.backgroundColor == 'section--light' %}
+			{% set bgColor = 'bg-light px-5' %}
+		{% elseif block.backgroundColor == 'section--default' %}
+			{% set bgColor = 'bg-white' %}
+		{% elseif block.backgroundColor == 'section--secondary' %}
+			{% set bgColor = 'bg-green px-5' %}
+		{% elseif block.backgroundColor == 'section--primary' %}
+			{% set bgColor = 'bg-primary px-5' %}
+		{% endif %}
+
+
+
+		<div class="flex {{ textColor }} {{ bgColor }} flex-wrap py-7">
+			<div class="w-full {% if block.image|length %}mt-8 md:mt-0 md:w-1/2{% else %}lg:w-3/4{% endif %}">
+				{% if block.blockTitle|length %}
+					<div class="text-xl font-serif font-medium mb-4" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+				{% endif %}
+				{% if block.subTitle|length %}
+					<div class="pb-4 font-sans text-xxs font-normal">{{ block.subTitle }}</div>
+				{% endif %}
+				{% if block.text|length %}
+					<div class="redactor font-sans text-xs font-normal mb-4">
+						{{ block.text }}
+					</div>
+				{% endif %}
+				{% if block.cta|length %}
+					<div class="flex flex-wrap items-baseline">
+						{% for cta in block.cta.all() %}
+							{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+
+	{% endif %}
 {% endif %}

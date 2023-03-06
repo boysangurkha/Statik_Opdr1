@@ -1,5 +1,8 @@
 {% extends '_site/_layout' %}
 
+{% set crumbColor1 = false %}
+{% set crumbColor2 = false %}
+
 {% set breadcrumbs = [
     craft.entries.section('newsOverview').one(),
     entry,
@@ -7,26 +10,20 @@
 
 {% block content %}
 
-    {% embed "_site/_snippet/_content/_defaultHeader" %}
-        {% block headerText %}
-            {% include '_site/_snippet/_nav/_breadcrumb' %}
-            {% include '_site/_snippet/_content/_pageTitle' %}
-            <div class="mb-5 text-sm font-semibold text-gray-700">{{ entry.postDate|date('d.m.Y'|t) }}</div>
-            {% include '_site/_snippet/_content/_intro' %}
-        {% endblock %}
-    {% endembed %}
+    <div class="">
+    {% embed "_site/_snippet/_content/_defaultHeader3" %}
 
+    {% endembed %}
+    </div>
      {% include '_site/_snippet/_content/_contentBuilder'
         with {
         settings : {
-            section: 'section',
+            section: '',
             container: 'container',
         }
     } %}
-
-    <div class="section section--default">
-        <div class="container">
-            {% include '_site/_snippet/_content/_socialShare' %}
-        </div>
-    </div>
+<div class="">
+{% include '_site/_snippet/_global/_footdiv' %}
+</div>
 {% endblock %}
+

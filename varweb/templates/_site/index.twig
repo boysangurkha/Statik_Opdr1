@@ -5,10 +5,11 @@
 
     {% include '_site/_snippet/_content/_hero' %}
 
+    {% set entryBlock = false %}
     {% set firstTextImageBlock = entry.contentBuilder|filter(block => block.type == 'textImage')|first %}
     {% if firstTextImageBlock is not null %}
         <div class="container py-5">
-            {% include '_site/_snippet/_content/_blocks/_' ~ firstTextImageBlock.type with { block: firstTextImageBlock }  %}
+            {% include '_site/_snippet/_content/_blocks/_' ~ firstTextImageBlock.type with { block: firstTextImageBlock, 'entryBlock': entryBlock }  %}
         </div>
     {% endif %}
 
@@ -48,7 +49,7 @@
     {% if remainingTextImageBlocks is not empty %}
         {% for remainingTextImageBlock in remainingTextImageBlocks %}
             <div class="container py-5">
-                {% include '_site/_snippet/_content/_blocks/_' ~ remainingTextImageBlock.type with { block: remainingTextImageBlock } %}
+                {% include '_site/_snippet/_content/_blocks/_' ~ remainingTextImageBlock.type with { block: remainingTextImageBlock, 'entryBlock': entryBlock } %}
             </div>
         {% endfor %}
     {% endif %}

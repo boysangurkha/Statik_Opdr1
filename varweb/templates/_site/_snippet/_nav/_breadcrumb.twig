@@ -11,11 +11,11 @@
 		{% for crumb in breadcrumbs %}
 			{% if not crumb is null %}
 				<span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="flex items-center breadcrumb__scope">
-					<a href="{{ crumb.url }}" itemprop="item" class="{% if crumbColor2 %}text-white opacity-50{% else %}text-black opacity-50{% endif %} flex underline hover:no-underline{% if loop.last %} no-underline{% endif %}">
+					<a href="{{ crumb.url }}" itemprop="item" class="{% if crumbColor2 %}text-white{% else %}text-black {% endif %} flex underline hover:no-underline{% if loop.last and crumbColor2 %} opacity-70 no-underline {% elseif loop.last %} opacity-70 no-underline {% endif %}">
 						<span itemprop="name">{{ crumb.title }}</span>
 					</a>
 					{% if not loop.last %}
-						{{ svg('@webroot/frontend/icons/chevron-right.svg')|attr({class: 'icon mx-1 text-primary'}) }}
+						{{ svg('@webroot/frontend/icons/chevron-right.svg')|attr({class: "icon mx-1 {% if crumbColor2 %}text-white{% else %}text-black {% endif %}"}) }}
 					{% endif %}
 					<meta itemprop="position" content="{{ loop.index+1 }}">
 				</span>

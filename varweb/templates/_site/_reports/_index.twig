@@ -110,9 +110,10 @@
         </div>
 
         <div class="-mb-7 mt-9">
+        {% set entryBlock = false %}
         {% for block in entry.contentBuilder.all() %}
             {% if block.type == 'textImage' %}
-                {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
+                {% include '_site/_snippet/_content/_blocks/_' ~ block.type with {'entryBlock': entryBlock} %}
             {% endif %}
         {% endfor %}
         </div>
