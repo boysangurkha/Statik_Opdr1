@@ -26,7 +26,7 @@
                 {% if craft.imageOptimize.serverSupportsWebP() and headerImage.extension != 'svg' %}
                     <source srcset="{{ optimizedImage.srcsetWebP() }}" sizes="100vw" type="image/webp"/>
                 {% endif %}
-                <img src="{{ optimizedImage.placeholderBox() }}" srcset="{{ optimizedImage.srcset() }}" sizes="100vw" alt="" class="sr-only js-bg-src" loading="lazy"/>
+                <img src="{{ optimizedImage.placeholderBox() }}" srcset="{{ optimizedImage.srcset() }}" sizes="100vw" alt="" class="sr-only js-bg-src " loading="lazy"/>
             </picture>
         </div>
     </div>

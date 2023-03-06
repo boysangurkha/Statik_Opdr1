@@ -1,0 +1,29 @@
+{% extends '_site/_layout' %}
+
+{% set crumbColor1 = false %}
+{% set crumbColor2 = false %}
+
+{% set breadcrumbs = [
+    craft.entries.section('advisoryReportsOverview').one(),
+    entry,
+] %}
+
+{% block content %}
+
+    <div class="">
+    {% embed "_site/_snippet/_content/_defaultHeader3" %}
+
+    {% endembed %}
+    </div>
+     {% include '_site/_snippet/_content/_contentBuilder'
+        with {
+        settings : {
+            section: '',
+            container: 'container',
+        }
+    } %}
+<div class="">
+{% include '_site/_snippet/_global/_footdiv' %}
+</div>
+{% endblock %}
+
