@@ -1,13 +1,85 @@
-{% set inverseClass = block.position == 'right' and block.image|length ? 'flex-row-reverse' : '' %}
 
-<div class="flex items-center {{ inverseClass }} my-5">
-	<div class="">
+
+{% if block.backgroundColor == 'section--light' %}
+		{% if block.position == 'right' %}
+			{% set bgColor = 'bg-offwhite clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
+			{% set inverseClass ='flex-row-reverse' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-gray' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
+		{% else %}
+			{% set bgColor = 'bg-offwhite clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
+			{% set inverseClass = '' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-gray' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
+		{% endif %}
+
+	{% elseif block.backgroundColor == 'section--default' %}
+		{% set inverseClass = block.position == 'right' and block.video|length ? 'flex-row-reverse' : '' %}		
+		{% set bgColor = 'bg-white' %}
+		{% set textColor = 'text-pitchblack' %}
+		{% set subColor = 'text-gray' %}
+		{% set image1 = '' %}
+		{% set image2 = 'w-full' %}
+
+	{% elseif block.backgroundColor == 'section--primary' %}
+		{% if block.position == 'right' %}
+			{% set bgColor = 'bg-primary clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
+			{% set inverseClass ='flex-row-reverse' %}			
+			{% set textColor = 'text-white' %}
+			{% set subColor = 'text-white opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% else %}
+			{% set bgColor = 'bg-primary clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
+			{% set inverseClass = '' %}
+			{% set textColor = 'text-white' %}
+			{% set subColor = 'text-white opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% endif %}
+
+	{% elseif block.backgroundColor == 'section--secondary' %}
+		{% if block.position == 'right' %}
+			{% set bgColor = 'bg-green clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
+			{% set inverseClass = 'flex-row-reverse' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-pitchblack opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% else %}
+			{% set bgColor = 'bg-green clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
+			{% set inverseClass = '' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-pitchblack opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% endif %}
+	{% endif %}
+
+<div class="flex {{ inverseClass }}">
+	<div class="w-200 px-4 mt-3">
+        {% if block.video|length %}
+
+            {% set embed = craft.videoparser.parse(block.video) %}
+            {% if embed %}
+                <div class="embed-container ">
+                    <iframe type="text/html" src="{{ embed.embedSrc }}?iv_load_policy=3&rel=0" frameborder="0"
+                            title="Embedded video" allowfullscreen></iframe>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+	<div class="{{bgColor}} {{textColor}}">
 		<div class=" w-full ">
 			{% if block.blockTitle|length %}
 				<div class="text-xl font-serif font-medium" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
 			{% endif %}
 			{% if block.subTitle|length %}
-				<div class=" font-sans text-xxs font-normal text-gray">{{ block.subTitle }}</div>
+				<div class=" font-sans text-xxs font-normal {{subColor}}">{{ block.subTitle }}</div>
 			{% endif %}
 			{% if block.text|length %}
 				<div class="pt-4 redactor font-sans text-xs font-normal">
@@ -24,16 +96,5 @@
 		</div>
 	</div>
 
-	<div class="w-full px-4 md:w-1/2 ">
-        {% if block.video|length %}
-
-            {% set embed = craft.videoparser.parse(block.video) %}
-            {% if embed %}
-                <div class="embed-container">
-                    <iframe type="text/html" src="{{ embed.embedSrc }}?iv_load_policy=3&rel=0" frameborder="0"
-                            title="Embedded video" allowfullscreen></iframe>
-                </div>
-            {% endif %}
-        {% endif %}
-    </div>
+	
 </div>

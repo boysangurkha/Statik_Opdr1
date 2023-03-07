@@ -87,6 +87,9 @@ module.exports = {
             xl: '1200px',
         },
         extend: {
+            width:{
+                '200' : '200%',
+            },
             height:{
                 '600': '600px',
             },
