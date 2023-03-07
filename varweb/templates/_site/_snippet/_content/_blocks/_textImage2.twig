@@ -1,7 +1,7 @@
 
 
 {% set inverseClass = block.position == 'right' and block.image|length ? 'flex-row-reverse' : '' %}
-{% set bgColor = block.backgroundColor == 'section--light' ? 'bg-offwhite py-7' : block.backgroundColor == 'section--default' ? 'bg-white' : (block.backgroundColor == 'section--primary' and block.position == 'right') ? 'bg-secondary' : 'bg-primary' %} 
+{% set bgColor = block.backgroundColor == 'section--light' ? 'bg-offwhite' : block.backgroundColor == 'section--default' ? 'bg-white' : (block.backgroundColor == 'section--primary' and block.position == 'right') ? 'bg-secondary' : 'bg-primary' %} 
 
 
 <div class="flex  flex-wrap -mx-4 {{ inverseClass }}">

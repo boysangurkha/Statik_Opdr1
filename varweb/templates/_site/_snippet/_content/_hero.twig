@@ -1,10 +1,10 @@
 {% if entry.hero|length %}
 	{% set hero = entry.hero.one() %}
 	{% set heroImage = entry.heroImage.one() %}
-	<div class=" relative py-10 bg-cover bg-no-repeat sm:py-20 js-bg-target" style="background-position: {% for focalPoint in heroImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; height: 70vh;">
-		<div class="container h-full flex flex-col justify-center">
-			<div class="w-full md:w-1/2 ">
-				<div class="relative z-10">
+	<div class="flex items-center relative py-10 bg-cover bg-no-repeat sm:py-20 js-bg-target" style="background-position: {% for focalPoint in heroImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 70vh;">
+		<div class="container h-full flex flex-col">
+			<div class="w-full md:w-1/2 flex">
+				<div class="">
 					{% if hero.heroTitle|length %}
 						<h1 class="text-2xl text-white font-serif">{{ hero.heroTitle }}</h1>
 					{% endif %}
