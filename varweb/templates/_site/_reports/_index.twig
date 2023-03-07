@@ -155,7 +155,7 @@
         {% set entryBlock = false %}
         {% for block in entry.contentBuilder.all() %}
             {% if block.type == 'textImage' %}
-                {% include '_site/_snippet/_content/_blocks/_' ~ block.type with {'entryBlock': entryBlock} %}
+                {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
             {% endif %}
         {% endfor %}
         </div>

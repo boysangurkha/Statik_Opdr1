@@ -1,52 +1,8 @@
-{#{% set inverseClass = block.position == 'right' and block.image|length ? 'flex-row-reverse' : '' %}#}
-{#{% set bgColor = block.backgroundColor == 'section--light' ? 'bg-offwhite py-7' : block.backgroundColor == 'section--default' ? 'bg-white' : (block.backgroundColor == 'section--primary' and block.position == 'right') ? 'bg-secondary' : 'bg-primary' %} #}
+{% set inverseClass = block.position == 'right' and block.image|length ? 'flex-row-reverse' : '' %}
 
-{% if block.backgroundColor == 'section--light' %}
-			{% set rela = 'relative' %}
-		{% if block.position == 'right' %}
-			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-offwhite xxs:-mt-5 clipRechts  md:absolute xl:right-98 lg:right-90 md:right-80 ' %}
-			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
-		{% else %}
-			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-offwhite xxs:-mt-5  clipLinks md:absolute xl:left-98 lg:left-90 md:left-80 ' %}
-			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8' %}
-	{% endif %}
-
-	{% elseif block.backgroundColor == 'section--default' %}
-		{% set rela = 'relative' %}
-		{% if block.position == 'right' %}
-			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-white  md:absolute xl:right-98 lg:right-90 md:right-80' %}
-			{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-5 md:pr-9 xxs:pt-5' %}
-		{% else %}
-			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-white  md:absolute xl:left-98 lg:left-90 md:left-80' %}
-			{% set additionalClasses = ' relative w-full xl:py-3 lg:py-6 md:py-7 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-9 md:pr-5 xxs:pt-5' %}
-	{% endif %}
-
-	{% elseif block.backgroundColor == 'section--primary' %}
-		{% set rela = 'relative' %}
-		{% if block.position == 'right' %}
-			{% set inverseClass = 'md:flex-row-reverse xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-primary xxs:-mt-5 clipBlue  md:absolute xl:right-98 lg:right-90 md:right-80 ' %}
-			{% set additionalClasses = ' relative lg:py-9 w-full md:py-10 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-7 md:pr-9 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
-		{% else %}
-			{% set inverseClass = 'md:flex-row xxs:flex-col xxs:flex-col-reverse' %}
-			{% set bgColor = 'bg-primary xxs:-mt-5  clipLinks md:absolute xl:left-98 lg:left-90 md:left-80 ' %}
-			{% set additionalClasses = 'relative lg:py-9 w-full md:py-10 xxs:py-5' %}
-			{% set paddingClasses = 'md:pl-9 md:pr-7 xxs:px-6 xxs:py-7 xl:py-9 lg:py-8 md:py-8 text-white' %}
-		{% endif %}
-	{% endif %}
-
-<div class="flex items-center {{ inverseClass }}  {{ additionalClasses }}">
-	<div class="{{ bgColor }}">
-		<div class=" w-full {{ paddingClasses }}">
+<div class="flex items-center {{ inverseClass }} my-5">
+	<div class="">
+		<div class=" w-full ">
 			{% if block.blockTitle|length %}
 				<div class="text-xl font-serif font-medium" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
 			{% endif %}
@@ -68,7 +24,7 @@
 		</div>
 	</div>
 
-	<div class="w-full px-4 md:w-1/2 {{ rela }}">
+	<div class="w-full px-4 md:w-1/2 ">
         {% if block.video|length %}
 
             {% set embed = craft.videoparser.parse(block.video) %}
