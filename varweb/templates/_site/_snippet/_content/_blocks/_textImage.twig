@@ -1,119 +1,168 @@
 
+{% if block.image|length %}
+	{% if block.backgroundColor == 'section--light' %}
+		{% if block.position == 'right' %}
+			{% set bgColor = 'bg-offwhite clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
+			{% set inverseClass = block.image|length ? 'flex-row-reverse items-center' : '' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-gray' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
+		{% else %}
+			{% set bgColor = 'bg-offwhite clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
+			{% set inverseClass = 'items-center' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-gray' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
+		{% endif %}
 
-{% if block.backgroundColor == 'section--light' %}
-	{% if block.position == 'right' %}
-		{% set bgColor = 'bg-offwhite clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
-		{% set inverseClass = block.image|length ? 'flex-row-reverse items-center' : '' %}
+	{% elseif block.backgroundColor == 'section--default' %}
+		{% set inverseClass = block.position == 'right' and block.image|length ? 'flex-row-reverse items-center' : 'items-center' %}
+		{% set bgColor = 'bg-white' %}
 		{% set textColor = 'text-pitchblack' %}
 		{% set subColor = 'text-gray' %}
 		{% set image1 = '' %}
 		{% set image2 = 'w-full' %}
-	{% else %}
-		{% set bgColor = 'bg-offwhite clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
-		{% set inverseClass = 'items-center' %}
-		{% set textColor = 'text-pitchblack' %}
-		{% set subColor = 'text-gray' %}
-		{% set image1 = '' %}
-		{% set image2 = 'w-full' %}
+
+	{% elseif block.backgroundColor == 'section--primary' %}
+		{% if block.position == 'right' %}
+			{% set bgColor = 'bg-primary clipBlue pl-5 pr-9 py-7 -mr-8' %}
+			{% set inverseClass = block.image|length ? 'flex-row-reverse' : '' %}
+			{% set textColor = 'text-white' %}
+			{% set subColor = 'text-white opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% else %}
+			{% set bgColor = 'bg-primary clipGreen pl-9 pr-5 py-7 -ml-8' %}
+			{% set inverseClass = '' %}
+			{% set textColor = 'text-white' %}
+			{% set subColor = 'text-white opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% endif %}
+
+	{% elseif block.backgroundColor == 'section--secondary' %}
+		{% if block.position == 'right' %}
+			{% set bgColor = 'bg-green clipBlue pl-5 pr-9 py-7 -mr-8' %}
+			{% set inverseClass = block.image|length ? 'flex-row-reverse' : '' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-pitchblack opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% else %}
+			{% set bgColor = 'bg-green clipGreen pl-9 pr-5 py-7 -ml-8' %}
+			{% set inverseClass = '' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-pitchblack opacity-70' %}
+			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
+			{% set image2 = 'sr-only js-bg-src' %}
+		{% endif %}
 	{% endif %}
 
-{% elseif block.backgroundColor == 'section--default' %}
-	{% set inverseClass = block.position == 'right' and block.image|length ? 'flex-row-reverse items-center' : 'items-center' %}
-	{% set bgColor = 'bg-white' %}
-	{% set textColor = 'text-pitchblack' %}
-	{% set subColor = 'text-gray' %}
-	{% set image1 = '' %}
-	{% set image2 = 'w-full' %}
 
-{% elseif block.backgroundColor == 'section--primary' %}
-	{% if block.position == 'right' %}
-		{% set bgColor = 'bg-primary clipBlue pl-5 pr-9 py-7 -mr-8' %}
-		{% set inverseClass = block.image|length ? 'flex-row-reverse' : '' %}
-		{% set textColor = 'text-white' %}
-		{% set subColor = 'text-white opacity-70' %}
-		{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-		{% set image2 = 'sr-only js-bg-src' %}
-	{% else %}
-		{% set bgColor = 'bg-primary clipGreen pl-9 pr-5 py-7 -ml-8' %}
-		{% set inverseClass = '' %}
-		{% set textColor = 'text-white' %}
-		{% set subColor = 'text-white opacity-70' %}
-		{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-		{% set image2 = 'sr-only js-bg-src' %}
-	{% endif %}
+	{% set image = block.image.collect().first() %}
+	{% set optimizedImage = image.optimizedTextImage %}
+	<div class="flex flex-wrap {{ inverseClass }} my-5 justify-center">
+		{% if block.image.collect().first() %}
 
-{% elseif block.backgroundColor == 'section--secondary' %}
-	{% if block.position == 'right' %}
-		{% set bgColor = 'bg-green clipBlue pl-5 pr-9 py-7 -mr-8' %}
-		{% set inverseClass = block.image|length ? 'flex-row-reverse' : '' %}
-		{% set textColor = 'text-pitchblack' %}
-		{% set subColor = 'text-pitchblack opacity-70' %}
-		{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-		{% set image2 = 'sr-only js-bg-src' %}
-	{% else %}
-		{% set bgColor = 'bg-green clipGreen pl-9 pr-5 py-7 -ml-8' %}
-		{% set inverseClass = '' %}
-		{% set textColor = 'text-pitchblack' %}
-		{% set subColor = 'text-pitchblack opacity-70' %}
-		{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-		{% set image2 = 'sr-only js-bg-src' %}
-	{% endif %}
-{% endif %}
-
-
-{% set image = block.image.collect().first() %}
-{% set optimizedImage = image.optimizedTextImage %}
-<div class="flex flex-wrap {{ inverseClass }} my-5">
-	{% if block.image.collect().first() %}
-
-		<div class="w-full px-4 md:w-1/2 {{image1}}">
-			
-			<picture class="">
-				{% if craft.imageOptimize.serverSupportsWebP() and image.extension != 'svg' and image.extension != 'gif' %}
-					<source srcset="{{ optimizedImage.srcsetWebP() }}"
+			<div class="w-full px-4 md:w-1/2 {{image1}} ">
+				
+				<picture class="">
+					{% if craft.imageOptimize.serverSupportsWebP() and image.extension != 'svg' and image.extension != 'gif' %}
+						<source srcset="{{ optimizedImage.srcsetWebP() }}"
+								sizes="height:100%"
+								type="image/webp"/>
+					{% endif %}
+						<img src="{{ optimizedImage.placeholderBox() }}"
+							srcset="{{ optimizedImage.srcset() }}"
 							sizes="height:100%"
-							type="image/webp"/>
+							width="{{optimizedImage.placeholderWidth}}" height="{{optimizedImage.placeholderHeight}}"
+							alt="{{ image.imageCaption }}"
+							class="{{image2}}" loading="lazy"/>
+				</picture>
+				{% if image.imageCopyright|length or image.imageCaption|length %}
+					<div class="mt-1 text-sm italic opacity-50">
+						{% if image.imageCaption|length %}
+							{{ image.imageCaption }}
+						{% endif %}
+						{% if image.imageCopyright|length and image.imageCaption|length %}
+							- 
+						{% endif %}
+						{% if image.imageCopyright|length %}
+							{{ image.imageCopyright }}
+						{% endif %}
+					</div>
 				{% endif %}
-					<img src="{{ optimizedImage.placeholderBox() }}"
-						srcset="{{ optimizedImage.srcset() }}"
-						sizes="height:100%"
-						width="{{optimizedImage.placeholderWidth}}" height="{{optimizedImage.placeholderHeight}}"
-						alt="{{ image.imageCaption }}"
-						class="{{image2}}" loading="lazy"/>
-			</picture>
-			{% if image.imageCopyright|length or image.imageCaption|length %}
-				<div class="mt-1 text-sm italic opacity-50">
-					{% if image.imageCaption|length %}
-						{{ image.imageCaption }}
-					{% endif %}
-					{% if image.imageCopyright|length and image.imageCaption|length %}
-						- 
-					{% endif %}
-					{% if image.imageCopyright|length %}
-						{{ image.imageCopyright }}
-					{% endif %}
+			</div>
+		{% endif %}
+		<div class="{{bgColor}} {{textColor}} w-full {% if block.image|length %}mt-8 md:mt-0 md:w-1/2{% else %}lg:w-3/4{% endif %}">
+			{% if block.blockTitle|length %}
+				<div class="text-xl font-serif font-medium mb-1" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+			{% endif %}
+			{% if block.subTitle|length %}
+				<div class="pb-4 font-sans text-xxs font-normal {{subColor}}">{{ block.subTitle }}</div>
+			{% endif %}
+			{% if block.text|length %}
+				<div class="redactor font-sans text-xs font-normal">
+					{{ block.text }}
+				</div>
+			{% endif %}
+			{% if block.cta|length %}
+				<div class="flex flex-wrap items-baseline">
+					{% for cta in block.cta.all() %}
+						{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+					{% endfor %}
 				</div>
 			{% endif %}
 		</div>
-	{% endif %}
-	<div class="{{bgColor}} {{textColor}} w-full {% if block.image|length %}mt-8 md:mt-0 md:w-1/2{% else %}lg:w-3/4{% endif %}">
-		{% if block.blockTitle|length %}
-			<div class="text-xl font-serif font-medium mb-1" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
-		{% endif %}
-		{% if block.subTitle|length %}
-			<div class="pb-4 font-sans text-xxs font-normal {{subColor}}">{{ block.subTitle }}</div>
-		{% endif %}
-		{% if block.text|length %}
-			<div class="redactor font-sans text-xs font-normal">
-				{{ block.text }}
-			</div>
-		{% endif %}
-		{% if block.cta|length %}
-			<div class="flex flex-wrap items-baseline">
-				{% for cta in block.cta.all() %}
-					{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
-				{% endfor %}
-			</div>
-		{% endif %}
 	</div>
-</div>
+
+
+{% else %}
+
+	{% if block.backgroundColor == 'section--light' %}
+		{% set bgColor = 'bg-offwhite pl-5 pr-9 pt-7 pb-8 -z-10' %}
+		{% set textColor = 'text-pitchblack' %}
+		{% set subColor = 'text-gray' %}
+
+	{% elseif block.backgroundColor == 'section--default' %}
+		{% set bgColor = 'bg-white' %}
+		{% set textColor = 'text-pitchblack' %}
+		{% set subColor = 'text-gray' %}
+
+	{% elseif block.backgroundColor == 'section--primary' %}
+		
+		{% set bgColor = 'bg-primary pl-5 pr-9 py-7' %}
+		{% set textColor = 'text-white' %}
+		{% set subColor = 'text-white opacity-70' %}
+
+	{% elseif block.backgroundColor == 'section--secondary' %}
+			{% set bgColor = 'bg-green pl-5 pr-9 py-7 -mr-8' %}
+			{% set textColor = 'text-pitchblack' %}
+			{% set subColor = 'text-pitchblack opacity-70' %}
+	{% endif %}
+
+	<div class="flex flex-wrap my-5">
+		<div class="{{bgColor}} {{textColor}} w-full">
+			{% if block.blockTitle|length %}
+				<div class="text-xl font-serif font-medium mb-1" id="{{ craft.statik.slugify(block.blockTitle) }}">{{ block.blockTitle }}</div>
+			{% endif %}
+			{% if block.subTitle|length %}
+				<div class="pb-4 font-sans text-xxs font-normal {{subColor}}">{{ block.subTitle }}</div>
+			{% endif %}
+			{% if block.text|length %}
+				<div class="redactor font-sans text-xs font-normal">
+					{{ block.text }}
+				</div>
+			{% endif %}
+			{% if block.cta|length %}
+				<div class="flex flex-wrap items-baseline">
+					{% for cta in block.cta.all() %}
+						{% include '_site/_snippet/_content/_blocks/_callToActionInclude' %}
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endif %}
