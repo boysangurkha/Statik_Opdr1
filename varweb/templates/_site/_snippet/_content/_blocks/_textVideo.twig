@@ -2,14 +2,14 @@
 
 {% if block.backgroundColor == 'section--light' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-offwhite clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
-			{% set inverseClass ='flex-row-reverse' %}
+			{% set bgColor = 'bg-offwhite clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 -z-10' %}
+			{% set inverseClass = block.video|length ? 'flex-row-reverse' : '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-gray' %}
 			{% set image1 = '' %}
 			{% set image2 = 'w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-offwhite clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
+			{% set bgColor = 'bg-offwhite clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 -z-10' %}
 			{% set inverseClass = '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-gray' %}
@@ -20,53 +20,53 @@
 	{% elseif block.backgroundColor == 'section--default' %}
 		{% set inverseClass = block.position == 'right' and block.video|length ? 'flex-row-reverse' : '' %}		
 		{% set bgColor = 'bg-white' %}
-		{% set textColor = 'text-pitchblack' %}
+		{% set textColor = 'text-white xxs:mt-4' %}
 		{% set subColor = 'text-gray' %}
 		{% set image1 = '' %}
 		{% set image2 = 'w-full' %}
 
 	{% elseif block.backgroundColor == 'section--primary' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-primary clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
-			{% set inverseClass ='flex-row-reverse' %}			
+			{% set bgColor = 'bg-primary clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 -z-10' %}
+			{% set inverseClass = block.video|length ? 'flex-row-reverse' : '' %}
 			{% set textColor = 'text-white' %}
 			{% set subColor = 'text-white opacity-70' %}
-			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-			{% set image2 = 'sr-only js-bg-src' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-primary clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
+			{% set bgColor = 'bg-primary clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 -z-10' %}
 			{% set inverseClass = '' %}
 			{% set textColor = 'text-white' %}
 			{% set subColor = 'text-white opacity-70' %}
-			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-			{% set image2 = 'sr-only js-bg-src' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
 		{% endif %}
 
 	{% elseif block.backgroundColor == 'section--secondary' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-green clipRechts pl-5 pr-9 pt-7 pb-8 -mr-8 -z-10' %}
-			{% set inverseClass = 'flex-row-reverse' %}
+			{% set bgColor = 'bg-green clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 -z-10' %}
+			{% set inverseClass = block.video|length ? 'flex-row-reverse' : '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-pitchblack opacity-70' %}
-			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-			{% set image2 = 'sr-only js-bg-src' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-green clipLinks pl-9 pr-5 py-7 -ml-8 -z-10' %}
+			{% set bgColor = 'bg-green clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 -z-10' %}
 			{% set inverseClass = '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-pitchblack opacity-70' %}
-			{% set image1 = 'bg-cover bg-no-repeat js-bg-target style=background-position: {% for focalPoint in image.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 100%;' %}
-			{% set image2 = 'sr-only js-bg-src' %}
+			{% set image1 = '' %}
+			{% set image2 = 'w-full' %}
 		{% endif %}
 	{% endif %}
 
-<div class="flex {{ inverseClass }}">
-	<div class="w-200 px-4 mt-3">
+<div class="md:flex {{ inverseClass }}">
+	<div class="md:w-200 px-4 md:mt-3 z-20">
         {% if block.video|length %}
 
             {% set embed = craft.videoparser.parse(block.video) %}
             {% if embed %}
-                <div class="embed-container ">
+                <div class="embed-container z-20">
                     <iframe type="text/html" src="{{ embed.embedSrc }}?iv_load_policy=3&rel=0" frameborder="0"
                             title="Embedded video" allowfullscreen></iframe>
                 </div>
