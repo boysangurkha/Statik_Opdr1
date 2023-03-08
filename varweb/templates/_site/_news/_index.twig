@@ -108,7 +108,7 @@
 
         </div>
 
-        {% set entryBlock = false %}
+
             {% if entry.contentBuilder is not null %}
                 {% for block in entry.contentBuilder.all() %}
                     {% if block.type == 'textImage'|length %}
