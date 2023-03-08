@@ -5,7 +5,7 @@
 
     {% include '_site/_snippet/_content/_hero' %}
 
-    {% set entryBlock = false %}
+
     {% set firstTextImageBlock = entry.contentBuilder|filter(block => block.type == 'textImage')|first %}
     {% if firstTextImageBlock is not null %}
         <div class="container py-5">

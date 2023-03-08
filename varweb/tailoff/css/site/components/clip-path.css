@@ -20,10 +20,19 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
 
+
 @media screen and (min-width:400px){
     .clip-foot2{
         clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 
+    }
+
+    .clipGreen{
+        clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    }
+    
+    .clipBlue{
+        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
     }
 }
 
