@@ -1,67 +1,81 @@
 
     {% set crumbColor1 = false %}
     {% set crumbColor2 = false %}
-    <div class="bg-light pt-6 pb-8">
-        <div class="container">
-            <div class="w-full flex flex-col px-0 ">
-                    {% include '_site/_snippet/_nav/_breadcrumb' %}
-                    {% include '_site/_snippet/_content/_pageTitle' %}
-                    <div class="md:flex mt-6">
-                        <div class="text-black mb-4 md:mb-0">
-                            {% include '_site/_snippet/_content/_intro' %}
-                        </div>
-
-                        {% if entry.contactperson|length %}
-                            {% set people = entry.contactperson.one() %}
-                            
-                            <div class="bg-white flex flex-col px-6 py-5 md:ml-4 font-sans font-normal text-xxs">
-                                {{ 'Neem contact op met: '|t }}
-                                <div class="flex w-full items-center mt-2">
-                                    {% if people.image.one()|length %}
-                                        {% set pfImage = people.image.one() %}
-                                        {% set optimizedImage = pfImage.optimizedContent %}
-                                        <div>
-                                            <div class="rounded-full bg-cover bg-no-repeat js-bg-target" style="width: 70px; height: 70px; background-position: {% for focalPoint in pfImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %};">
-                                                <picture>
-                                                    {% if craft.imageOptimize.serverSupportsWebP() and pfImage.extension != 'svg' %}
-                                                        <source srcset="{{ optimizedImage.srcsetWebP() }}" sizes="100%" type="image/webp"/>
-                                                    {% endif %}
-                                                    <img src="{{ optimizedImage.placeholderBox() }}" srcset="{{ optimizedImage.srcset() }}" sizes="100%" alt="" class="sr-only js-bg-src" loading="lazy"/>
-                                                </picture>
-                                            </div>
-                                        </div>
-                                        {% else %}
-                                    {% endif %}
-                                    <div class="ml-3 flex flex-col">
-                                        <div class="font-serif font-medium text-foot">{{ people }}</div>
-                                        <div class="font-sans underline hover:no-underline text-sm font-normal flex items-center">
-                                            {{ svg('@webroot/frontend/icons/phone.svg')|attr({class: 'icon text-primary mr-1'}) }}
-                                            {{ people.peopleGsm }}
-                                        </div>
-                                        <div class="font-sans underline hover:no-underline text-sm font-normal flex items-center">
-                                            {{ svg('@webroot/frontend/icons/envelope.svg')|attr({class: 'icon text-primary mr-1'}) }}
-                                            {{ people.mail }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endif %}
+<div class="bg-light pt-6 pb-8">
+    <div class="container">
+        <div class="w-full flex flex-col px-0 ">
+            {% include '_site/_snippet/_nav/_breadcrumb' %}
+            {% include '_site/_snippet/_content/_pageTitle' %}
+            <div class="md:flex mt-6">
+                
+                <div>
+                    <div class="text-black mb-4 md:mb-0">
+                        {% include '_site/_snippet/_content/_intro' %}
                     </div>
+                    {% if entry.mainAsset.getURL|length %}
+                    {% set mainAsset = entry.mainAsset.getURL() %}
+                    <div class="mt-5 mb-5">
+                        <div class="flex items-center text-xxs">
+                            <a class="btn btn--secondary" href="{{mainAsset}}" download="{{mainAsset}}">{% if entry.mainAsset.customText|length %} {{ entry.mainAsset.customText }} {% else %} {{'Download het advies'|t}} {% endif %} <img class="pl-1 fill-white svg-icon group-hover:fill-white group-hover:invert" src="/frontend/icons/download.svg" /></a>
+                            <div class="ml-5 font-serif font-medium">{{'Delen via:'|t}}</div>
+                            <a class="ml-3" href="#"><div class="bg-primary p-0.5 rounded-sm">{{ svg('@webroot/frontend/icons/linkedin.svg')|attr({class: 'icon text-primary text-offwhite text-foot'}) }}</div></a>
+                            <a class="ml-3" href="#"><div class=" p-0.5 rounded-sm">{{ svg('@webroot/frontend/icons/envelope.svg')|attr({class: 'icon text-primary text-primary text-foot'}) }}</div></a>    
+                        </div>
 
-                    {% if entry.mainAsset|length %}
-                        {% set mainAsset = entry.mainAsset.getURL() %}
-                        <div class="mt-5">
-                            <div class="flex items-center text-xxs">
-                                <a class="btn btn--secondary" href="{{mainAsset}}" download="{{mainAsset}}">{% if entry.mainAsset.customText|length %} {{ entry.mainAsset.customText }} {% else %} {{'Download het advies'|t}} {% endif %} <img class="pl-1 fill-white svg-icon group-hover:fill-white group-hover:invert" src="/frontend/icons/download.svg" /></a>
-                                <div class="ml-5 font-serif font-medium">{{'Delen via:'|t}}</div>
-                                <a class="ml-3" href="#"><div class="bg-primary p-0.5 rounded-sm">{{ svg('@webroot/frontend/icons/linkedin.svg')|attr({class: 'icon text-primary text-offwhite text-foot'}) }}</div></a>
-                                <a class="ml-3" href="#"><div class=" p-0.5 rounded-sm">{{ svg('@webroot/frontend/icons/envelope.svg')|attr({class: 'icon text-primary text-primary text-foot'}) }}</div></a>    
+                        {% if entry.extraDownloads|length %}
+                        <div>
+                            <div class="mt-6 font-sans font-normal text-sm"> {{'Aanvullende documenten: '|t}} </div>
+                            {% for extraDownload in entry.extraDownloads %}
+                                <a class=" mt-1 font-sans font-medium text-sm" href="{{extraDownload.linkit.getURL()}}" download="{{extraDownload.linkit.getURL()}}">{% if extraDownload.linkit.customText|length %} {{ extraDownload.linkit.customText }} {% else %} {{ 'Download extra document'|t }} {% endif %} <img class="pl-1" src="/frontend/icons/download.svg" /></a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                    </div>
+                    {% endif %}
+                </div>
+
+
+                {% if entry.contactperson|length %}
+                {% set people = entry.contactperson.one() %}
+                    
+                <div class="bg-white flex flex-col px-6 py-5 md:ml-4 font-sans font-normal text-xxs">
+                    {{ 'Neem contact op met: '|t }}
+                    <div class="flex w-full items-center mt-2">
+                        {% if people.image.one()|length %}
+                        {% set pfImage = people.image.one() %}
+                        {% set optimizedImage = pfImage.optimizedContent %}
+                        <div>
+                            <div class="rounded-full bg-cover bg-no-repeat js-bg-target" style="width: 70px; height: 70px; background-position: {% for focalPoint in pfImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %};">
+                                <picture>
+                                    {% if craft.imageOptimize.serverSupportsWebP() and pfImage.extension != 'svg' %}
+                                        <source srcset="{{ optimizedImage.srcsetWebP() }}" sizes="100%" type="image/webp"/>
+                                    {% endif %}
+                                    <img src="{{ optimizedImage.placeholderBox() }}" srcset="{{ optimizedImage.srcset() }}" sizes="100%" alt="" class="sr-only js-bg-src" loading="lazy"/>
+                                </picture>
                             </div>
                         </div>
-                    {% endif %}
-                    
+                        {% else %}
+                        {% endif %}
+                        <div class="ml-3 flex flex-col">
+                            <div class="font-serif font-medium text-foot">{{ people }}</div>
+                            <div class="font-sans underline hover:no-underline text-sm font-normal flex items-center">
+                                {{ svg('@webroot/frontend/icons/phone.svg')|attr({class: 'icon text-primary mr-1'}) }}
+                                {{ people.peopleGsm }}
+                            </div>
+                            <div class="font-sans underline hover:no-underline text-sm font-normal flex items-center">
+                                {{ svg('@webroot/frontend/icons/envelope.svg')|attr({class: 'icon text-primary mr-1'}) }}
+                                {{ people.mail }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </div>
+
+                
         </div>
     </div>
+</div>
 
 
