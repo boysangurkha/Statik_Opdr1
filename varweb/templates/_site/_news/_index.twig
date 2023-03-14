@@ -90,7 +90,7 @@
 
                 <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 relative">
                     {% for cardEntry in news %}
-                        {% set showContrast = true %}
+                        {% set showContrast = false %}
                         {% include '_site/_snippet/_item/_newscard' with {'showContrast' : showContrast } %}
                     {% else %}
                     <div class="bg-light w-full text-center py-5 absolute font-serif font-medium text-sm">
