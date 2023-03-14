@@ -63,7 +63,7 @@
                     <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
                         {% for cardEntry in news.all() %}
                             {% set showContrast = true %}
-                            {% include '_site/_snippet/_item/_newscard' with {amount: news.count(), 'showContrast' : showContrast } %}
+                            {% include '_site/_snippet/_item/_newscard' with {amount: news.count()} %}
                         {% endfor %}
                     </div> 
                 </div>
