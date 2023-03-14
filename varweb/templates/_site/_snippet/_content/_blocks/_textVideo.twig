@@ -27,14 +27,14 @@
 
 	{% elseif block.backgroundColor == 'section--primary' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-primary clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 -z-10' %}
+			{% set bgColor = 'bg-primary clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 ' %}
 			{% set inverseClass = block.video|length ? 'flex-row-reverse' : '' %}
 			{% set textColor = 'text-white' %}
 			{% set subColor = 'text-white opacity-70' %}
 			{% set image1 = '' %}
 			{% set image2 = 'w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-primary clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 -z-10' %}
+			{% set bgColor = 'bg-primary clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 ' %}
 			{% set inverseClass = '' %}
 			{% set textColor = 'text-white' %}
 			{% set subColor = 'text-white opacity-70' %}
@@ -44,14 +44,14 @@
 
 	{% elseif block.backgroundColor == 'section--secondary' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-green clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 -z-10' %}
+			{% set bgColor = 'bg-green clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 ' %}
 			{% set inverseClass = block.video|length ? 'flex-row-reverse' : '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-pitchblack opacity-70' %}
 			{% set image1 = '' %}
 			{% set image2 = 'w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-green clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 -z-10' %}
+			{% set bgColor = 'bg-green clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 ' %}
 			{% set inverseClass = '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-pitchblack opacity-70' %}

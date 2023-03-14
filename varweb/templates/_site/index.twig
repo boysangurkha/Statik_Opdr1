@@ -28,7 +28,6 @@
                 </div>
                 <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
                     {% for cardEntry in advisoryReports.all() %}
-                        {% set bgColor = 'bg-white' %}
                         {% include '_site/_snippet/_item/_card' with {amount: advisoryReports.count()} %}
                     {% endfor %}
                 </div> 
@@ -38,7 +37,7 @@
 
     {% for block in entry.contentBuilder %}
         {% if block.type == 'textVideo' %}
-        <div class="container py-5">
+        <div class="container pb-5 pt-7">
             {% include '_site/_snippet/_content/_blocks/_' ~ block.type %}
         </div>
         {% endif %}
