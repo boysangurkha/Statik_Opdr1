@@ -3,10 +3,10 @@
     {% set crumbColor1 = true %}
     {% set crumbColor2 = true %}
 
-    <div class="relative pt-6 pb-8 bg-cover bg-no-repeat sm:py-20 js-bg-target" style="background-position: {% for focalPoint in headerImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 50vh;">
+    <div class="relative bright pt-6 pb-8 bg-cover bg-no-repeat sm:py-20 js-bg-target h-full" style="background-position: {% for focalPoint in headerImage.getFocalPoint() %} {{ focalPoint * 100 }}% {% endfor %}; min-height: 45vh;">
         <div class="container h-full flex flex-col justify-center">
-            <div class="w-full md:w-1/2">
-                <div class="relative z-10">
+            <div class="w-full md:w-1/2 relative z-20">
+
                     {% include '_site/_snippet/_nav/_breadcrumb' with {'crumbColor1': crumbColor1, 'crumbColor2': crumbColor2} %}
                     <div class="text-white">
                     {% include '_site/_snippet/_content/_pageTitle' %}
@@ -19,14 +19,14 @@
                             {% endfor %}
                         </div>
 					{% endif %}
-                </div>
+
             </div>
             {% set optimizedImage = headerImage.optimizedContent %}
             <picture>
                 {% if craft.imageOptimize.serverSupportsWebP() and headerImage.extension != 'svg' %}
                     <source srcset="{{ optimizedImage.srcsetWebP() }}" sizes="100vw" type="image/webp"/>
                 {% endif %}
-                <img src="{{ optimizedImage.placeholderBox() }}" srcset="{{ optimizedImage.srcset() }}" sizes="100vw" alt="" class="sr-only js-bg-src " loading="lazy"/>
+                <img src="{{ optimizedImage.placeholderBox() }}" srcset="{{ optimizedImage.srcset() }}" sizes="100vw" alt="" class="sr-only js-bg-src" loading="lazy"/>
             </picture>
         </div>
     </div>

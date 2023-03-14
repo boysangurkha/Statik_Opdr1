@@ -10,6 +10,7 @@
 
 @import './components/lijn.css';
 
+@import './components/background.css';
 @import './components/clip-path.css';
 @import './components/textImage.css';
 @import './components/card.css';
