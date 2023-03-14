@@ -2,14 +2,14 @@
 
 {% if block.backgroundColor == 'section--light' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-offwhite clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 -z-10' %}
+			{% set bgColor = 'bg-offwhite clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 ' %}
 			{% set inverseClass = block.video|length ? 'flex-row-reverse' : '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-gray' %}
 			{% set image1 = '' %}
 			{% set image2 = 'w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-offwhite clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 -z-10' %}
+			{% set bgColor = 'bg-offwhite clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 ' %}
 			{% set inverseClass = '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-gray' %}

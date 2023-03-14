@@ -2,18 +2,18 @@
 {% if block.image|length %}
 	{% if block.backgroundColor == 'section--light' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-offwhite clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 -z-10' %}
+			{% set bgColor = 'bg-offwhite clipRechts pl-6 pr-5 md:pl-5 md:pr-9 md:-mt-0 -mt-4 pt-7 pb-8 md:-mr-8 ' %}
 			{% set inverseClass = block.image|length ? 'flex-row-reverse items-center' : '' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-gray' %}
-			{% set image1 = '' %}
+			{% set image1 = 'z-20' %}
 			{% set image2 = 'w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-offwhite clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 -z-10' %}
+			{% set bgColor = 'bg-offwhite clipLinks md:pl-9 pl-6 pr-5 py-7 md:-mt-0 -mt-4 md:-ml-8 ' %}
 			{% set inverseClass = 'items-center' %}
 			{% set textColor = 'text-pitchblack' %}
 			{% set subColor = 'text-gray' %}
-			{% set image1 = '' %}
+			{% set image1 = 'z-20' %}
 			{% set image2 = 'w-full' %}
 		{% endif %}
 
@@ -44,14 +44,14 @@
 
 	{% elseif block.backgroundColor == 'section--secondary' %}
 		{% if block.position == 'right' %}
-			{% set bgColor = 'bg-green clipBlue pl-5 pr-8 py-7 md:-mr-8' %}
-			{% set inverseClass = block.image|length ? 'flex-row-reverse' : '' %}
+			{% set bgColor = 'bg-green clipBlue pl-5 pr-8 py-7 md:-mr-8 flex flex-col justify-center' %}
+			{% set inverseClass = block.image|length ? 'flex-row-reverse ' : '' %}
 			{% set textColor = 'text-pitchblack xxs:-mt-7 md:-mt-0' %}
 			{% set subColor = 'text-pitchblack opacity-70' %}
 			{% set image1 = 'bg-cover bg-no-repeat js-bg-target' %}
 			{% set image2 = 'sr-only js-bg-src w-full' %}
 		{% else %}
-			{% set bgColor = 'bg-green clipGreen md:pl-8 md:pr-5 py-7 md:-ml-8 xxs:px-5 md:px-0' %}
+			{% set bgColor = 'bg-green clipGreen md:pl-8 md:pr-5 py-7 md:-ml-8 xxs:px-5 md:px-0 flex flex-col justify-center' %}
 			{% set inverseClass = '' %}
 			{% set textColor = 'text-pitchblack xxs:-mt-7 md:-mt-0' %}
 			{% set subColor = 'text-pitchblack opacity-70' %}

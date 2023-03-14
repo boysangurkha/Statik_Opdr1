@@ -1,7 +1,7 @@
 
     {% set crumbColor1 = false %}
     {% set crumbColor2 = false %}
-<div class="bg-light pt-6 pb-8">
+<div class="bg-light pt-6 pb-6 mb-7">
     <div class="container">
         <div class="w-full flex flex-col px-0 ">
             {% include '_site/_snippet/_nav/_breadcrumb' %}
@@ -26,7 +26,7 @@
                         <div>
                             <div class="mt-6 font-sans font-normal text-sm"> {{'Aanvullende documenten: '|t}} </div>
                             {% for extraDownload in entry.extraDownloads %}
-                                <a class=" mt-1 font-sans font-medium text-sm" href="{{extraDownload.linkit.getURL()}}" download="{{extraDownload.linkit.getURL()}}">{% if extraDownload.linkit.customText|length %} {{ extraDownload.linkit.customText }} {% else %} {{ 'Download extra document'|t }} {% endif %} <img class="pl-1" src="/frontend/icons/download.svg" /></a>
+                                <a class="flex mt-1 font-sans font-medium text-sm" href="{{extraDownload.linkit.getURL()}}" download="{{extraDownload.linkit.getURL()}}">{% if extraDownload.linkit.customText|length %} {{ extraDownload.linkit.customText }} {% else %} {{ 'Download extra document'|t }} {% endif %} <img class="pl-1" src="/frontend/icons/download.svg" /></a>
                             {% endfor %}
                         </div>
                         {% endif %}
@@ -39,9 +39,9 @@
                 {% if entry.contactperson|length %}
                 {% set people = entry.contactperson.one() %}
                     
-                <div class="bg-white flex flex-col px-6 py-5 md:ml-4 font-sans font-normal text-xxs">
+                <div class="bg-white h-1/2 flex flex-col px-6 py-5 md:ml-4 font-sans font-normal text-xxs xxs:-ml-4 xxs:-mr-4">
                     {{ 'Neem contact op met: '|t }}
-                    <div class="flex w-full items-center mt-2">
+                    <div class=" flex w-full items-center mt-2">
                         {% if people.image.one()|length %}
                         {% set pfImage = people.image.one() %}
                         {% set optimizedImage = pfImage.optimizedContent %}
